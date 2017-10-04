@@ -24,13 +24,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
+<<<<<<< HEAD
 /*	jQuery(document).ready(function($) {
+=======
+	jQuery(document).ready(function($) {
+>>>>>>> d1c9b83341943dbc74019ef2eb3c82e07cf0c825
 		$(".scroll").click(function(event){		
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
+<<<<<<< HEAD
 	});*/
 </script>
 <!-- start-smoth-scrolling -->
 </head>
+=======
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+>>>>>>> d1c9b83341943dbc74019ef2eb3c82e07cf0c825
 <body>
