@@ -11,5 +11,32 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
+	
+	//Hàm hiển thị sản phẩm theo product ID, Chi tiết sản phẩm
+	public function Hien_thi_san_pham_theo_ProductID($ProductID)
+	{
+		$sql="SELECT * FROM products WHERE ProductID=$ProductID";
+		$this->setQuery($sql);
+		return $this->loadRow();
+	}
+	
+	public function Hien_thi_san_pham_theo_SupplierID($SupplierID)
+	{
+		$sql="SELECT * FROM products WHERE SupplierID=$SupplierID";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
+	
+	public function Them_san_pham()
+	{
+	}
+	
+	public function Xoa_san_pham()
+	{
+	}
+	
+	public function Sua_san_pham()
+	{
+	}
 }
 ?>

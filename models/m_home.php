@@ -14,7 +14,7 @@ class M_home extends database
 	//Hàm hiển thị 8 danh mục sản phẩm chính
 	public function Hien_thi_Category()
 	{
-		$sql="SELECT CategoryName FROM `category` LIMIT 0,8";
+		$sql="SELECT CategoryName FROM category WHERE CategoryParentID is NULL ORDER BY Priority ASC ";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
@@ -23,7 +23,7 @@ class M_home extends database
 	public function Hien_thi_san_pham_theo_promotionprice()
 	{
 		$sql="SELECT * FROM promotion_price pp INNER JOIN products p on p.ProductID=pp.ProductID  
-				ORDER BY `pp`.`Priority`  ASC";
+				ORDER BY pp.Priority  ASC";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
