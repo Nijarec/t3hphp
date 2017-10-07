@@ -27,12 +27,22 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 		return $this->loadAllRows();
 	}
 	
-	public function Them_san_pham()
+	public function Them_san_pham( $CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority)
 	{
+		$sql="INSERT INTO  products (ProductID, CategoryID, SupplierID, ProductName, ProductType, Unit, SubUnit, UnitQuantity, Description, Image, Price, Discount, LastUpdate, Priority) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$this->setQuery($sql);
+		$param=array($CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority);
+		$kq=$this->execute($param);
+		return $kq;
 	}
 	
-	public function Xoa_san_pham()
+	public function Xoa_san_pham($ProductID,$ProductName)
 	{
+		$sql="DELETE FROM products WHERE ProductID=?or ProductName=?";
+		$this->setQuery($sql);
+		$param=array($ProductID,$ProductName);
+		$kq=$this->execute($param);
+		return $kq;
 	}
 	
 	public function Sua_san_pham()

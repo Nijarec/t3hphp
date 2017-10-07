@@ -2,8 +2,8 @@
 include_once("database.php");
 class M_home extends database
 {
-	// Hàm hiển thị 4 sản phẩm thông dụng đưa vào slide trong content
-	public function Hien_thi_san_pham()
+	// Hàm hiển thị 4 sản phẩm thông dụng đưa vào slider trong banner
+	public function Hien_thi_san_pham_slider()
 	{
 		//câu lệnh sql hiển thị sản phẩm thông dụng mới từ bảng product và newproduct
 		$sql="SELECT * from products p INNER JOIN new_product n on p.ProductID=n.ProductID WHERE n.Priority=1";
@@ -12,7 +12,7 @@ class M_home extends database
 	}
 	
 	//Hàm hiển thị 8 danh mục sản phẩm chính
-	public function Hien_thi_Category()
+	public function Hien_thi_main_Category()
 	{
 		$sql="SELECT CategoryName FROM category WHERE CategoryParentID is NULL ORDER BY Priority ASC ";
 		$this->setQuery($sql);

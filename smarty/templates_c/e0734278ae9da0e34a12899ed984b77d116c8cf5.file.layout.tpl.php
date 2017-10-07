@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:104242738259d5c8ca1764d2-58661150%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,55 +7,61 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0734278ae9da0e34a12899ed984b77d116c8cf5' => 
     array (
       0 => 'smarty\\templates\\layout.tpl',
-      1 => 1507183141,
+      1 => 1507373595,
       2 => 'file',
     ),
     '36fbe3939497ac5a91a56553a460db140e5e6f2d' => 
     array (
       0 => 'smarty\\templates\\head.tpl',
-      1 => 1507186454,
+      1 => 1507374149,
       2 => 'file',
     ),
     '6652bf75f43eb8665356b88e8a0e2401680ee1b9' => 
     array (
       0 => 'smarty\\templates\\header.tpl',
-      1 => 1507182791,
+      1 => 1507185762,
       2 => 'file',
     ),
     '0a51a134b085e9b61932ce46e7055c1be650a052' => 
     array (
       0 => 'smarty\\templates\\banner.tpl',
-      1 => 1507186808,
+      1 => 1506932265,
+      2 => 'file',
+    ),
+    '5a62fd8204254c7fb1bb64d90e26568f5623a60e' => 
+    array (
+      0 => 'smarty\\templates\\slider_in_banner.tpl',
+      1 => 1507373532,
       2 => 'file',
     ),
     '3d41945b7740230c9f7f0541c9f99cfc354d9447' => 
     array (
       0 => 'smarty\\templates\\top_brands.tpl',
-      1 => 1507181639,
+      1 => 1507185762,
       2 => 'file',
     ),
     '267291e07d2b36e4c6aa07ee6f45102544e0a994' => 
     array (
       0 => 'smarty\\templates\\fresh_vegetables.tpl',
-      1 => 1507181664,
+      1 => 1506932265,
       2 => 'file',
     ),
     '1a30a5d6d36d79cd4adc145fda9da04b0d16a88a' => 
     array (
       0 => 'smarty\\templates\\news_letter.tpl',
-      1 => 1507183162,
+      1 => 1507185762,
       2 => 'file',
     ),
     '70eba14aea234c9b7881b48964462938ebb4971e' => 
     array (
       0 => 'smarty\\templates\\footer.tpl',
-      1 => 1507181698,
+      1 => 1507185762,
       2 => 'file',
     ),
     '337da50429a42fbde041b37fc0caac657e86c1af' => 
     array (
       0 => 'smarty\\templates\\javascript.tpl',
-      1 => 1507182126,
+      1 => 1507185762,
       2 => 'file',
     ),
   ),
@@ -78,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  <?php /*  Call merged included template "head.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d87956c2c6_72649270($_smarty_tpl);
+content_59d8b492a828e0_83342420($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "head.tpl" */?> 
 <body>
@@ -88,7 +94,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d8795751d9_95682966($_smarty_tpl);
+content_59d8b492aae3e3_74119127($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "header.tpl" */?> 
 
@@ -97,15 +103,21 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "banner.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d87957ab04_19334125($_smarty_tpl);
+content_59d8b492ad63c9_45744121($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
-/*  End of included template "banner.tpl" */?> 	
+/*  End of included template "banner.tpl" */?> 
+ <?php /*  Call merged included template "slider_in_banner.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("slider_in_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
+content_59d8b492af47b9_80420830($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); 
+/*  End of included template "slider_in_banner.tpl" */?> }	
 <!--// banner -->
 <!-- top-brands -->
  <?php /*  Call merged included template "top_brands.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d87957ded0_38718723($_smarty_tpl);
+content_59d8b492b0d7b8_85025618($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "top_brands.tpl" */?> 	
 <!-- //top-brands -->
@@ -113,7 +125,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "fresh_vegetables.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("fresh_vegetables.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d8795823e3_85809618($_smarty_tpl);
+content_59d8b492b24ad2_75776174($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "fresh_vegetables.tpl" */?> 		
 <!-- //fresh-vegetables -->
@@ -121,7 +133,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "news_letter.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d879585bc0_68433559($_smarty_tpl);
+content_59d8b492b37395_58881985($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "news_letter.tpl" */?> 	
 <!-- //newsletter -->
@@ -129,7 +141,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d879589887_22370369($_smarty_tpl);
+content_59d8b492b4a268_65800083($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "footer.tpl" */?> 
 <!-- //footer -->
@@ -137,29 +149,27 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '104242738259d5c8ca1764d2-58661150');
-content_59d5d87958c781_87963920($_smarty_tpl);
+content_59d8b492b61b24_70277404($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "javascript.tpl" */?> 
 </body>
 </html>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\head.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d87956c2c6_72649270')) {function content_59d5d87956c2c6_72649270($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_59d8b492a828e0_83342420')) {function content_59d8b492a828e0_83342420($_smarty_tpl) {?><head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
 <script type="application/x-javascript"> 
 	addEventListener("load", function() {
 		setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){
 			window.scrollTo(0,1); 
 		} </script>
-
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -174,7 +184,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -184,12 +193,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
-
 <!-- start-smoth-scrolling -->
 </head><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d8795751d9_95682966')) {function content_59d5d8795751d9_95682966($_smarty_tpl) {?><!-- header -->
+<?php if ($_valid && !is_callable('content_59d8b492aae3e3_74119127')) {function content_59d8b492aae3e3_74119127($_smarty_tpl) {?><!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href="products.html">Today's special Offers !</a>
@@ -269,153 +277,199 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d87957ab04_19334125')) {function content_59d5d87957ab04_19334125($_smarty_tpl) {?><div class="banner">
-	<div class="w3l_banner_nav_left">
-		<nav class="navbar nav_bottom">
-		 <!-- Brand and toggle get grouped for better mobile display -->
-		  <div class="navbar-header nav_2">
-			  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-		   </div> 
-		   <!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-				<ul class="nav navbar-nav nav_1">
-					<li><a href="products.html">Branded Foods</a></li>
-					<li><a href="household.html">Households</a></li>
-					<li class="dropdown mega-dropdown active">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
-						<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-							<div class="w3ls_vegetables">
-								<ul>	
-									<li><a href="vegetables.html">Vegetables</a></li>
-									<li><a href="vegetables.html">Fruits</a></li>
-								</ul>
-							</div>                  
-						</div>				
-					</li>
-					<li><a href="kitchen.html">Kitchen</a></li>
-					<li><a href="short-codes.html">Short Codes</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
-						<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-							<div class="w3ls_vegetables">
-								<ul>
-									<li><a href="drinks.html">Soft Drinks</a></li>
-									<li><a href="drinks.html">Juices</a></li>
-								</ul>
-							</div>                  
-						</div>	
-					</li>
-					<li><a href="pet.html">Pet Food</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frozen Foods<span class="caret"></span></a>
-						<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
-							<div class="w3ls_vegetables">
-								<ul>
-									<li><a href="frozen.html">Frozen Snacks</a></li>
-									<li><a href="frozen.html">Frozen Nonveg</a></li>
-								</ul>
-							</div>                  
-						</div>	
-					</li>
-					<li><a href="bread.html">Bread & Bakery</a></li>
-				</ul>
-			 </div><!-- /.navbar-collapse -->
-		</nav>
+<?php if ($_valid && !is_callable('content_59d8b492ad63c9_45744121')) {function content_59d8b492ad63c9_45744121($_smarty_tpl) {?><!-- banner -->
+	<div class="banner">
+		<div class="w3l_banner_nav_left">
+			<nav class="navbar nav_bottom">
+			 <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header nav_2">
+				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+			   </div> 
+			   <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav nav_1">
+						<li><a href="products.html">Branded Foods</a></li>
+						<li><a href="household.html">Households</a></li>
+						<li class="dropdown mega-dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>	
+										<li><a href="vegetables.html">Vegetables</a></li>
+										<li><a href="vegetables.html">Fruits</a></li>
+									</ul>
+								</div>                  
+							</div>				
+						</li>
+						<li><a href="kitchen.html">Kitchen</a></li>
+						<li><a href="short-codes.html">Short Codes</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="drinks.html">Soft Drinks</a></li>
+										<li><a href="drinks.html">Juices</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li><a href="pet.html">Pet Food</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frozen Foods<span class="caret"></span></a>
+							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
+								<div class="w3ls_vegetables">
+									<ul>
+										<li><a href="frozen.html">Frozen Snacks</a></li>
+										<li><a href="frozen.html">Frozen Nonveg</a></li>
+									</ul>
+								</div>                  
+							</div>	
+						</li>
+						<li><a href="bread.html">Bread & Bakery</a></li>
+					</ul>
+				 </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+		<div class="w3l_banner_nav_right">
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div class="w3l_banner_nav_right_banner">
+								<h3>Make your <span>food</span> with Spicy.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_nav_right_banner1">
+								<h3>Make your <span>food</span> with Spicy.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_nav_right_banner2">
+								<h3>upto <i>50%</i> off.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- flexSlider -->
+				<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+				<script defer src="js/jquery.flexslider.js"></script>
+				<script type="text/javascript">
+				$(window).load(function(){
+				  $('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider){
+					  $('body').removeClass('loading');
+					}
+				  });
+				});
+			  </script>
+			<!-- //flexSlider -->
+		</div>
+		<div class="clearfix"></div>
 	</div>
-	<div class="w3l_banner_nav_right">
-		<section class="slider">
-			<div class="flexslider">
-				<ul class="slides">
-					<li>
-						<div class="w3l_banner_nav_right_banner">
-							<h3>Make your <span>food</span> with Spicy.</h3>
-							<div class="more">
-								<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="w3l_banner_nav_right_banner1">
-							<h3>Make your <span>food</span> with Spicy.</h3>
-							<div class="more">
-								<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="w3l_banner_nav_right_banner2">
-							<h3>upto <i>50%</i> off.</h3>
-							<div class="more">
-								<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<!-- flexSlider -->
-			<link rel="stylesheet" href="../../css/flexslider.css" type="text/css" media="screen" property="" />
-			<script defer src="../../js/jquery.flexslider.js"></script>
-			
-			<script type="text/javascript">
-			$(window).load(function(){
-			  $('.flexslider').flexslider({
-				animation: "slide",
-				start: function(slider){
-				  $('body').removeClass('loading');
-				}
-			  });
-			});
-
-		  </script>
-
-		
-		<!-- //flexSlider -->
-	</div>
-	<div class="clearfix"></div>
-</div>
 <!-- banner -->
-<div class="banner_bottom">
-		<div class="wthree_banner_bottom_left_grid_sub"> </div>
-		<div class="wthree_banner_bottom_left_grid_sub1">
-			<div class="col-md-4 wthree_banner_bottom_left">
-				<div class="wthree_banner_bottom_left_grid">
-					<img src="../../images/4.jpg" alt=" " class="img-responsive" />
-					<div class="wthree_banner_bottom_left_grid_pos">
-						<h4>Discount Offer <span>25%</span></h4>
-					</div>
-				</div>
+	<div class="banner_bottom">
+			<div class="wthree_banner_bottom_left_grid_sub">
 			</div>
-			<div class="col-md-4 wthree_banner_bottom_left">
-				<div class="wthree_banner_bottom_left_grid">
-					<img src="../../images/5.jpg" alt=" " class="img-responsive" />
-					<div class="wthree_banner_btm_pos">
-						<h3>introducing <span>best store</span> for <i>groceries</i></h3>
+			<div class="wthree_banner_bottom_left_grid_sub1">
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="images/4.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_bottom_left_grid_pos">
+							<h4>Discount Offer <span>25%</span></h4>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4 wthree_banner_bottom_left">
-				<div class="wthree_banner_bottom_left_grid">
-					<img src="../../images/6.jpg" alt=" " class="img-responsive" />
-					<div class="wthree_banner_btm_pos1">
-						<h3>Save <span>Upto</span> $10</h3>
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="images/5.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_btm_pos">
+							<h3>introducing <span>best store</span> for <i>groceries</i></h3>
+						</div>
 					</div>
 				</div>
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="images/6.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_btm_pos1">
+							<h3>Save <span>Upto</span> $10</h3>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
-		</div>
-		<div class="clearfix"> </div>
-</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+	</div><?php }} ?>
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
+         compiled from "smarty\templates\slider_in_banner.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_59d8b492af47b9_80420830')) {function content_59d8b492af47b9_80420830($_smarty_tpl) {?><div class="w3l_banner_nav_right">
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li>
+							<div class="w3l_banner_nav_right_banner">
+								<h3>Make your <span>food</span> with Spicy.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_nav_right_banner1">
+								<h3>Make your <span>food</span> with Spicy.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="w3l_banner_nav_right_banner2">
+								<h3>upto <i>50%</i> off.</h3>
+								<div class="more">
+									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- flexSlider -->
+				<link rel="stylesheet" href="../../css/flexslider.css" type="text/css" media="screen" property="" />
+				<script defer src="js/jquery.flexslider.js"></script>
+				<script type="text/javascript">
+				$(window).load(function(){
+				  $('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider){
+					  $('body').removeClass('loading');
+					}
+				  });
+				});
+			  </script>
+			<!-- //flexSlider -->
+		</div><?php }} ?>
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\top_brands.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d87957ded0_38718723')) {function content_59d5d87957ded0_38718723($_smarty_tpl) {?><div class="top-brands">
+<?php if ($_valid && !is_callable('content_59d8b492b0d7b8_85025618')) {function content_59d8b492b0d7b8_85025618($_smarty_tpl) {?><div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
@@ -564,9 +618,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\fresh_vegetables.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d8795823e3_85809618')) {function content_59d5d8795823e3_85809618($_smarty_tpl) {?><div class="fresh-vegetables">
+<?php if ($_valid && !is_callable('content_59d8b492b24ad2_75776174')) {function content_59d8b492b24ad2_75776174($_smarty_tpl) {?><div class="fresh-vegetables">
 		<div class="container">
 			<h3>Top Products</h3>
 			<div class="w3l_fresh_vegetables_grids">
@@ -633,9 +687,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\news_letter.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d879585bc0_68433559')) {function content_59d5d879585bc0_68433559($_smarty_tpl) {?><div class="newsletter">
+<?php if ($_valid && !is_callable('content_59d8b492b37395_58881985')) {function content_59d8b492b37395_58881985($_smarty_tpl) {?><div class="newsletter">
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -650,9 +704,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d879589887_22370369')) {function content_59d5d879589887_22370369($_smarty_tpl) {?><div class="footer">
+<?php if ($_valid && !is_callable('content_59d8b492b4a268_65800083')) {function content_59d8b492b4a268_65800083($_smarty_tpl) {?><div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -720,9 +774,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 09:00:09
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-07 11:03:46
          compiled from "smarty\templates\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59d5d87958c781_87963920')) {function content_59d5d87958c781_87963920($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
+<?php if ($_valid && !is_callable('content_59d8b492b61b24_70277404')) {function content_59d8b492b61b24_70277404($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            
