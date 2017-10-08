@@ -1,23 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2016 at 10:13 AM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: Oct 08, 2017 at 07:02 PM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db-7.12`
+-- Database: `db_sieu_thi_mini`
 --
 
 -- --------------------------------------------------------
@@ -26,17 +28,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `auth_access`
 --
 
-CREATE TABLE IF NOT EXISTS `auth_access` (
-  `UserID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `auth_access` (
+  `UserID` int(10) UNSIGNED NOT NULL,
   `Email` varchar(45) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `Name` varchar(100) DEFAULT NULL,
   `Phone` varchar(15) DEFAULT NULL,
   `Mobile` varchar(15) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
-  `ActiveCode` varchar(45) DEFAULT '0',
-  PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+  `ActiveCode` varchar(45) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `auth_access`
@@ -63,18 +64,16 @@ INSERT INTO `auth_access` (`UserID`, `Email`, `Password`, `Name`, `Phone`, `Mobi
 -- Table structure for table `category`
 --
 
-CREATE TABLE IF NOT EXISTS `category` (
-  `CategoryID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `CategoryParentID` int(10) unsigned DEFAULT NULL,
+CREATE TABLE `category` (
+  `CategoryID` int(10) UNSIGNED NOT NULL,
+  `CategoryParentID` int(10) UNSIGNED DEFAULT NULL,
   `CategoryName` varchar(100) NOT NULL,
   `Description` varchar(255) DEFAULT NULL,
-  `Priority` int(10) unsigned DEFAULT '10000',
+  `Priority` int(10) UNSIGNED DEFAULT '10000',
   `Quotation` varchar(45) DEFAULT NULL,
   `Link` varchar(45) DEFAULT NULL,
-  `SEO` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`CategoryID`),
-  KEY `FK_category_CategoryID` (`CategoryParentID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
+  `SEO` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
@@ -132,7 +131,7 @@ INSERT INTO `category` (`CategoryID`, `CategoryParentID`, `CategoryName`, `Descr
 (49, 2, 'Dầu xả', '', 41, '', 'my_pham/dau_xa', 'Mỹ phẩm | Dầu xả |  phân phối giá sỉ Dầu xả Clear, Dove, Pentene,…'),
 (50, 2, 'Sữa rửa mặt', '', 42, '', 'my_pham/sua_rua_mat', 'Mỹ phẩm | Sữa rửa mặt |  phân phối giá sỉ Sữa rửa mặt Biore, Hazaline, Biona,..'),
 (51, 2, 'Sữa tắm', '', 43, '', 'my_pham/sua_tam', 'Mỹ phẩm | Sữa tắm |  phân phối giá sỉ Sữa tắm Coast, Fa, Dove, Lux, Olay,..'),
-(52, 2, 'Kem dưỡng da', '', 44, '', 'my_pham/kem_duong_da', 'Mỹ phẩm | Kem dưỡng da |  phân phối giá sỉ Kem dưỡng da Biona, Olay, POND''S,..'),
+(52, 2, 'Kem dưỡng da', '', 44, '', 'my_pham/kem_duong_da', 'Mỹ phẩm | Kem dưỡng da |  phân phối giá sỉ Kem dưỡng da Biona, Olay, POND\'S,..'),
 (53, 2, 'Nước hoa hồng', '', 47, '', 'my_pham/nuoc_hoa', 'Mỹ phẩm | Nước hoa |  phân phối giá sỉ Nước hoa'),
 (54, 2, 'Lăn khử mùi', '', 46, '', 'my_pham/lan_khu_mui', 'Mỹ phẩm | Lăn khử mùi |  phân phối giá sỉ Lăn khử mùi'),
 (55, 2, 'Nước hoa', '', 47, '', 'my_pham/nuoc_hoa', 'Mỹ phẩm | Nước hoa |  phân phối giá sỉ Nước hoa'),
@@ -156,13 +155,27 @@ INSERT INTO `category` (`CategoryID`, `CategoryParentID`, `CategoryName`, `Descr
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `ma_lien_he` int(11) NOT NULL,
+  `ho_ten` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` varchar(1500) COLLATE utf8_unicode_ci NOT NULL,
+  `ngay_lien_he` date NOT NULL,
+  `trang_thai` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `new_product`
 --
 
-CREATE TABLE IF NOT EXISTS `new_product` (
-  `ProductID` int(10) unsigned NOT NULL,
-  `Priority` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`ProductID`)
+CREATE TABLE `new_product` (
+  `ProductID` int(10) UNSIGNED NOT NULL,
+  `Priority` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -209,12 +222,11 @@ INSERT INTO `new_product` (`ProductID`, `Priority`) VALUES
 -- Table structure for table `orderdetail`
 --
 
-CREATE TABLE IF NOT EXISTS `orderdetail` (
-  `OrderID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ProductID` int(10) unsigned NOT NULL,
-  `Quantity` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`OrderID`,`ProductID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+CREATE TABLE `orderdetail` (
+  `OrderID` int(10) UNSIGNED NOT NULL,
+  `ProductID` int(10) UNSIGNED NOT NULL,
+  `Quantity` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `orderdetail`
@@ -396,14 +408,13 @@ INSERT INTO `orderdetail` (`OrderID`, `ProductID`, `Quantity`) VALUES
 -- Table structure for table `orders`
 --
 
-CREATE TABLE IF NOT EXISTS `orders` (
-  `OrderID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `UserID` int(10) unsigned NOT NULL,
+CREATE TABLE `orders` (
+  `OrderID` int(10) UNSIGNED NOT NULL,
+  `UserID` int(10) UNSIGNED NOT NULL,
   `Note` text,
   `DateCreated` datetime DEFAULT NULL,
-  `Status` varchar(200) DEFAULT 'Mới',
-  PRIMARY KEY (`OrderID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+  `Status` varchar(200) DEFAULT 'Mới'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `orders`
@@ -418,25 +429,22 @@ INSERT INTO `orders` (`OrderID`, `UserID`, `Note`, `DateCreated`, `Status`) VALU
 -- Table structure for table `products`
 --
 
-CREATE TABLE IF NOT EXISTS `products` (
-  `ProductID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `CategoryID` int(10) unsigned NOT NULL DEFAULT '0',
-  `SupplierID` int(10) unsigned NOT NULL DEFAULT '0',
+CREATE TABLE `products` (
+  `ProductID` int(10) UNSIGNED NOT NULL,
+  `CategoryID` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `SupplierID` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `ProductName` varchar(255) NOT NULL,
   `ProductType` varchar(100) DEFAULT NULL,
   `Unit` varchar(45) DEFAULT NULL,
   `SubUnit` varchar(45) DEFAULT NULL,
-  `UnitQuantity` int(10) unsigned DEFAULT NULL,
+  `UnitQuantity` int(10) UNSIGNED DEFAULT NULL,
   `Description` text,
   `Image` varchar(45) DEFAULT NULL,
-  `Price` int(10) unsigned DEFAULT NULL,
+  `Price` int(10) UNSIGNED DEFAULT NULL,
   `Discount` varchar(45) DEFAULT NULL,
   `LastUpdate` datetime DEFAULT NULL,
-  `Priority` int(10) unsigned zerofill DEFAULT NULL,
-  PRIMARY KEY (`ProductID`),
-  KEY `FK_products_CategoryID` (`CategoryID`),
-  KEY `FK_products_SupplierID` (`SupplierID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4209 ;
+  `Priority` int(10) UNSIGNED ZEROFILL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
@@ -604,15 +612,15 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (168, 50, 1, 'Hazeline Kem DDCN trắng mịn ngọc ngà 50g (hũ)', 'Hazeline', 'Thùng', 'Hũ', 12, '', 'MP-227.jpg', 29500, '1', '2009-11-26 15:55:36', NULL),
 (169, 50, 1, 'Hazeline kem phấn trắng mịn ngọc ngà 4g (hũ)', 'Hazeline', 'Thùng', 'Hũ', 12, '', 'MP-228.jpg', 7200, '1', '2009-11-26 15:55:36', NULL),
 (170, 50, 1, 'Hazeline Kem TD CX từ hoa hồng 4g (hũ)', 'Hazeline', 'Thùng', 'Hũ', 12, '', 'MP-229.jpg', 7200, '1', '2009-11-26 15:55:36', NULL),
-(171, 50, 1, 'Pond''s Sữa rửa mặt trắng hồng rạng rỡ 50g (tuýp)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-230.jpg', 19300, '1', '2009-11-26 15:55:36', NULL),
-(172, 50, 1, 'Pond''s Sữa rửa mặt chống nhờn 50g (tuýp)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-231.jpg', 19300, '1', '2009-11-26 15:55:36', NULL),
-(173, 52, 1, 'Pond''s kem trắng da ban đêm 30g (hũ)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-232.jpg', 29000, '1', '2009-11-26 15:55:36', NULL),
-(174, 52, 1, 'Pond''s kem trắng da ban đêm 50g (hũ)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-233.jpg', 43100, '1', '2009-11-26 15:55:36', NULL),
-(175, 52, 1, 'Pond''s kem trắng hồng rạng rỡ 50g (hộp)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-234.jpg', 43100, '1', '2009-11-26 15:55:36', NULL),
-(176, 52, 1, 'Pond''s kem trắng hồng rạng rỡ 30g (hộp)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-235.jpg', 29000, '1', '2009-11-26 15:55:36', NULL),
-(177, 52, 1, 'Pond''s kem trắng rạng ngời không tì vết ngày 50g (hũ)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-236.jpg', 117300, '1', '2009-11-26 15:55:36', NULL),
-(178, 52, 1, 'Pond''s kem trắng rạng ngời không tì vết đêm 50g (hũ)', 'Pond''s', 'Thùng', 'Hũ', 12, '', 'MP-237.jpg', 117300, '1', '2009-11-26 15:55:36', NULL),
-(179, 52, 1, 'Pond''s kem rạng ngời không vết thâm nám 10g (gói)', 'Pond''s', 'Gói', 'Gói', 1, '', 'MP-238.jpg', 5000, '1', '2009-11-26 15:55:36', NULL),
+(171, 50, 1, 'Pond\'s Sữa rửa mặt trắng hồng rạng rỡ 50g (tuýp)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-230.jpg', 19300, '1', '2009-11-26 15:55:36', NULL),
+(172, 50, 1, 'Pond\'s Sữa rửa mặt chống nhờn 50g (tuýp)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-231.jpg', 19300, '1', '2009-11-26 15:55:36', NULL),
+(173, 52, 1, 'Pond\'s kem trắng da ban đêm 30g (hũ)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-232.jpg', 29000, '1', '2009-11-26 15:55:36', NULL),
+(174, 52, 1, 'Pond\'s kem trắng da ban đêm 50g (hũ)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-233.jpg', 43100, '1', '2009-11-26 15:55:36', NULL),
+(175, 52, 1, 'Pond\'s kem trắng hồng rạng rỡ 50g (hộp)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-234.jpg', 43100, '1', '2009-11-26 15:55:36', NULL),
+(176, 52, 1, 'Pond\'s kem trắng hồng rạng rỡ 30g (hộp)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-235.jpg', 29000, '1', '2009-11-26 15:55:36', NULL),
+(177, 52, 1, 'Pond\'s kem trắng rạng ngời không tì vết ngày 50g (hũ)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-236.jpg', 117300, '1', '2009-11-26 15:55:36', NULL),
+(178, 52, 1, 'Pond\'s kem trắng rạng ngời không tì vết đêm 50g (hũ)', 'Pond\'s', 'Thùng', 'Hũ', 12, '', 'MP-237.jpg', 117300, '1', '2009-11-26 15:55:36', NULL),
+(179, 52, 1, 'Pond\'s kem rạng ngời không vết thâm nám 10g (gói)', 'Pond\'s', 'Gói', 'Gói', 1, '', 'MP-238.jpg', 5000, '1', '2009-11-26 15:55:36', NULL),
 (180, 50, 1, 'VASELINE Trắng da toàn thân 250g (chai)', 'Vaseline', 'Thùng', 'Chai', 24, '', 'MP-239.jpg', 42300, '1', '2009-11-26 15:55:36', NULL),
 (181, 50, 1, 'VASELINE dữa dưỡng và mát da toàn thân 250ml (chai)', 'Vaseline', 'Thùng', 'Chai', 24, '', 'MP-240.jpg', 37000, '1', '2009-11-26 15:55:36', NULL),
 (199, 51, 1, 'Dove sữa tắm tẩy tế bào chết 200g (chai)', 'Dove', 'Thùng', 'Chai', 24, '', 'MP-260.jpg', 26500, '1', '2009-11-26 15:55:36', NULL),
@@ -779,8 +787,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (389, 55, 56, 'Dầu thơm morning Dew 125 ML', 'Dầu thơm', 'Thùng', 'Chai', 24, '', 'MP-586.jpg', 32400, NULL, '2009-11-26 15:55:37', NULL),
 (460, 18, 1, 'KNORR Viên súp Vị heo 20gx6/24 (hộp)', 'KNORR', 'Thùng', 'Hộp', 24, '', 'TP-1.jpg', 16200, '1', '2009-12-03 16:17:31', NULL),
 (461, 18, 1, 'KNORR Hạt nêm từ thịt 450g/16 (gói)', 'KNORR', 'Thùng', 'Gói', 16, '', 'TP-8.jpg', 21600, '1', '2009-12-03 16:17:31', NULL),
-(462, 18, 1, 'KNORR Hạt nêm từ thịt 900g/8 (gói)', 'KNORR', 'Thùng', 'Gói', 8, '', 'TP-9.jpg', 40500, '1', '2009-12-03 16:17:31', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(462, 18, 1, 'KNORR Hạt nêm từ thịt 900g/8 (gói)', 'KNORR', 'Thùng', 'Gói', 8, '', 'TP-9.jpg', 40500, '1', '2009-12-03 16:17:31', NULL),
 (463, 18, 1, 'KNORR Hạt nêm từ thịt 1.5kg/8 (gói)', 'KNORR', 'Thùng', 'Gói', 8, '', 'TP-4.jpg', 62100, '1', '2009-12-03 16:17:31', NULL),
 (464, 18, 1, 'KNORR Hạt nêm từ thịt 230gx2/12+TO KM (Bộ)', 'KNORR', 'Thùng', 'Bộ', 12, '', 'TP-5.jpg', 21600, '1', '2009-12-03 16:17:31', NULL),
 (465, 18, 1, 'KNORR Hạt nêm từ thịt 70g/80 (gói)', 'KNORR', 'Thùng', 'Gói', 80, '', 'TP-6.jpg', 3600, '1', '2009-12-03 16:17:31', NULL),
@@ -799,7 +806,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (478, 18, 31, 'Bột ngọt A-One 454gr(L)', 'AONE', 'Thùng', 'Gói', 50, '', 'TP-22.jpg', 18810, '1', '2009-12-03 16:17:31', NULL),
 (479, 18, 31, 'Bột ngọt A-One 400gr(L)', 'AONE', 'Thùng', 'Gói', 50, '', 'TP-23.jpg', 16610, '1', '2009-12-03 16:17:31', NULL),
 (480, 18, 31, 'Bột ngọt A-One 350gr(L)', 'AONE', 'Thùng', 'Gói', 40, '', 'TP-24.jpg', 14575, '1', '2009-12-03 16:17:31', NULL),
-(481, 18, 31, 'Bột ngọt A-One 200gr (L)', 'AONE', 'Thùng', 'Gói', 60, '', 'TP-25.jpg', 8305, '1', '2009-12-03 16:17:31', NULL),
+(481, 18, 31, 'Bột ngọt A-One 200gr (L)', 'AONE', 'Thùng', 'Gói', 60, '', 'TP-25.jpg', 8305, '1', '2009-12-03 16:17:31', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (482, 18, 31, 'Bột ngọt A-One 100gr(L)', 'AONE', 'Thùng', 'Gói', 120, '', 'TP-26.jpg', 4152, '1', '2009-12-03 16:17:31', NULL),
 (483, 18, 31, 'Bột ngọt A-One 1kg (L)', 'AONE', 'Thùng', 'Gói', 25, '', 'TP-27.jpg', 37840, '1', '2009-12-03 16:17:31', NULL),
 (484, 18, 31, 'Bột ngọt A-One 454gr(M)', 'AONE', 'Thùng', 'Gói', 50, '', 'TP-28.jpg', 17380, '1', '2009-12-03 16:17:31', NULL),
@@ -1136,8 +1144,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (815, 23, 46, 'Cary Bò 280gr', 'Thịt Bò', 'Hộp', 'Hộp', 1, '', 'TP-402.jpg', 19800, NULL, '2009-12-03 16:17:34', NULL),
 (816, 23, 46, 'Cary Gà 280gr', 'Thịt Gà', 'Hộp', 'Hộp', 1, '', 'TP-403.jpg', 14850, NULL, '2009-12-03 16:17:34', NULL),
 (817, 23, 46, 'Gà hầm 340gr', 'Thịt Gà', 'Hộp', 'Hộp', 1, '', 'TP-404.jpg', 17600, NULL, '2009-12-03 16:17:34', NULL),
-(818, 23, 46, 'Bò kho 397gr', 'Thịt Bò', 'Hộp', 'Hộp', 1, '', 'TP-405.jpg', 24750, NULL, '2009-12-03 16:17:34', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(818, 23, 46, 'Bò kho 397gr', 'Thịt Bò', 'Hộp', 'Hộp', 1, '', 'TP-405.jpg', 24750, NULL, '2009-12-03 16:17:34', NULL),
 (819, 23, 46, 'Bò hầm 397gr', 'Thịt Bò', 'Hộp', 'Hộp', 1, '', 'TP-406.jpg', 33000, NULL, '2009-12-03 16:17:34', NULL),
 (820, 23, 46, 'Heo hầm 397gr', 'Thịt Bò', 'Hộp', 'Hộp', 1, '', 'TP-407.jpg', 33550, NULL, '2009-12-03 16:17:34', NULL),
 (821, 23, 46, 'Pate Thịt heo 397gr', 'Pate', 'Hộp', 'Hộp', 1, '', 'TP-408.jpg', 32450, NULL, '2009-12-03 16:17:34', NULL),
@@ -1179,8 +1186,9 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (857, 27, 22, 'Kẹo dẽo Yupi Fun Gum 120g', 'Yupi', 'Thùng', 'bịch', 24, '', 'TP-477.jpg', 11220, NULL, '2009-12-03 16:17:34', NULL),
 (858, 27, 22, 'Kẹo dẽo Yupi Neon Worm', 'Yupi', 'Thùng', 'bịch', 24, '', 'TP-478.jpg', 11220, NULL, '2009-12-03 16:17:34', NULL),
 (859, 27, 22, 'Kẹo dẽo Yupi Strawberry Kiss 120g', 'Yupi', 'Thùng', 'bịch', 24, '', 'TP-479.jpg', 11220, NULL, '2009-12-03 16:17:34', NULL),
-(860, 29, 41, 'Kẹo Chocolate Kid''s- Ú hũ 340gr', 'Sô-cô-la', 'Thùng', 'Hũ', 12, '', 'TP-480.jpg', 28500, NULL, '2009-12-03 16:17:34', NULL),
-(861, 29, 41, 'Kẹo Chocolate Kid"s bịch 340gr', 'Sô-cô-la', 'Thùng', 'Bịch', 16, '', 'TP-481.jpg', 22167, NULL, '2009-12-03 16:17:34', NULL),
+(860, 29, 41, 'Kẹo Chocolate Kid\'s- Ú hũ 340gr', 'Sô-cô-la', 'Thùng', 'Hũ', 12, '', 'TP-480.jpg', 28500, NULL, '2009-12-03 16:17:34', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(861, 29, 41, 'Kẹo Chocolate Kid\"s bịch 340gr', 'Sô-cô-la', 'Thùng', 'Bịch', 16, '', 'TP-481.jpg', 22167, NULL, '2009-12-03 16:17:34', NULL),
 (862, 29, 41, 'Kẹo Ruby xoắn hộp giấy 200gr', 'Sô-cô-la', 'Thùng', 'hộp', 20, '', 'TP-482.jpg', 14375, NULL, '2009-12-03 16:17:34', NULL),
 (863, 29, 41, 'Kẹo Ruby xoắn hũ nhựa 150gr', 'Sô-cô-la', 'Thùng', 'hũ', 24, '', 'TP-483.jpg', 12075, NULL, '2009-12-03 16:17:34', NULL),
 (864, 29, 41, 'Choco Ball xoắn hộp giấy 200gr', 'Choco Ball', 'Thùng', 'hộp', 20, '', 'TP-484.jpg', 14375, NULL, '2009-12-03 16:17:34', NULL),
@@ -1477,8 +1485,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (1181, 28, 9, 'Bánh Cracker gói Cosy Rostery 114gr', 'Cracker', 'Thùng', 'Gói', 40, '', 'TP-919.jpg', 7000, NULL, '2009-12-03 16:17:36', NULL),
 (1182, 28, 9, 'Bánh Cracker hộp AFC 100gr ( lúa mì, rau cải )', 'Cracker', 'Thùng', 'Hộp', 36, '', 'TP-921.jpg', 6000, NULL, '2009-12-03 16:17:36', NULL),
 (1183, 28, 9, 'Bánh Cracker hộp AFC 200gr ( lúa mì, rau cải )', 'Cracker', 'Thùng', 'Hộp', 16, '', 'TP-922.jpg', 11500, NULL, '2009-12-03 16:17:36', NULL),
-(1184, 28, 9, 'Bánh Cracker hộp AFC phô mai 180gr', 'Cracker', 'Thùng', 'Hộp', 16, '', 'TP-924.jpg', 11500, NULL, '2009-12-03 16:17:36', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(1184, 28, 9, 'Bánh Cracker hộp AFC phô mai 180gr', 'Cracker', 'Thùng', 'Hộp', 16, '', 'TP-924.jpg', 11500, NULL, '2009-12-03 16:17:36', NULL),
 (1185, 28, 9, 'Bánh Cracker hộp AFC Active 102gr', 'Cracker', 'Thùng', 'Hộp', 16, '', 'TP-925.jpg', 9000, NULL, '2009-12-03 16:17:36', NULL),
 (1186, 28, 9, 'Bánh Cracker hộp AFC Active 153gr', 'Cracker', 'Thùng', 'Hộp', 16, '', 'TP-926.jpg', 12000, NULL, '2009-12-03 16:17:36', NULL),
 (1187, 28, 9, 'Bánh Quế 165gr ( thập cẩm, dâu, sôsôla )', 'Bánh', 'Thùng', 'Gói', 24, '', 'TP-935.jpg', 6700, NULL, '2009-12-03 16:17:36', NULL),
@@ -1544,7 +1551,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (1247, 24, 34, 'Xíu Mại 300g', 'Cholimex', 'Thùng', 'Gói', 20, '', 'TP-1059.jpg', 31000, NULL, '2009-11-28 11:30:16', NULL),
 (1248, 23, 59, 'Heo hầm 450 G', 'Thịt Heo', 'Thùng', 'Lon', 24, '', 'TP-1085.jpg', 40000, NULL, '2009-12-03 16:17:37', NULL),
 (1249, 30, 59, 'Bò vàng 45 G', 'Thịt Bò', 'Thùng', 'Gói', 100, '', 'TP-1115.jpg', 11200, NULL, '2009-12-03 16:17:37', NULL),
-(1250, 30, 67, 'Mít sấy vinamit gói 500gr', 'Mít sấy', 'Thùng', 'Gói', 10, '', 'TP-1137.jpg', 63345, '1', '2009-12-03 16:17:37', NULL),
+(1250, 30, 67, 'Mít sấy vinamit gói 500gr', 'Mít sấy', 'Thùng', 'Gói', 10, '', 'TP-1137.jpg', 63345, '1', '2009-12-03 16:17:37', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (1251, 30, 67, 'Mít sấy vinamit gói 250gr', 'Mít sấy', 'Thùng', 'Gói', 20, '', 'TP-1138.jpg', 32445, '1', '2009-12-03 16:17:37', NULL),
 (1252, 30, 67, 'Mít sấy vinamit gói 210gr', 'Mít sấy', 'Thùng', 'Gói', 20, '', 'TP-1139.jpg', 29561, '1', '2009-12-03 16:17:37', NULL),
 (1253, 30, 67, 'Mít sấy vinamit gói 100gr', 'Mít sấy', 'Thùng', 'Gói', 40, '', 'TP-1141.jpg', 13648, '1', '2009-12-03 16:17:37', NULL),
@@ -1825,8 +1833,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (1528, 46, 19, 'Raid Lavender 300ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-322.jpg', 23460, '1', '2009-12-02 15:18:34', NULL),
 (1529, 46, 19, 'Raid chanh 300ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-323.jpg', 23460, '1', '2009-12-02 15:18:34', NULL),
 (1530, 46, 19, 'Raid chanh 600ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-324.jpg', 35700, '1', '2009-12-02 15:18:34', NULL),
-(1531, 46, 19, 'Raid FIK 600ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-325.jpg', 35700, '1', '2009-12-02 15:18:34', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(1531, 46, 19, 'Raid FIK 600ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-325.jpg', 35700, '1', '2009-12-02 15:18:34', NULL),
 (1532, 46, 19, 'Raid Lavender 600ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-326.jpg', 35700, '1', '2009-12-02 15:18:34', NULL),
 (1533, 46, 19, 'Raid Orderless 600ml', 'Raid', 'Chai', 'Chai', 1, '', 'HMP-327.jpg', 35700, '1', '2009-12-02 15:18:34', NULL),
 (1534, 46, 19, 'Bộ máy đuổi muỗi', 'Máy đuổi muỗi', 'Bộ', 'Bộ', 1, '', 'HMP-328.jpg', 39000, '1', '2009-12-02 15:18:34', NULL),
@@ -1911,7 +1918,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (1618, 60, 11, 'Lưỡi dao cạo Sensor Exvel Cart 3 S', 'Lưỡi dao cạo', 'Thùng', 'Hộp', 12, '', 'HMP-242.jpg', 57200, '1', '2009-11-28 11:30:24', NULL),
 (1619, 60, 11, 'Dao cạo cần xanh (gói 2 tặng 1)', 'Blue', 'Thùng', 'Hộp', 12, '', 'HMP-245.jpg', 8800, '1', '2009-11-28 11:30:24', NULL),
 (1620, 60, 11, 'Dao Blue II Ultra gói 2 cây', 'cần xanh', 'Thùng', 'Hộp', 12, '', 'HMP-246.jpg', 8800, '1', '2009-11-28 11:30:24', NULL),
-(1621, 60, 11, 'Dao cạo Blue II Pivot (gói 5)', 'Blue', 'Thùng', 'Hộp', 12, '', 'HMP-247.jpg', 25300, '1', '2009-11-28 11:30:24', NULL),
+(1621, 60, 11, 'Dao cạo Blue II Pivot (gói 5)', 'Blue', 'Thùng', 'Hộp', 12, '', 'HMP-247.jpg', 25300, '1', '2009-11-28 11:30:24', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (1622, 60, 11, 'Dao cạo Blue II Plus 5+1', 'Blue', 'Thùng', 'Hộp', 12, '', 'HMP-248.jpg', 19800, '1', '2009-11-28 11:30:24', NULL),
 (1623, 60, 11, 'Dao cạo Blue II Pivot 5+1', 'Blue', 'Thùng', 'Hộp', 12, '', 'HMP-249.jpg', 25300, '1', '2009-11-28 11:30:24', NULL),
 (1624, 60, 11, 'Dao cạo Super Click ER-80 (16.4)', 'Super Click', 'Thùng', 'Hộp', 144, '', 'HMP-250.jpg', 5739, '1', '2009-11-28 11:30:24', NULL),
@@ -2176,8 +2184,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (1954, 14, 53, 'APPETON WEIGHT GAIN CHILD 450g\n(Thức uống dinh dưỡng dành cho người gầy\nTrẻ em-sản phẩm của Pháp)', 'APPETON', 'Thùng', 'Hộp', 24, '', 'SCPS-391.jpg', 215000, '2', '2009-12-03 11:56:44', NULL),
 (1955, 14, 53, 'APPETON WEIGHT GAIN ADULT 900g\n(Thức uống dinh dưỡng dành cho người gầy\nNgười lớn-sản phẩm của Pháp)', 'APPETON', 'Thùng', 'Hộp', 12, '', 'SCPS-392.jpg', 399000, '2', '2009-12-03 11:56:44', NULL),
 (1956, 14, 53, 'APPETON WEIGHT GAIN CHILD 900g\n(Thức uống dinh dưỡng dành cho người gầy\nTrẻ em-sản phẩm của Pháp)', 'APPETON', 'Thùng', 'Hộp', 12, '', 'SCPS-393.jpg', 399000, '2', '2009-12-03 11:56:44', NULL),
-(1957, 10, 58, 'Sữa tươi Ba Vì có đường 180ml', 'Ba Vì', 'Thùng', 'Lốc', 12, '', 'SCPS-394.jpg', 17400, '2', '2009-12-03 11:56:44', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(1957, 10, 58, 'Sữa tươi Ba Vì có đường 180ml', 'Ba Vì', 'Thùng', 'Lốc', 12, '', 'SCPS-394.jpg', 17400, '2', '2009-12-03 11:56:44', NULL),
 (1958, 10, 58, 'Sữa tươi Ba Vì dâu 180ml', 'Ba Vì', 'Thùng', 'Lốc', 12, '', 'SCPS-395.jpg', 17400, '2', '2009-12-03 11:56:44', NULL),
 (1959, 10, 58, 'Sữa tươi Ba Vì có đường 110ml', 'Ba Vì', 'Thùng', 'Lốc', 12, '', 'SCPS-396.jpg', 12000, '2', '2009-12-03 11:56:44', NULL),
 (1960, 10, 58, 'Sữa tươi Ba Vì dâu 110ml', 'Ba Vì', 'Thùng', 'Lốc', 12, '', 'SCPS-397.jpg', 12000, '2', '2009-12-03 11:56:44', NULL),
@@ -2280,7 +2287,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2057, 33, 27, 'Trà Xanh 500ml', 'Trà chai', 'Thùng', 'chai', 24, '', 'TU-114.jpg', 6208, NULL, '2009-11-26 11:00:07', NULL),
 (2058, 32, 29, 'Caphe đen VNM hộp 255g', 'Vinamilk', 'Thùng', 'Hộp', 32, '', 'TU-119.jpg', 28571, NULL, '2009-12-04 16:51:49', NULL),
 (2059, 32, 29, 'Caphe 3 in 1 VNM hộp 340g', 'Vinamilk', 'Thùng', 'Hộp', 24, '', 'TU-120.jpg', 24762, NULL, '2009-12-04 16:51:49', NULL),
-(2060, 32, 29, 'Caphe đen VNM dây 170g', 'Vinamilk', 'Dây', 'Dây', 1, '', 'TU-121.jpg', 19050, NULL, '2009-12-04 16:51:49', NULL),
+(2060, 32, 29, 'Caphe đen VNM dây 170g', 'Vinamilk', 'Dây', 'Dây', 1, '', 'TU-121.jpg', 19050, NULL, '2009-12-04 16:51:49', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (2061, 32, 29, 'Caphe 3 in 1 VNM dây 170g', 'Vinamilk', 'Dây', 'Dây', 1, '', 'TU-122.jpg', 12290, NULL, '2009-12-04 16:51:49', NULL),
 (2062, 32, 28, 'Nescafe Bịch (12*35)', 'Nescafe', 'Hộp', 'Hộp', 1, '', 'TU-123.jpg', 48000, '3', '2009-12-04 16:51:49', NULL),
 (2063, 32, 28, 'Nescafe Đậm đà 24*20', 'Nescafe', 'Hộp', 'Hộp', 1, '', 'TU-124.jpg', 29200, '3', '2009-12-04 16:51:50', NULL),
@@ -2393,13 +2401,13 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2193, 31, 64, 'Medoc - Château Au Berton 2000', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-297.jpg', 247000, '12', '2009-11-26 11:00:08', NULL),
 (2194, 31, 64, 'Cotes de Castillon- Chateau Briand 2003 GOLD MEDAL', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-298.jpg', 269000, '12', '2009-11-26 11:00:08', NULL),
 (2195, 31, 64, 'Cotes de Blaye - Vieux Chateau Valentin Premieres 2002 GOLD MEDAL', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-299.jpg', 289000, '12', '2009-11-26 11:00:08', NULL),
-(2196, 31, 64, 'Haut Medoc - Chateau de Monteil D''Arsac 2006  Cru Bourgeois', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-300.jpg', 295000, '12', '2009-11-26 11:00:08', NULL),
+(2196, 31, 64, 'Haut Medoc - Chateau de Monteil D\'Arsac 2006  Cru Bourgeois', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-300.jpg', 295000, '12', '2009-11-26 11:00:08', NULL),
 (2197, 31, 64, 'Saint Emillon - Font Destiac 2006', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-301.jpg', 276000, '12', '2009-11-26 11:00:08', NULL),
 (2198, 31, 64, 'Cotes de Bourg AOC - Chateau Tour De Guiet 2005 GOLD MEDAL', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-302.jpg', 335000, '12', '2009-11-26 11:00:08', NULL),
 (2199, 31, 64, 'Lalande de Pomerol - Chateau Coudreau 2006', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-303.jpg', 355000, '12', '2009-11-26 11:00:08', NULL),
 (2200, 31, 64, 'Fronsac - Chateau La Vieille Croix 2000', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-304.jpg', 445000, '12', '2009-11-26 11:00:08', NULL),
 (2201, 31, 64, 'St Emillon Grand Cru - Chateau Petit Val 2004', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-305.jpg', 465000, '12', '2009-11-26 11:00:08', NULL),
-(2202, 31, 64, 'Margaux - Château D''Arsac Cru Bourgeois 2006', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-306.jpg', 630000, '12', '2009-11-26 11:00:08', NULL),
+(2202, 31, 64, 'Margaux - Château D\'Arsac Cru Bourgeois 2006', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-306.jpg', 630000, '12', '2009-11-26 11:00:08', NULL),
 (2203, 31, 64, 'Pauillac - Château Lacoste Borie 2006 (Barrel Aged)', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-307.jpg', 645000, '12', '2009-11-26 11:00:08', NULL),
 (2204, 31, 64, 'Bordeaux AOC - Bordeaux Cuvée Spéciale 2006', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-309.jpg', 138000, '12', '2009-11-26 11:00:08', NULL),
 (2205, 31, 64, 'Bordeaux AOC - Roc Saint André 2005', 'French Wine', 'Chai', 'Chai', 1, '', 'TU-310.jpg', 158000, '12', '2009-11-26 11:00:08', NULL),
@@ -2503,8 +2511,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2303, 31, 64, 'Colchagua Valley - MontGras Reserva Merlot 2007 (14.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-408.jpg', 261000, '12', '2009-11-26 11:00:09', NULL),
 (2304, 31, 64, 'Colchagua Valley - MontGras Reserva Cabernet Sauvignon 2007 (14.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-409.jpg', 261000, '12', '2009-11-26 11:00:09', NULL),
 (2305, 31, 64, 'Colchagua Valley - MontGras Reserva Carmenère 2007 (14.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-410.jpg', 282000, '12', '2009-11-26 11:00:09', NULL),
-(2306, 31, 64, 'Colchagua Valley - MontGras Reserva Quatro 2007 (14.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-411.jpg', 282000, '12', '2009-11-26 11:00:09', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(2306, 31, 64, 'Colchagua Valley - MontGras Reserva Quatro 2007 (14.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-411.jpg', 282000, '12', '2009-11-26 11:00:09', NULL),
 (2307, 31, 64, 'Colchagua Valley - Ninquen Antu Cabernet Sauvignon Carmenere 2006 (15 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-412.jpg', 424000, '12', '2009-11-26 11:00:09', NULL),
 (2308, 31, 64, 'Colchagua Valley - Luis Felipe Chardonnay 2006 (13.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-413.jpg', 178000, '12', '2009-11-26 11:00:09', NULL),
 (2309, 31, 64, 'Central Valley - Luis Felipe Sauvignon Blanc 2006 (13.5 º)', 'Chilean Wines', 'Chai', 'Chai', 1, '', 'TU-414.jpg', 178000, '12', '2009-11-26 11:00:09', NULL),
@@ -2611,7 +2618,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2411, 67, 13, 'Núm vú S.mềm 2 cái', 'Núm vú', 'Hộp', 'Cái', 2, '', 'SCPS-3.jpg', 32700, '3', '2009-11-24 11:33:38', NULL),
 (2412, 67, 13, 'Bình sữa Streamline 150 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-4.jpg', 45000, '3', '2009-11-24 11:33:38', NULL),
 (2413, 67, 13, 'Bình sữa Streamline 250 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-5.jpg', 47600, '3', '2009-11-24 11:33:38', NULL),
-(2414, 67, 13, 'Bình sữa tròn có hình 120 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-6.jpg', 19500, '3', '2009-11-24 11:33:38', NULL),
+(2414, 67, 13, 'Bình sữa tròn có hình 120 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-6.jpg', 19500, '3', '2009-11-24 11:33:38', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (2415, 67, 13, 'Bình sữa tròn có hình 240 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-7.jpg', 20500, '3', '2009-11-24 11:33:38', NULL),
 (2416, 67, 13, 'Bình sữa tiêu chuẩn 120 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-8.jpg', 14000, '3', '2009-11-24 11:33:38', NULL),
 (2417, 67, 13, 'Bình sữa tiêu chuẩn 240 ml', 'Bình sữa', 'Cái', 'Cái', 1, '', 'SCPS-9.jpg', 15000, '3', '2009-11-24 11:33:38', NULL),
@@ -2699,8 +2707,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2536, 48, 56, 'Dầu gội đầu em bé 800 ML', 'Dầu gội', 'Thùng', 'Chai', 12, '', 'MP-603.jpg', 67500, NULL, '2009-11-26 15:55:38', NULL),
 (2537, 48, 56, 'Dầu gội đầu em bé có dầu xả 200 ML', 'Dầu gội', 'Thùng', 'Chai', 48, '', 'MP-604.jpg', 26600, NULL, '2009-11-26 15:55:38', NULL),
 (2538, 48, 56, 'Dầu gội đầu em bé có dầu xả 800 ML', 'Dầu gội', 'Thùng', 'Chai', 12, '', 'MP-605.jpg', 77400, NULL, '2009-11-26 15:55:38', NULL),
-(2539, 48, 56, 'Dầu gội đầu Johnson''s Baby cho tóc bé mềm mại 200 ml', 'Dầu gội', 'Thùng', 'Chai', 48, '', 'MP-606.jpg', 26550, NULL, '2009-11-26 15:55:38', NULL),
-(2540, 48, 56, 'Dầu gội đầu Johnson''s Baby cho tóc bé mềm mại 800 ml', 'Dầu gội', 'Thùng', 'Chai', 12, '', 'MP-607.jpg', 80100, NULL, '2009-11-26 15:55:38', NULL),
+(2539, 48, 56, 'Dầu gội đầu Johnson\'s Baby cho tóc bé mềm mại 200 ml', 'Dầu gội', 'Thùng', 'Chai', 48, '', 'MP-606.jpg', 26550, NULL, '2009-11-26 15:55:38', NULL),
+(2540, 48, 56, 'Dầu gội đầu Johnson\'s Baby cho tóc bé mềm mại 800 ml', 'Dầu gội', 'Thùng', 'Chai', 12, '', 'MP-607.jpg', 80100, NULL, '2009-11-26 15:55:38', NULL),
 (2541, 51, 56, 'Sữa tắm em bé 100 ML', 'Sữa tắm', 'Thùng', 'Chai', 48, '', 'MP-609.jpg', 13500, NULL, '2009-11-26 15:55:38', NULL),
 (2542, 51, 56, 'Sữa tắm em bé 500 ML', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-611.jpg', 44100, NULL, '2009-11-26 15:55:38', NULL),
 (2543, 51, 56, 'Sữa tắm em bé 1000 ML', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-612.jpg', 80100, NULL, '2009-11-26 15:55:38', NULL),
@@ -2840,8 +2848,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2688, 58, 12, 'Băng Vệ Sinh LAURIER Đêm trọn giấc nồng', 'LAURIER', 'Thùng', 'Gói', 90, '', 'HMP-219.jpg', 7298, '2', '2009-12-02 17:26:15', 0000000100),
 (2689, 58, 12, 'Băng Vệ Sinh LAURIER Siêu mỏng bảo vệ ( ban ngày)', 'LAURIER', 'Thùng', 'Gói', 60, '', 'HMP-220.jpg', 7450, '2', '2009-11-28 11:48:21', NULL),
 (2690, 58, 12, 'Băng Vệ Sinh LAURIER Laurier PL Natural fit', 'LAURIER', 'Thùng', 'Gói', 36, '', 'HMP-223.jpg', 16275, '2', '2009-12-02 17:26:15', 0000000100),
-(2691, 58, 12, 'Băng Vệ Sinh LAURIER Laurier PL Natural fit hương trà xanh', 'LAURIER', 'Thùng', 'Gói', 36, '', 'HMP-224.jpg', 16275, '2', '2009-12-02 17:26:15', 0000000100);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(2691, 58, 12, 'Băng Vệ Sinh LAURIER Laurier PL Natural fit hương trà xanh', 'LAURIER', 'Thùng', 'Gói', 36, '', 'HMP-224.jpg', 16275, '2', '2009-12-02 17:26:15', 0000000100),
 (2692, 49, 11, 'Head & Shoulders xả Bạc hà mát rượi 200ml', 'Head & Shoulders', 'Thùng', 'Chai', 24, '', 'MP-184.jpg', 27000, '1', '2009-11-28 11:30:41', NULL),
 (2693, 54, 15, 'FA ROLL ON Dry White 50 ml', 'FA', 'Thùng', 'Chai', 30, '', 'MP-443.jpg', 20800, '2', '2009-11-28 11:30:41', NULL),
 (2694, 54, 15, 'FA ROLL ON For Men 50 ml', 'FA', 'Thùng', 'Chai', 30, '', 'MP-444.jpg', 20800, '2', '2009-11-28 11:30:41', NULL),
@@ -2884,7 +2891,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2735, 47, 16, 'Gel vệ sinh tay Nuolive- Hương Đào', 'Nuolive', 'Thùng', 'Chai', 72, '', 'MP-575.jpg', 36000, '12', '2009-12-04 16:51:50', NULL),
 (2736, 47, 16, 'Gel vệ sinh tay Nuolive- Hương Cam', 'Nuolive', 'Thùng', 'Chai', 72, '', 'MP-576.jpg', 36000, '12', '2009-12-04 16:51:50', NULL),
 (2737, 47, 16, 'Gel vệ sinh tay Nuolive- Hương Táo', 'Nuolive', 'Thùng', 'Chai', 72, '', 'MP-577.jpg', 36000, '12', '2009-12-04 16:51:50', NULL),
-(2739, 62, 56, 'Khăn ướt JOHNSON''S BABY 20 M', 'Khăn ướt', 'Thùng', 'Gói', 48, '', 'HMP-601.jpg', 12887, '1', '2009-11-28 11:48:22', NULL),
+(2739, 62, 56, 'Khăn ướt JOHNSON\'S BABY 20 M', 'Khăn ướt', 'Thùng', 'Gói', 48, '', 'HMP-601.jpg', 12887, '1', '2009-11-28 11:48:22', NULL),
 (2740, 66, 13, 'Phấn thơm 450g', 'PIGEON', 'Thùng', 'Chai', 1, '', 'MP-348.jpg', 30000, '3', '2009-11-28 11:48:22', NULL),
 (2741, 66, 13, 'Phấn thuốc 100g', 'PIGEON', 'Thùng', 'Chai', 1, '', 'MP-349.jpg', 13000, '3', '2009-11-28 11:48:22', NULL),
 (2742, 66, 56, 'Phấn thơm em bé 050 GM', 'Phấn thơm', 'Thùng', 'Chai', 144, '', 'MP-590.jpg', 5300, '1', '2009-11-28 11:48:22', NULL),
@@ -2964,7 +2971,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (2868, 50, 12, 'Sữa rửa mặt Biore (cho nữ) Trắng sáng rạng rỡ 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-247.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
 (2869, 50, 12, 'Sữa rửa mặt Biore (cho nữ) Trắng da chống nắng 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-248.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
 (2870, 50, 12, 'Sữa rửa mặt Biore (cho nam) Ngăn ngừa & sạch mụn 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-249.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
-(2871, 50, 12, 'Sữa rửa mặt Biore (cho nam) Làm sạch kĩ & se lỗ chân lông 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-250.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
+(2871, 50, 12, 'Sữa rửa mặt Biore (cho nam) Làm sạch kĩ & se lỗ chân lông 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-250.jpg', 17250, '2', '2009-12-01 10:16:19', NULL);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (2872, 50, 12, 'Sữa rửa mặt Biore (cho nam) Mát mẻ & sảng khoái 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-251.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
 (2873, 50, 12, 'Sữa rửa mặt Biore (cho nam) Da sạch & sáng khỏe 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-252.jpg', 17250, '2', '2009-12-01 10:16:19', NULL),
 (2874, 50, 12, 'Sữa rửa mặt Biore (cho nam) Sữa rửa mặt tác động kép 50g', 'Biore', 'Thùng', 'Tuýp', 48, '', 'MP-253.jpg', 20702, '2', '2009-12-01 10:16:19', NULL),
@@ -3086,7 +3094,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3065, 60, 63, 'Romano - Bọt cạo râu Classic - 175ml', 'Romano', 'Tuýp', 'Tuýp', 1, '', 'NL-1.jpg', 36500, '12', '2009-12-02 17:26:15', 0000000100),
 (3066, 62, 22, 'Khăn ướt Mitu Hộp Hồng 60 sheet/hộp', 'Khăn ướt', 'Hộp', 'Gói', 24, '', 'HMP-465.jpg', 26928, '1', '2009-12-02 16:32:08', 0000000100),
 (3067, 62, 22, 'Khăn ướt Mitu Hộp Xanh 60 sheet/hộp', 'Khăn ướt', 'Hộp', 'Gói', 24, '', 'HMP-466.jpg', 26928, '1', '2009-12-02 16:32:08', 0000000100),
-(3068, 62, 56, 'Khăn ướt Johnson''s Baby 80 M', 'Khăn ướt', 'Thùng', 'Cái', 12, '', 'HMP-602.jpg', 48300, '1', '2009-12-02 16:32:08', 0000000100),
+(3068, 62, 56, 'Khăn ướt Johnson\'s Baby 80 M', 'Khăn ướt', 'Thùng', 'Cái', 12, '', 'HMP-602.jpg', 48300, '1', '2009-12-02 16:32:08', 0000000100),
 (3069, 63, 14, 'Tấm lót Newborn 1-56', 'Newborn', 'Thùng', 'Gói', 8, '', 'HMP-544.jpg', 50000, '2', '2009-12-02 16:32:08', 0000000100),
 (3070, 63, 14, 'Tấm lót Newborn 2-20', 'Newborn', 'Thùng', 'Gói', 12, '', 'HMP-545.jpg', 28000, '2', '2009-12-02 16:32:08', 0000000100),
 (3071, 63, 14, 'Tấm lót Newborn 2-40', 'Newborn', 'Thùng', 'Gói', 6, '', 'HMP-546.jpg', 53000, '2', '2009-12-02 16:32:08', 0000000100),
@@ -3175,8 +3183,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3154, 68, 22, 'Sáp Bịch Mùi Cam 80g', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-405.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100),
 (3155, 68, 22, 'Sáp Bịch Mùi Táo 80g', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-406.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100),
 (3156, 68, 22, 'Sáp Bịch Mùi Chanh', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-407.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100),
-(3157, 68, 22, 'Sáp Bịch Mùi Bougenville 80g', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-408.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(3157, 68, 22, 'Sáp Bịch Mùi Bougenville 80g', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-408.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100),
 (3158, 68, 22, 'Sáp Bịch Mùi Sensation 80g', 'Bịch', 'Thùng', 'bịch', 72, '', 'HMP-409.jpg', 19074, NULL, '2009-12-02 16:32:34', 0000000100),
 (3159, 68, 22, 'Gốm Thơm Finesse Hồng 20g/gói', 'Finesse', 'Thùng', 'gói', 72, '', 'HMP-416.jpg', 12342, NULL, '2009-12-02 16:32:34', 0000000100),
 (3160, 68, 22, 'Gốm Thơm Finesse Lài 20g/gói', 'Finesse', 'Thùng', 'gói', 72, '', 'HMP-417.jpg', 12342, NULL, '2009-12-02 16:32:34', 0000000100),
@@ -3315,7 +3322,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3305, 55, 56, 'Dầu chia trong 200 ml', 'Dầu thơm', 'Thùng', 'Chai', 12, '', 'MP-584.jpg', 35100, NULL, '2009-12-02 16:32:42', 0000000100),
 (3306, 55, 56, 'Dầu thơm Morning Dew 50 ml', 'Dầu thơm', 'Thùng', 'Chai', 36, '', 'MP-585.jpg', 16200, NULL, '2009-12-02 16:32:42', 0000000100),
 (3307, 51, 56, 'Sữa tắm em bé 200 ml', 'Sữa tắm', 'Thùng', 'Chai', 48, '', 'MP-610.jpg', 22500, NULL, '2009-12-02 16:32:42', 0000000100),
-(3308, 51, 56, 'Sữa tắm thư giãn chứa 1/3 Kem dưỡng da 250 ml', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-624.jpg', 27000, NULL, '2009-12-02 16:32:42', 0000000100),
+(3308, 51, 56, 'Sữa tắm thư giãn chứa 1/3 Kem dưỡng da 250 ml', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-624.jpg', 27000, NULL, '2009-12-02 16:32:42', 0000000100);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (3309, 51, 56, 'Sữa tắm thư giãn chứa 1/3 Kem dưỡng da 400 ml', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-625.jpg', 39600, NULL, '2009-12-02 16:32:42', 0000000100),
 (3310, 51, 56, 'Sữa tắm thư giãn chứa 1/3 Kem dưỡng da 750 ml', 'Sữa tắm', 'Thùng', 'Chai', 12, '', 'MP-626.jpg', 67500, NULL, '2009-12-02 16:32:42', 0000000100),
 (3311, 52, 56, 'Kem dưỡng da (Hũ) 50 gr', 'Kem dưỡng da', 'Thùng', 'Chai', 24, '', 'MP-627.jpg', 24300, NULL, '2009-12-02 16:32:42', 0000000100),
@@ -3505,8 +3513,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3521, 28, 9, 'Bông lan Swiss roll cuốn 480gr', 'Bông lan', 'Thùng', 'Hộp', 12, '', 'TP-868.jpg', 28000, NULL, '2009-12-03 16:11:45', 0000000100),
 (3522, 28, 9, 'Bánh bơ Gói Bơ túi 400gr ( nho, dừa, mứt, cacao )', 'Bánh bơ', 'Thùng', 'Gói', 30, '', 'TP-881.jpg', 28000, NULL, '2009-12-03 16:11:45', 0000000100),
 (3523, 28, 9, 'Bánh bơ Gói Good choice 80gr', 'Bánh bơ', 'Thùng', 'Hộp', 12, '', 'TP-884.jpg', 7500, NULL, '2009-12-03 16:11:45', 0000000100),
-(3524, 28, 9, 'Bánh bơ Copo 3 Kg/thùng', 'Bánh bơ', 'Thùng', 'Thùng', 1, '', 'TP-885.jpg', 44000, NULL, '2009-12-03 16:11:45', 0000000100);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(3524, 28, 9, 'Bánh bơ Copo 3 Kg/thùng', 'Bánh bơ', 'Thùng', 'Thùng', 1, '', 'TP-885.jpg', 44000, NULL, '2009-12-03 16:11:45', 0000000100),
 (3525, 28, 9, 'Bánh bơ Copo sọc 3Kg/thùng', 'Bánh bơ', 'Thùng', 'Thùng', 1, '', 'TP-886.jpg', 44000, NULL, '2009-12-03 16:11:45', 0000000100),
 (3526, 28, 9, 'Bánh bơ Hộp giấy Chipco hạt sôcôla 150gr', 'Bánh bơ', 'Thùng', 'Hộp', 16, '', 'TP-888.jpg', 8300, NULL, '2009-12-03 16:11:45', 0000000100),
 (3527, 28, 9, 'Bánh bơ Hộp giấy Sharry 150gr (dừa, mè)', 'Bánh bơ', 'Thùng', 'Hộp', 16, '', 'TP-889.jpg', 6500, NULL, '2009-12-03 16:11:45', 0000000100),
@@ -3672,7 +3679,8 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3687, 27, 44, 'Kẹo Blow up Mint/Menta (Bạc hà) 280g', 'Kẹo Blow up', 'Thùng', 'hộp', 18, '', 'TP-1278.jpg', 25000, NULL, '2009-12-03 16:11:46', 0000000100),
 (3688, 26, 44, 'Bánh quy Mana chocolate rellenas vanila 165g', 'Khác', 'Thùng', 'ống', 36, '', 'TP-1279.jpg', 12500, NULL, '2009-12-03 16:11:46', 0000000100),
 (3689, 27, 44, 'Kẹo Rocklets candy coated chocolate coated peanuts 24 x 150g', 'Khác', 'Thùng', 'gói', 24, '', 'TP-1280.jpg', 28000, NULL, '2009-12-03 16:11:46', 0000000100),
-(3690, 27, 44, 'Kẹo Rocklets candy chocolate 24 x 150g', 'Khác', 'Thùng', 'gói', 24, '', 'TP-1281.jpg', 28000, NULL, '2009-12-03 16:11:47', 0000000100),
+(3690, 27, 44, 'Kẹo Rocklets candy chocolate 24 x 150g', 'Khác', 'Thùng', 'gói', 24, '', 'TP-1281.jpg', 28000, NULL, '2009-12-03 16:11:47', 0000000100);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
 (3691, 27, 44, 'BON O BON MILK CHOCO 16X18X17G', 'Khác', 'Thùng', 'hộp', 16, '', 'TP-1282.jpg', 48000, NULL, '2009-12-03 16:11:47', 0000000100),
 (3692, 27, 44, 'BON O BON BLANCO 16X18X17G', 'Khác', 'Thùng', 'hộp', 16, '', 'TP-1283.jpg', 48000, NULL, '2009-12-03 16:11:47', 0000000100),
 (3693, 27, 44, 'Kẹo Blow up', 'Khác', 'Thùng', 'hủ', 12, '', 'TP-1284.jpg', 35000, NULL, '2009-12-03 16:11:47', 0000000100),
@@ -3701,7 +3709,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3716, 26, 44, 'Milk Choky (milk & chocolate)', 'Khác', 'Thùng', 'gói', 48, '', 'TP-1308.jpg', 9000, NULL, '2009-12-03 16:11:47', 0000000100),
 (3717, 29, 7, 'Kẹo hộp - Kẹo mềm Michoco Hộp nhựa Trái Tim 200g', 'Kẹo hộp', 'Thùng', 'Hộp', 28, '', 'TP-541.jpg', 19000, NULL, '2009-12-03 16:17:34', NULL),
 (3718, 24, 34, 'Xíu Mại 300', 'Cholimex', 'Thùng', 'Gói', 20, '', 'TP-1059.jpg', 31000, NULL, '2009-12-03 16:17:37', NULL),
-(3749, 28, 69, 'Marie Original Biscuits 300gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1299.jpg', 22500, '3', '2009-12-03 16:46:16', NULL),
+(3749, 28, 69, 'Marie Original Biscuits 300gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1299.jpg', 22500, '3', '2009-12-03 16:46:16', NULL),
 (3816, 33, 4, 'Trà xanh chai PET 0.5 lít', 'Trà chai', 'Thùng', 'Chai', 24, '', 'TU-39.jpg', 6263, NULL, '2009-12-03 17:03:10', 0000000100),
 (3817, 33, 5, 'Hồng trà cám', 'Trà', 'Kg', 'Kg', 1, '', 'TU-63.jpg', 15400, '12', '2009-12-03 17:03:10', 0000000100),
 (3818, 33, 5, 'Trà sen rời loại 1', 'Trà', 'Kg', 'Kg', 1, '', 'TU-64.jpg', 136500, '12', '2009-12-03 17:03:10', 0000000100),
@@ -3780,57 +3788,57 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (3985, 26, 69, 'Bánh Snack hương vị thịt nướng 45g', 'Bánh Snack', 'Thùng', 'Lon', 12, '', 'TP-1276.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
 (3986, 26, 69, 'Bánh Snack hương vị Khoai tây 45g', 'Bánh Snack', 'Thùng', 'Lon', 12, '', 'TP-1277.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
 (3987, 26, 69, 'Bánh Snack Gia vị thơm cay 45g', 'Bánh Snack', 'Thùng', 'Lon', 12, '', 'TP-1278.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3988, 26, 69, 'Muzic chocolate wafer 110gr', 'Bánh Munchy''s', 'Thùng', 'Gói', 12, '', 'TP-1279.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3989, 26, 69, 'Muzic hazelnut wafer 110gr', 'Bánh Munchy''s', 'Thùng', 'Gói', 12, '', 'TP-1280.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3990, 26, 69, 'Muzic vanilla wafer 110gr', 'Bánh Munchy''s', 'Thùng', 'Gói', 12, '', 'TP-1281.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3991, 26, 69, 'Munchini chocolate W/S 100g', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1282.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3992, 26, 69, 'Munchini strawberry W/S 100g', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1283.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3993, 26, 69, 'Munchini giga bite chocolate 65gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1284.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3994, 26, 69, 'Munchini giga bite strawberry 65gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1285.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3995, 26, 69, 'Lexus vegetable  calcium cracker 168gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1286.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3996, 26, 69, 'Lexus cheese cream  sandwich  168gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1287.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3997, 26, 69, 'Lexus chocolate cream sandwich 168gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1288.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3998, 26, 69, 'Lexus peanut butter sandwich 168gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1289.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(3999, 26, 69, 'Yosss chocolate cream wafer 9g', 'Bánh Munchy''s', 'Thùng', 'Gói', 48, '', 'TP-1290.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4000, 26, 69, 'Yosss strawberry cream wafer 9g', 'Bánh Munchy''s', 'Thùng', 'Gói', 48, '', 'TP-1291.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4001, 26, 69, 'Lexus cheese cream  sandwich 31.5gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1292.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4002, 26, 69, 'Lexus chocolate cream sandwich 31.5gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1293.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4003, 26, 69, 'Lexus peanut butter sandwich 31.5gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1294.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4004, 26, 69, 'Mini cracker cheese cream 45g', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1295.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4005, 26, 69, 'Mini cracker peanut butter 45g', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1296.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4006, 26, 69, 'Mini cracker chocolate cream 45g', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1297.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4007, 26, 69, 'Marie Cuppucino Biscuits 300gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1298.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4008, 26, 69, 'Marie Original Biscuits 300gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1299.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4009, 26, 69, 'Shortea Chocolate Cookies 75gr', 'Bánh Munchy''s', 'Thùng', 'Gói', 72, '', 'TP-1300.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4010, 26, 69, 'Shortea Milk Cookies 75gr', 'Bánh Munchy''s', 'Thùng', 'Gói', 72, '', 'TP-1301.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4011, 26, 69, 'Lite Cream Cracker 380gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1302.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4012, 26, 69, 'Cream Cracker 380gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1303.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4013, 26, 69, 'Vege Cracker 380gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1304.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4014, 26, 69, 'Sugar Cracker 380gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 12, '', 'TP-1305.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4015, 26, 69, 'Romeo Chocolate 200gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1306.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4016, 26, 69, 'Romeo Coffee 200gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 24, '', 'TP-1307.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4017, 26, 69, 'Jackpot Assorted Biscuits 700gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1308.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4018, 26, 69, 'The Tour Assorted Biscuits 700gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1309.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4019, 26, 69, 'Funmix assorted biscuits 750gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1310.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4020, 26, 69, 'Topmix assorted biscuits 750gr', 'Bánh Munchy''s', 'Thùng', 'Hộp', 6, '', 'TP-1311.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
-(4030, 31, 69, 'Misty Mooring Dry White 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-509.jpg', 120000, NULL, '2009-12-04 16:51:49', NULL),
-(4031, 31, 69, 'Misty Mooring Soft Dry Red 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-510.jpg', 120000, NULL, '2009-12-04 16:51:49', NULL),
-(4032, 31, 69, 'CR Cabernet Sauvignon 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-511.jpg', 160000, NULL, '2009-12-04 16:51:49', NULL),
-(4033, 31, 69, 'Long Row Cabernet Sauvignon 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 6, '', 'TU-512.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
-(4034, 31, 69, 'Long Row Chardonnay 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-513.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
-(4035, 31, 69, 'Long Row Shiraz 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 6, '', 'TU-514.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
-(4036, 31, 69, 'Long Row Sauvignon Blanc 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 6, '', 'TU-515.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
-(4037, 31, 69, 'Nine Vine Rose 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-516.jpg', 290000, NULL, '2009-12-04 16:51:49', NULL),
-(4038, 31, 69, 'Coonawarra Cabernet Sauvignon 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 6, '', 'TU-517.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL),
-(4039, 31, 69, 'Red Belly Black Shiraz 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-518.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
-(4040, 31, 69, 'Red Belly Black Chardonnay 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-519.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
-(4041, 31, 69, 'Chalk Hill Blue Semillon Chardonnay 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-520.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
-(4042, 31, 69, 'Chalk Hill Blue Shiraz Cabernet 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-521.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
-(4043, 31, 69, 'Chalk Hill Blue Sparking NV 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-522.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
-(4044, 31, 69, 'Sparkling Wine Regent Brut Pinot NV 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-523.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
-(4045, 31, 69, 'St Agnes Silver Vodka 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-524.jpg', 250000, NULL, '2009-12-04 16:51:49', NULL),
-(4046, 31, 69, 'St Agnes 3 Star Brandy 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-525.jpg', 250000, NULL, '2009-12-04 16:51:49', NULL),
-(4047, 31, 69, 'St Agnes very old Brandy (Brandy XO above 30 years) 750ml', 'Rượu Angove''s', 'Thùng', 'Chai', 12, '', 'TU-526.jpg', 4500000, NULL, '2009-12-04 16:51:49', NULL),
+(3988, 26, 69, 'Muzic chocolate wafer 110gr', 'Bánh Munchy\'s', 'Thùng', 'Gói', 12, '', 'TP-1279.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3989, 26, 69, 'Muzic hazelnut wafer 110gr', 'Bánh Munchy\'s', 'Thùng', 'Gói', 12, '', 'TP-1280.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3990, 26, 69, 'Muzic vanilla wafer 110gr', 'Bánh Munchy\'s', 'Thùng', 'Gói', 12, '', 'TP-1281.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3991, 26, 69, 'Munchini chocolate W/S 100g', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1282.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3992, 26, 69, 'Munchini strawberry W/S 100g', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1283.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3993, 26, 69, 'Munchini giga bite chocolate 65gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1284.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3994, 26, 69, 'Munchini giga bite strawberry 65gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1285.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3995, 26, 69, 'Lexus vegetable  calcium cracker 168gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1286.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3996, 26, 69, 'Lexus cheese cream  sandwich  168gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1287.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3997, 26, 69, 'Lexus chocolate cream sandwich 168gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1288.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3998, 26, 69, 'Lexus peanut butter sandwich 168gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1289.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(3999, 26, 69, 'Yosss chocolate cream wafer 9g', 'Bánh Munchy\'s', 'Thùng', 'Gói', 48, '', 'TP-1290.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4000, 26, 69, 'Yosss strawberry cream wafer 9g', 'Bánh Munchy\'s', 'Thùng', 'Gói', 48, '', 'TP-1291.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4001, 26, 69, 'Lexus cheese cream  sandwich 31.5gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1292.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4002, 26, 69, 'Lexus chocolate cream sandwich 31.5gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1293.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4003, 26, 69, 'Lexus peanut butter sandwich 31.5gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1294.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4004, 26, 69, 'Mini cracker cheese cream 45g', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1295.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4005, 26, 69, 'Mini cracker peanut butter 45g', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1296.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4006, 26, 69, 'Mini cracker chocolate cream 45g', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1297.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4007, 26, 69, 'Marie Cuppucino Biscuits 300gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1298.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4008, 26, 69, 'Marie Original Biscuits 300gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1299.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4009, 26, 69, 'Shortea Chocolate Cookies 75gr', 'Bánh Munchy\'s', 'Thùng', 'Gói', 72, '', 'TP-1300.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4010, 26, 69, 'Shortea Milk Cookies 75gr', 'Bánh Munchy\'s', 'Thùng', 'Gói', 72, '', 'TP-1301.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4011, 26, 69, 'Lite Cream Cracker 380gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1302.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4012, 26, 69, 'Cream Cracker 380gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1303.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4013, 26, 69, 'Vege Cracker 380gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1304.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4014, 26, 69, 'Sugar Cracker 380gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 12, '', 'TP-1305.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4015, 26, 69, 'Romeo Chocolate 200gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1306.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4016, 26, 69, 'Romeo Coffee 200gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 24, '', 'TP-1307.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4017, 26, 69, 'Jackpot Assorted Biscuits 700gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1308.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4018, 26, 69, 'The Tour Assorted Biscuits 700gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1309.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4019, 26, 69, 'Funmix assorted biscuits 750gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1310.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4020, 26, 69, 'Topmix assorted biscuits 750gr', 'Bánh Munchy\'s', 'Thùng', 'Hộp', 6, '', 'TP-1311.jpg', 22500, NULL, '2009-12-04 16:51:49', NULL),
+(4030, 31, 69, 'Misty Mooring Dry White 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-509.jpg', 120000, NULL, '2009-12-04 16:51:49', NULL),
+(4031, 31, 69, 'Misty Mooring Soft Dry Red 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-510.jpg', 120000, NULL, '2009-12-04 16:51:49', NULL),
+(4032, 31, 69, 'CR Cabernet Sauvignon 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-511.jpg', 160000, NULL, '2009-12-04 16:51:49', NULL),
+(4033, 31, 69, 'Long Row Cabernet Sauvignon 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 6, '', 'TU-512.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
+(4034, 31, 69, 'Long Row Chardonnay 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-513.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
+(4035, 31, 69, 'Long Row Shiraz 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 6, '', 'TU-514.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
+(4036, 31, 69, 'Long Row Sauvignon Blanc 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 6, '', 'TU-515.jpg', 239000, NULL, '2009-12-04 16:51:49', NULL),
+(4037, 31, 69, 'Nine Vine Rose 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-516.jpg', 290000, NULL, '2009-12-04 16:51:49', NULL),
+(4038, 31, 69, 'Coonawarra Cabernet Sauvignon 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 6, '', 'TU-517.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL),
+(4039, 31, 69, 'Red Belly Black Shiraz 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-518.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
+(4040, 31, 69, 'Red Belly Black Chardonnay 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-519.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
+(4041, 31, 69, 'Chalk Hill Blue Semillon Chardonnay 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-520.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
+(4042, 31, 69, 'Chalk Hill Blue Shiraz Cabernet 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-521.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
+(4043, 31, 69, 'Chalk Hill Blue Sparking NV 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-522.jpg', 230000, NULL, '2009-12-04 16:51:49', NULL),
+(4044, 31, 69, 'Sparkling Wine Regent Brut Pinot NV 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-523.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
+(4045, 31, 69, 'St Agnes Silver Vodka 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-524.jpg', 250000, NULL, '2009-12-04 16:51:49', NULL),
+(4046, 31, 69, 'St Agnes 3 Star Brandy 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-525.jpg', 250000, NULL, '2009-12-04 16:51:49', NULL),
+(4047, 31, 69, 'St Agnes very old Brandy (Brandy XO above 30 years) 750ml', 'Rượu Angove\'s', 'Thùng', 'Chai', 12, '', 'TU-526.jpg', 4500000, NULL, '2009-12-04 16:51:49', NULL),
 (4048, 31, 69, 'Coteaux Du Ventoux ( Les Dentelles) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-527.jpg', 250000, NULL, '2009-12-04 16:51:49', NULL),
 (4049, 31, 69, 'Coteaux Du Tricastin (Hautes Terres) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-528.jpg', 310000, NULL, '2009-12-04 16:51:49', NULL),
 (4050, 31, 69, 'Cellier des Dauphins Cotes Du Rhone Villeges(Tradition) 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-529.jpg', 320000, NULL, '2009-12-04 16:51:49', NULL),
@@ -3842,8 +3850,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (4056, 31, 69, 'Cotes Du Rhone (Clefs De Legats) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-535.jpg', 360000, NULL, '2009-12-04 16:51:49', NULL),
 (4057, 31, 69, 'Cotes Du Rhone (Prestige) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-536.jpg', 385000, NULL, '2009-12-04 16:51:49', NULL),
 (4058, 31, 69, 'Cotes Du Rhone (Prestige) White 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-537.jpg', 385000, NULL, '2009-12-04 16:51:49', NULL),
-(4059, 31, 69, 'Chateau De L’Estagnd (Cotes Du Rhone) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-538.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL);
-INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
+(4059, 31, 69, 'Chateau De L’Estagnd (Cotes Du Rhone) Red 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-538.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL),
 (4060, 31, 69, 'Chateau De L’Estagnd (Cotes Du Rhone) White 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-539.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL),
 (4061, 31, 69, 'Cellier Des Dauphins, Cotes Du Rhone ( Les Dorimmes) 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-540.jpg', 450000, NULL, '2009-12-04 16:51:49', NULL),
 (4062, 31, 69, 'Cellier Des Dauphins, Cotes Du  (Red) Black Label 750ml', 'Cellier Des Dauphins', 'Thùng', 'Chai', 6, '', 'TU-541.jpg', 480000, NULL, '2009-12-04 16:51:49', NULL),
@@ -3985,9 +3992,9 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 (4198, 57, 63, 'Classic - Gội 200g + Gel 50g', 'Enchanteur', 'Hộp', 'Hộp', 1, '', 'MP-714.jpg', 49000, NULL, '2009-12-04 11:11:58', 0000000100),
 (4199, 57, 63, 'Romano - Tắm gội 2+1 HTT ICY COOL', 'Romano', 'Gói', 'Gói', 1, '', 'MP-702.jpg', 800, '12', '2009-12-04 11:11:58', 0000000100),
 (4200, 27, 44, 'Kẹo trái cây Superior 150g', 'Rellenos', 'Thùng', 'Gói', 36, '', 'TP-571.jpg', 15500, NULL, '2009-12-04 16:51:49', 0000000100),
-(4201, 27, 44, 'Mister pop''s Frutal 625g', 'Kẹo Mister Pop', 'Thùng', 'gói', 12, '', 'TP-574.jpg', 40000, NULL, '2009-12-04 16:51:49', 0000000100),
-(4202, 27, 44, 'Mister pop''s Frutal 125g', 'Kẹo Mister Pop', 'Thùng', 'gói', 24, '', 'TP-575.jpg', 12000, NULL, '2009-12-04 16:51:49', 0000000100),
-(4203, 27, 44, 'Mister pop''s Surtido 625g', 'Kẹo Mister Pop', 'Thùng', 'gói', 12, '', 'TP-576.jpg', 40000, NULL, '2009-12-04 16:51:49', 0000000100),
+(4201, 27, 44, 'Mister pop\'s Frutal 625g', 'Kẹo Mister Pop', 'Thùng', 'gói', 12, '', 'TP-574.jpg', 40000, NULL, '2009-12-04 16:51:49', 0000000100),
+(4202, 27, 44, 'Mister pop\'s Frutal 125g', 'Kẹo Mister Pop', 'Thùng', 'gói', 24, '', 'TP-575.jpg', 12000, NULL, '2009-12-04 16:51:49', 0000000100),
+(4203, 27, 44, 'Mister pop\'s Surtido 625g', 'Kẹo Mister Pop', 'Thùng', 'gói', 12, '', 'TP-576.jpg', 40000, NULL, '2009-12-04 16:51:49', 0000000100),
 (4204, 27, 44, 'Kẹo Butter Toffees sabor Dulce De Leche 959g', 'Kẹo Butter Toffees', 'Thùng', 'Gói', 6, '', 'TP-588.jpg', 112000, NULL, '2009-12-04 16:51:49', 0000000100),
 (4205, 27, 44, 'Kẹo Butter Toffees Avellanas - hạt dẻ 959g', 'Kẹo Butter Toffees', 'Thùng', 'Gói', 6, '', 'TP-589.jpg', 112000, NULL, '2009-12-04 16:51:49', 0000000100),
 (4206, 62, 16, 'Khăn ướt Nuolive Baby Wipes 80 tờ', 'Khăn ướt', 'Thùng', 'Gói', 24, '', 'HMP-439.jpg', 32000, '12', '2009-12-04 16:51:50', NULL),
@@ -4000,11 +4007,10 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 -- Table structure for table `promotion_gift`
 --
 
-CREATE TABLE IF NOT EXISTS `promotion_gift` (
-  `ProductID` int(10) unsigned NOT NULL,
+CREATE TABLE `promotion_gift` (
+  `ProductID` int(10) UNSIGNED NOT NULL,
   `Description` varchar(255) DEFAULT NULL,
-  `Priority` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`ProductID`)
+  `Priority` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -4013,12 +4019,11 @@ CREATE TABLE IF NOT EXISTS `promotion_gift` (
 -- Table structure for table `promotion_price`
 --
 
-CREATE TABLE IF NOT EXISTS `promotion_price` (
-  `ProductID` int(10) unsigned NOT NULL,
+CREATE TABLE `promotion_price` (
+  `ProductID` int(10) UNSIGNED NOT NULL,
   `Description` varchar(255) DEFAULT NULL,
-  `Discount` int(10) unsigned DEFAULT NULL,
-  `Priority` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`ProductID`)
+  `Discount` int(10) UNSIGNED DEFAULT NULL,
+  `Priority` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -4043,14 +4048,13 @@ INSERT INTO `promotion_price` (`ProductID`, `Description`, `Discount`, `Priority
 -- Table structure for table `shopcart`
 --
 
-CREATE TABLE IF NOT EXISTS `shopcart` (
-  `CartID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `ProductID` int(10) unsigned NOT NULL,
-  `UserID` int(10) unsigned NOT NULL,
-  `Quantity` int(10) unsigned NOT NULL,
-  `Date` datetime DEFAULT NULL,
-  PRIMARY KEY (`CartID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=182 ;
+CREATE TABLE `shopcart` (
+  `CartID` int(10) UNSIGNED NOT NULL,
+  `ProductID` int(10) UNSIGNED NOT NULL,
+  `UserID` int(10) UNSIGNED NOT NULL,
+  `Quantity` int(10) UNSIGNED NOT NULL,
+  `Date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `shopcart`
@@ -4098,11 +4102,10 @@ INSERT INTO `shopcart` (`CartID`, `ProductID`, `UserID`, `Quantity`, `Date`) VAL
 -- Table structure for table `status`
 --
 
-CREATE TABLE IF NOT EXISTS `status` (
-  `statusid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `status` varchar(45) NOT NULL,
-  PRIMARY KEY (`statusid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+CREATE TABLE `status` (
+  `statusid` int(10) UNSIGNED NOT NULL,
+  `status` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `status`
@@ -4118,13 +4121,12 @@ INSERT INTO `status` (`statusid`, `status`) VALUES
 -- Table structure for table `supplier`
 --
 
-CREATE TABLE IF NOT EXISTS `supplier` (
-  `SupplierID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `supplier` (
+  `SupplierID` int(10) UNSIGNED NOT NULL,
   `SupplierName` varchar(45) NOT NULL,
   `Description` varchar(255) DEFAULT NULL,
-  `Priority` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`SupplierID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
+  `Priority` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `supplier`
@@ -4202,6 +4204,134 @@ INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Description`, `Priority`)
 (69, 'Tân Úc Việt', '', NULL);
 
 --
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `auth_access`
+--
+ALTER TABLE `auth_access`
+  ADD PRIMARY KEY (`UserID`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`CategoryID`),
+  ADD KEY `FK_category_CategoryID` (`CategoryParentID`);
+
+--
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`ma_lien_he`);
+
+--
+-- Indexes for table `new_product`
+--
+ALTER TABLE `new_product`
+  ADD PRIMARY KEY (`ProductID`);
+
+--
+-- Indexes for table `orderdetail`
+--
+ALTER TABLE `orderdetail`
+  ADD PRIMARY KEY (`OrderID`,`ProductID`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`OrderID`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`ProductID`),
+  ADD KEY `FK_products_CategoryID` (`CategoryID`),
+  ADD KEY `FK_products_SupplierID` (`SupplierID`);
+
+--
+-- Indexes for table `promotion_gift`
+--
+ALTER TABLE `promotion_gift`
+  ADD PRIMARY KEY (`ProductID`);
+
+--
+-- Indexes for table `promotion_price`
+--
+ALTER TABLE `promotion_price`
+  ADD PRIMARY KEY (`ProductID`);
+
+--
+-- Indexes for table `shopcart`
+--
+ALTER TABLE `shopcart`
+  ADD PRIMARY KEY (`CartID`);
+
+--
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`statusid`);
+
+--
+-- Indexes for table `supplier`
+--
+ALTER TABLE `supplier`
+  ADD PRIMARY KEY (`SupplierID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `auth_access`
+--
+ALTER TABLE `auth_access`
+  MODIFY `UserID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `CategoryID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `ma_lien_he` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `orderdetail`
+--
+ALTER TABLE `orderdetail`
+  MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `ProductID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4209;
+--
+-- AUTO_INCREMENT for table `shopcart`
+--
+ALTER TABLE `shopcart`
+  MODIFY `CartID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `statusid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `supplier`
+--
+ALTER TABLE `supplier`
+  MODIFY `SupplierID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+--
 -- Constraints for dumped tables
 --
 
@@ -4217,6 +4347,7 @@ ALTER TABLE `category`
 ALTER TABLE `products`
   ADD CONSTRAINT `FK_products_CategoryID` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CategoryID`),
   ADD CONSTRAINT `FK_products_SupplierID` FOREIGN KEY (`SupplierID`) REFERENCES `supplier` (`SupplierID`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
