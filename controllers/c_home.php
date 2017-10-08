@@ -4,7 +4,7 @@ class C_home
 	public function Hien_thi()
 	{
 		//Model
-		include("m_home");
+		include("models/m_home.php");
 		$m_home= new M_home();
 		$san_pham_slider=$m_home->Hien_thi_san_pham_slider();
 		$category=$m_home->Hien_thi_main_Category();
@@ -13,7 +13,6 @@ class C_home
 		//View
 		include("controllers/Smarty_sieu_thi.php");
 		$smarty=new Smarty_sieu_thi();
-		//$smarty->assign("title","Nhà hàng Thu Trân");
 		$smarty->display("layout.tpl");	
 	}
 }

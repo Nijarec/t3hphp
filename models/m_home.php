@@ -5,7 +5,7 @@ class M_home extends database
 	// Hàm hiển thị 4 sản phẩm thông dụng đưa vào slider trong banner
 	public function Hien_thi_san_pham_slider()
 	{
-		//câu lệnh sql hiển thị sản phẩm thông dụng mới từ bảng product và newproduct
+		//câu lệnh sql hiển thị sản phẩm thông dụng mới từ bảng product và new product
 		$sql="SELECT * from products p INNER JOIN new_product n on p.ProductID=n.ProductID WHERE n.Priority=1";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
