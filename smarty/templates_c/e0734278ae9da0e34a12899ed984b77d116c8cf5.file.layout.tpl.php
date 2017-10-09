@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:52433578059db8ca8bcb369-70246582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6652bf75f43eb8665356b88e8a0e2401680ee1b9' => 
     array (
       0 => 'smarty\\templates\\header.tpl',
-      1 => 1507182791,
+      1 => 1507561640,
       2 => 'file',
     ),
     '0a51a134b085e9b61932ce46e7055c1be650a052' => 
@@ -69,9 +69,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.18',
   'unifunc' => 'content_59db8ca8c0e274_26347198',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59db8ca8c0e274_26347198')) {function content_59db8ca8c0e274_26347198($_smarty_tpl) {?><!--
 author: W3layouts
@@ -84,7 +84,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  <?php /*  Call merged included template "head.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8beeb98_56103214($_smarty_tpl);
+content_59db90adaa0008_69073398($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "head.tpl" */?> 
 <body>
@@ -94,7 +94,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8bf2c03_87384483($_smarty_tpl);
+content_59db90adaa42a4_85739751($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "header.tpl" */?> 
 
@@ -103,13 +103,13 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "banner.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8bf6987_88351249($_smarty_tpl);
+content_59db90adaa7882_11157382($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner.tpl" */?> 
  <?php /*  Call merged included template "slider_in_banner.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("slider_in_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8bfbb99_25476102($_smarty_tpl);
+content_59db90adaaae26_22274783($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "slider_in_banner.tpl" */?> }	
 <!--// banner -->
@@ -117,7 +117,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "top_brands.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8c00087_31578697($_smarty_tpl);
+content_59db90adaae1e1_67786592($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "top_brands.tpl" */?> 	
 <!-- //top-brands -->
@@ -125,7 +125,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "fresh_vegetables.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("fresh_vegetables.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8c02cd8_35047630($_smarty_tpl);
+content_59db90adab0f75_29916101($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "fresh_vegetables.tpl" */?> 		
 <!-- //fresh-vegetables -->
@@ -133,7 +133,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "news_letter.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8c05630_36940895($_smarty_tpl);
+content_59db90adab3b73_68326247($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "news_letter.tpl" */?> 	
 <!-- //newsletter -->
@@ -141,7 +141,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8c08355_89532754($_smarty_tpl);
+content_59db90adab7cc9_54158755($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "footer.tpl" */?> 
 <!-- //footer -->
@@ -149,15 +149,15 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db8ca8c0b0d6_46840545($_smarty_tpl);
+content_59db90adabbc23_67074463($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "javascript.tpl" */?> 
 </body>
 </html>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\head.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8beeb98_56103214')) {function content_59db8ca8beeb98_56103214($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_59db90adaa0008_69073398')) {function content_59db90adaa0008_69073398($_smarty_tpl) {?><head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -195,9 +195,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8bf2c03_87384483')) {function content_59db8ca8bf2c03_87384483($_smarty_tpl) {?><!-- header -->
+<?php if ($_valid && !is_callable('content_59db90adaa42a4_85739751')) {function content_59db90adaa42a4_85739751($_smarty_tpl) {?><!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href="products.html">Today's special Offers !</a>
@@ -234,7 +234,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ul>
 		</div>
 		<div class="w3l_header_right1">
-			<h2><a href="mail.html">Contact Us</a></h2>
+			<h2><a href="contact.php">Contact Us</a></h2>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
@@ -257,7 +257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.html"><span>Grocery</span> Store</a></h1>
+				<h1><a href="index.php"><span>Grocery</span> Store</a></h1>
 			</div>
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
@@ -277,9 +277,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8bf6987_88351249')) {function content_59db8ca8bf6987_88351249($_smarty_tpl) {?><!-- banner -->
+<?php if ($_valid && !is_callable('content_59db90adaa7882_11157382')) {function content_59db90adaa7882_11157382($_smarty_tpl) {?><!-- banner -->
 	<div class="banner">
 		<div class="w3l_banner_nav_left">
 			<nav class="navbar nav_bottom">
@@ -419,9 +419,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"> </div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\slider_in_banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8bfbb99_25476102')) {function content_59db8ca8bfbb99_25476102($_smarty_tpl) {?><div class="w3l_banner_nav_right">
+<?php if ($_valid && !is_callable('content_59db90adaaae26_22274783')) {function content_59db90adaaae26_22274783($_smarty_tpl) {?><div class="w3l_banner_nav_right">
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
@@ -467,9 +467,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  </script>
 			<!-- //flexSlider -->
 		</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\top_brands.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8c00087_31578697')) {function content_59db8ca8c00087_31578697($_smarty_tpl) {?><div class="top-brands">
+<?php if ($_valid && !is_callable('content_59db90adaae1e1_67786592')) {function content_59db90adaae1e1_67786592($_smarty_tpl) {?><div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
@@ -618,9 +618,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\fresh_vegetables.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8c02cd8_35047630')) {function content_59db8ca8c02cd8_35047630($_smarty_tpl) {?><div class="fresh-vegetables">
+<?php if ($_valid && !is_callable('content_59db90adab0f75_29916101')) {function content_59db90adab0f75_29916101($_smarty_tpl) {?><div class="fresh-vegetables">
 		<div class="container">
 			<h3>Top Products</h3>
 			<div class="w3l_fresh_vegetables_grids">
@@ -687,9 +687,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\news_letter.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8c05630_36940895')) {function content_59db8ca8c05630_36940895($_smarty_tpl) {?><div class="newsletter">
+<?php if ($_valid && !is_callable('content_59db90adab3b73_68326247')) {function content_59db90adab3b73_68326247($_smarty_tpl) {?><div class="newsletter">
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -704,9 +704,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8c08355_89532754')) {function content_59db8ca8c08355_89532754($_smarty_tpl) {?><div class="footer">
+<?php if ($_valid && !is_callable('content_59db90adab7cc9_54158755')) {function content_59db90adab7cc9_54158755($_smarty_tpl) {?><div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -774,9 +774,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 16:50:16
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
          compiled from "smarty\templates\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db8ca8c0b0d6_46840545')) {function content_59db8ca8c0b0d6_46840545($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
+<?php if ($_valid && !is_callable('content_59db90adabbc23_67074463')) {function content_59db90adabbc23_67074463($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            
