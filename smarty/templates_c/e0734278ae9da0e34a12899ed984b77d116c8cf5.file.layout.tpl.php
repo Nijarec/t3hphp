@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:52433578059db8ca8bcb369-70246582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,73 +7,73 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0734278ae9da0e34a12899ed984b77d116c8cf5' => 
     array (
       0 => 'smarty\\templates\\layout.tpl',
-      1 => 1507629736,
+      1 => 1507632627,
       2 => 'file',
     ),
     '36fbe3939497ac5a91a56553a460db140e5e6f2d' => 
     array (
       0 => 'smarty\\templates\\head.tpl',
-      1 => 1507444452,
+      1 => 1507374149,
       2 => 'file',
     ),
     '6652bf75f43eb8665356b88e8a0e2401680ee1b9' => 
     array (
       0 => 'smarty\\templates\\header.tpl',
-      1 => 1507561705,
+      1 => 1507632627,
       2 => 'file',
     ),
     '2a620d5116c5f6bf74198c17eda3c6b14d393e99' => 
     array (
       0 => 'smarty\\templates\\banner\\banner_left.tpl',
-      1 => 1507630013,
+      1 => 1507632627,
       2 => 'file',
     ),
     '2fbb5bfeb89839314a8f017bb046caad55c5de65' => 
     array (
       0 => 'smarty\\templates\\banner\\banner_right.tpl',
-      1 => 1507630238,
+      1 => 1507632627,
       2 => 'file',
     ),
     '4628d414226e6004937a1fdd647aaac6d9e45bca' => 
     array (
       0 => 'smarty\\templates\\banner\\banner_down.tpl',
-      1 => 1507630020,
+      1 => 1507632627,
       2 => 'file',
     ),
     '0a51a134b085e9b61932ce46e7055c1be650a052' => 
     array (
       0 => 'smarty\\templates\\banner.tpl',
-      1 => 1507630114,
+      1 => 1507632626,
       2 => 'file',
     ),
     '3d41945b7740230c9f7f0541c9f99cfc354d9447' => 
     array (
       0 => 'smarty\\templates\\top_brands.tpl',
-      1 => 1507181639,
+      1 => 1507185762,
       2 => 'file',
     ),
     '267291e07d2b36e4c6aa07ee6f45102544e0a994' => 
     array (
       0 => 'smarty\\templates\\fresh_vegetables.tpl',
-      1 => 1507181664,
+      1 => 1506932265,
       2 => 'file',
     ),
     '1a30a5d6d36d79cd4adc145fda9da04b0d16a88a' => 
     array (
       0 => 'smarty\\templates\\news_letter.tpl',
-      1 => 1507183162,
+      1 => 1507185762,
       2 => 'file',
     ),
     '70eba14aea234c9b7881b48964462938ebb4971e' => 
     array (
       0 => 'smarty\\templates\\footer.tpl',
-      1 => 1507181698,
+      1 => 1507185762,
       2 => 'file',
     ),
     '337da50429a42fbde041b37fc0caac657e86c1af' => 
     array (
       0 => 'smarty\\templates\\javascript.tpl',
-      1 => 1507182126,
+      1 => 1507185762,
       2 => 'file',
     ),
   ),
@@ -96,7 +96,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  <?php /*  Call merged included template "head.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb26ee5_13358629($_smarty_tpl);
+content_59dcb1bd61bf97_17283430($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "head.tpl" */?> 
 <body>
@@ -106,7 +106,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb2c8c4_12215857($_smarty_tpl);
+content_59dcb1bd6e2d60_75160493($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "header.tpl" */?> 
 
@@ -115,7 +115,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "banner.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb30ea0_84229904($_smarty_tpl);
+content_59dcb1bd734b34_54948752($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner.tpl" */?> 
 <!--// banner -->
@@ -123,7 +123,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "top_brands.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb3da91_49091059($_smarty_tpl);
+content_59dcb1bd8b3d14_60082234($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "top_brands.tpl" */?> 	
 <!-- //top-brands -->
@@ -131,7 +131,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "fresh_vegetables.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("fresh_vegetables.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb41200_85295948($_smarty_tpl);
+content_59dcb1bd9663a2_23752224($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "fresh_vegetables.tpl" */?> 		
 <!-- //fresh-vegetables -->
@@ -139,7 +139,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "news_letter.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb45574_65686367($_smarty_tpl);
+content_59dcb1bd9d3f83_38868114($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "news_letter.tpl" */?> 	
 <!-- //newsletter -->
@@ -147,7 +147,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb48418_15975553($_smarty_tpl);
+content_59dcb1bda020c9_62237434($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "footer.tpl" */?> 
 <!-- //footer -->
@@ -155,15 +155,15 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb4af42_70830706($_smarty_tpl);
+content_59dcb1bda2d0f8_19748417($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "javascript.tpl" */?> 
 </body>
 </html>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\head.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb26ee5_13358629')) {function content_59dc9c9fb26ee5_13358629($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_59dcb1bd61bf97_17283430')) {function content_59dcb1bd61bf97_17283430($_smarty_tpl) {?><head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -201,9 +201,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb2c8c4_12215857')) {function content_59dc9c9fb2c8c4_12215857($_smarty_tpl) {?><!-- header -->
+<?php if ($_valid && !is_callable('content_59dcb1bd6e2d60_75160493')) {function content_59dcb1bd6e2d60_75160493($_smarty_tpl) {?><!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href="index.php">Today's special Offers !</a>
@@ -283,20 +283,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb30ea0_84229904')) {function content_59dc9c9fb30ea0_84229904($_smarty_tpl) {?><!-- banner -->
+<?php if ($_valid && !is_callable('content_59dcb1bd734b34_54948752')) {function content_59dcb1bd734b34_54948752($_smarty_tpl) {?><!-- banner -->
 	<div class="banner">
 		 <?php /*  Call merged included template "banner/banner_left.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_left.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb33ec5_81643596($_smarty_tpl);
+content_59dcb1bd79c179_00642340($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner/banner_left.tpl" */?> 
 		 <?php /*  Call merged included template "banner/banner_right.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_right.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb370c6_95202555($_smarty_tpl);
+content_59dcb1bd7fb0b3_16887320($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner/banner_right.tpl" */?> 
 		<div class="clearfix"></div>
@@ -305,12 +305,12 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "banner/banner_down.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_down.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59dc9c9fb3a2e1_83094855($_smarty_tpl);
+content_59dcb1bd857391_87434712($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner/banner_down.tpl" */?> <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\banner\banner_left.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb33ec5_81643596')) {function content_59dc9c9fb33ec5_81643596($_smarty_tpl) {?><div class="w3l_banner_nav_left">
+<?php if ($_valid && !is_callable('content_59dcb1bd79c179_00642340')) {function content_59dcb1bd79c179_00642340($_smarty_tpl) {?><div class="w3l_banner_nav_left">
 			<nav class="navbar nav_bottom">
 			 <!-- Brand and toggle get grouped for better mobile display -->
 			  <div class="navbar-header nav_2">
@@ -367,9 +367,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 				 </div><!-- /.navbar-collapse -->
 			</nav>
 		</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\banner\banner_right.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb370c6_95202555')) {function content_59dc9c9fb370c6_95202555($_smarty_tpl) {?><div class="w3l_banner_nav_right">
+<?php if ($_valid && !is_callable('content_59dcb1bd7fb0b3_16887320')) {function content_59dcb1bd7fb0b3_16887320($_smarty_tpl) {?><div class="w3l_banner_nav_right">
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
@@ -415,9 +415,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			  </script>
 			<!-- //flexSlider -->
 		</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\banner\banner_down.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb3a2e1_83094855')) {function content_59dc9c9fb3a2e1_83094855($_smarty_tpl) {?><div class="banner_bottom">
+<?php if ($_valid && !is_callable('content_59dcb1bd857391_87434712')) {function content_59dcb1bd857391_87434712($_smarty_tpl) {?><div class="banner_bottom">
 			<div class="wthree_banner_bottom_left_grid_sub">
 			</div>
 			<div class="wthree_banner_bottom_left_grid_sub1">
@@ -449,9 +449,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 			<div class="clearfix"> </div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\top_brands.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb3da91_49091059')) {function content_59dc9c9fb3da91_49091059($_smarty_tpl) {?><div class="top-brands">
+<?php if ($_valid && !is_callable('content_59dcb1bd8b3d14_60082234')) {function content_59dcb1bd8b3d14_60082234($_smarty_tpl) {?><div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
@@ -600,9 +600,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\fresh_vegetables.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb41200_85295948')) {function content_59dc9c9fb41200_85295948($_smarty_tpl) {?><div class="fresh-vegetables">
+<?php if ($_valid && !is_callable('content_59dcb1bd9663a2_23752224')) {function content_59dcb1bd9663a2_23752224($_smarty_tpl) {?><div class="fresh-vegetables">
 		<div class="container">
 			<h3>Top Products</h3>
 			<div class="w3l_fresh_vegetables_grids">
@@ -669,9 +669,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\news_letter.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb45574_65686367')) {function content_59dc9c9fb45574_65686367($_smarty_tpl) {?><div class="newsletter">
+<?php if ($_valid && !is_callable('content_59dcb1bd9d3f83_38868114')) {function content_59dcb1bd9d3f83_38868114($_smarty_tpl) {?><div class="newsletter">
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -686,9 +686,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			<div class="clearfix"> </div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb48418_15975553')) {function content_59dc9c9fb48418_15975553($_smarty_tpl) {?><div class="footer">
+<?php if ($_valid && !is_callable('content_59dcb1bda020c9_62237434')) {function content_59dcb1bda020c9_62237434($_smarty_tpl) {?><div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -756,9 +756,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 11:40:45
          compiled from "smarty\templates\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59dc9c9fb4af42_70830706')) {function content_59dc9c9fb4af42_70830706($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
+<?php if ($_valid && !is_callable('content_59dcb1bda2d0f8_19748417')) {function content_59dcb1bda2d0f8_19748417($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            
