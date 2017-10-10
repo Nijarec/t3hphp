@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:52433578059db8ca8bcb369-70246582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e0734278ae9da0e34a12899ed984b77d116c8cf5' => 
     array (
       0 => 'smarty\\templates\\layout.tpl',
-      1 => 1507444452,
+      1 => 1507629736,
       2 => 'file',
     ),
     '36fbe3939497ac5a91a56553a460db140e5e6f2d' => 
@@ -19,19 +19,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6652bf75f43eb8665356b88e8a0e2401680ee1b9' => 
     array (
       0 => 'smarty\\templates\\header.tpl',
-      1 => 1507561640,
+      1 => 1507561705,
+      2 => 'file',
+    ),
+    '2a620d5116c5f6bf74198c17eda3c6b14d393e99' => 
+    array (
+      0 => 'smarty\\templates\\banner\\banner_left.tpl',
+      1 => 1507630013,
+      2 => 'file',
+    ),
+    '2fbb5bfeb89839314a8f017bb046caad55c5de65' => 
+    array (
+      0 => 'smarty\\templates\\banner\\banner_right.tpl',
+      1 => 1507630238,
+      2 => 'file',
+    ),
+    '4628d414226e6004937a1fdd647aaac6d9e45bca' => 
+    array (
+      0 => 'smarty\\templates\\banner\\banner_down.tpl',
+      1 => 1507630020,
       2 => 'file',
     ),
     '0a51a134b085e9b61932ce46e7055c1be650a052' => 
     array (
       0 => 'smarty\\templates\\banner.tpl',
-      1 => 1507444452,
-      2 => 'file',
-    ),
-    '5a62fd8204254c7fb1bb64d90e26568f5623a60e' => 
-    array (
-      0 => 'smarty\\templates\\slider_in_banner.tpl',
-      1 => 1507444452,
+      1 => 1507630114,
       2 => 'file',
     ),
     '3d41945b7740230c9f7f0541c9f99cfc354d9447' => 
@@ -84,7 +96,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  <?php /*  Call merged included template "head.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adaa0008_69073398($_smarty_tpl);
+content_59dc9c9fb26ee5_13358629($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "head.tpl" */?> 
 <body>
@@ -94,7 +106,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adaa42a4_85739751($_smarty_tpl);
+content_59dc9c9fb2c8c4_12215857($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "header.tpl" */?> 
 
@@ -103,21 +115,15 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "banner.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adaa7882_11157382($_smarty_tpl);
+content_59dc9c9fb30ea0_84229904($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "banner.tpl" */?> 
- <?php /*  Call merged included template "slider_in_banner.tpl" */
-$_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("slider_in_banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adaaae26_22274783($_smarty_tpl);
-$_smarty_tpl = array_pop($_tpl_stack); 
-/*  End of included template "slider_in_banner.tpl" */?> }	
 <!--// banner -->
 <!-- top-brands -->
  <?php /*  Call merged included template "top_brands.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adaae1e1_67786592($_smarty_tpl);
+content_59dc9c9fb3da91_49091059($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "top_brands.tpl" */?> 	
 <!-- //top-brands -->
@@ -125,7 +131,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "fresh_vegetables.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("fresh_vegetables.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adab0f75_29916101($_smarty_tpl);
+content_59dc9c9fb41200_85295948($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "fresh_vegetables.tpl" */?> 		
 <!-- //fresh-vegetables -->
@@ -133,7 +139,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "news_letter.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adab3b73_68326247($_smarty_tpl);
+content_59dc9c9fb45574_65686367($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "news_letter.tpl" */?> 	
 <!-- //newsletter -->
@@ -141,7 +147,7 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adab7cc9_54158755($_smarty_tpl);
+content_59dc9c9fb48418_15975553($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "footer.tpl" */?> 
 <!-- //footer -->
@@ -149,15 +155,15 @@ $_smarty_tpl = array_pop($_tpl_stack);
  <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
  $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59db90adabbc23_67074463($_smarty_tpl);
+content_59dc9c9fb4af42_70830706($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "javascript.tpl" */?> 
 </body>
 </html>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\head.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adaa0008_69073398')) {function content_59db90adaa0008_69073398($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_59dc9c9fb26ee5_13358629')) {function content_59dc9c9fb26ee5_13358629($_smarty_tpl) {?><head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -195,12 +201,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adaa42a4_85739751')) {function content_59db90adaa42a4_85739751($_smarty_tpl) {?><!-- header -->
+<?php if ($_valid && !is_callable('content_59dc9c9fb2c8c4_12215857')) {function content_59dc9c9fb2c8c4_12215857($_smarty_tpl) {?><!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="products.html">Today's special Offers !</a>
+			<a href="index.php">Today's special Offers !</a>
 		</div>
 		<div class="w3l_search">
 			<form action="#" method="post">
@@ -277,11 +283,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adaa7882_11157382')) {function content_59db90adaa7882_11157382($_smarty_tpl) {?><!-- banner -->
+<?php if ($_valid && !is_callable('content_59dc9c9fb30ea0_84229904')) {function content_59dc9c9fb30ea0_84229904($_smarty_tpl) {?><!-- banner -->
 	<div class="banner">
-		<div class="w3l_banner_nav_left">
+		 <?php /*  Call merged included template "banner/banner_left.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_left.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
+content_59dc9c9fb33ec5_81643596($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); 
+/*  End of included template "banner/banner_left.tpl" */?> 
+		 <?php /*  Call merged included template "banner/banner_right.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_right.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
+content_59dc9c9fb370c6_95202555($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); 
+/*  End of included template "banner/banner_right.tpl" */?> 
+		<div class="clearfix"></div>
+	</div>
+<!-- banner -->
+ <?php /*  Call merged included template "banner/banner_down.tpl" */
+$_tpl_stack[] = $_smarty_tpl;
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("banner/banner_down.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
+content_59dc9c9fb3a2e1_83094855($_smarty_tpl);
+$_smarty_tpl = array_pop($_tpl_stack); 
+/*  End of included template "banner/banner_down.tpl" */?> <?php }} ?>
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+         compiled from "smarty\templates\banner\banner_left.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_59dc9c9fb33ec5_81643596')) {function content_59dc9c9fb33ec5_81643596($_smarty_tpl) {?><div class="w3l_banner_nav_left">
 			<nav class="navbar nav_bottom">
 			 <!-- Brand and toggle get grouped for better mobile display -->
 			  <div class="navbar-header nav_2">
@@ -295,50 +324,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav nav_1">
-						<li><a href="products.html">Branded Foods</a></li>
-						<li><a href="household.html">Households</a></li>
+						<li><a href="../products.html">Branded Foods</a></li>
+						<li><a href="../household.html">Households</a></li>
 						<li class="dropdown mega-dropdown active">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Veggies & Fruits<span class="caret"></span></a>				
 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 								<div class="w3ls_vegetables">
 									<ul>	
-										<li><a href="vegetables.html">Vegetables</a></li>
-										<li><a href="vegetables.html">Fruits</a></li>
+										<li><a href="../vegetables.html">Vegetables</a></li>
+										<li><a href="../vegetables.html">Fruits</a></li>
 									</ul>
 								</div>                  
 							</div>				
 						</li>
-						<li><a href="kitchen.html">Kitchen</a></li>
-						<li><a href="short-codes.html">Short Codes</a></li>
+						<li><a href="../kitchen.html">Kitchen</a></li>
+						<li><a href="../short-codes.html">Short Codes</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<span class="caret"></span></a>
 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 								<div class="w3ls_vegetables">
 									<ul>
-										<li><a href="drinks.html">Soft Drinks</a></li>
-										<li><a href="drinks.html">Juices</a></li>
+										<li><a href="../drinks.html">Soft Drinks</a></li>
+										<li><a href="../drinks.html">Juices</a></li>
 									</ul>
 								</div>                  
 							</div>	
 						</li>
-						<li><a href="pet.html">Pet Food</a></li>
+						<li><a href="../pet.html">Pet Food</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Frozen Foods<span class="caret"></span></a>
 							<div class="dropdown-menu mega-dropdown-menu w3ls_vegetables_menu">
 								<div class="w3ls_vegetables">
 									<ul>
-										<li><a href="frozen.html">Frozen Snacks</a></li>
-										<li><a href="frozen.html">Frozen Nonveg</a></li>
+										<li><a href="../frozen.html">Frozen Snacks</a></li>
+										<li><a href="../frozen.html">Frozen Nonveg</a></li>
 									</ul>
 								</div>                  
 							</div>	
 						</li>
-						<li><a href="bread.html">Bread & Bakery</a></li>
+						<li><a href="../bread.html">Bread & Bakery</a></li>
 					</ul>
 				 </div><!-- /.navbar-collapse -->
 			</nav>
-		</div>
-		<div class="w3l_banner_nav_right">
+		</div><?php }} ?>
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+         compiled from "smarty\templates\banner\banner_right.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_59dc9c9fb370c6_95202555')) {function content_59dc9c9fb370c6_95202555($_smarty_tpl) {?><div class="w3l_banner_nav_right">
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
@@ -346,7 +377,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="w3l_banner_nav_right_banner">
 								<h3>Make your <span>food</span> with Spicy.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="../products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
 								</div>
 							</div>
 						</li>
@@ -354,7 +385,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="w3l_banner_nav_right_banner1">
 								<h3>Make your <span>food</span> with Spicy.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="../products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
 								</div>
 							</div>
 						</li>
@@ -362,7 +393,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="w3l_banner_nav_right_banner2">
 								<h3>upto <i>50%</i> off.</h3>
 								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="../products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
 								</div>
 							</div>
 						</li>
@@ -370,91 +401,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</section>
 			<!-- flexSlider -->
-				<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-				<script defer src="js/jquery.flexslider.js"></script>
-				<script type="text/javascript">
-				$(window).load(function(){
-				  $('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-					  $('body').removeClass('loading');
-					}
-				  });
-				});
-			  </script>
-			<!-- //flexSlider -->
-		</div>
-		<div class="clearfix"></div>
-	</div>
-<!-- banner -->
-	<div class="banner_bottom">
-			<div class="wthree_banner_bottom_left_grid_sub">
-			</div>
-			<div class="wthree_banner_bottom_left_grid_sub1">
-				<div class="col-md-4 wthree_banner_bottom_left">
-					<div class="wthree_banner_bottom_left_grid">
-						<img src="images/4.jpg" alt=" " class="img-responsive" />
-						<div class="wthree_banner_bottom_left_grid_pos">
-							<h4>Discount Offer <span>25%</span></h4>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 wthree_banner_bottom_left">
-					<div class="wthree_banner_bottom_left_grid">
-						<img src="images/5.jpg" alt=" " class="img-responsive" />
-						<div class="wthree_banner_btm_pos">
-							<h3>introducing <span>best store</span> for <i>groceries</i></h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 wthree_banner_bottom_left">
-					<div class="wthree_banner_bottom_left_grid">
-						<img src="images/6.jpg" alt=" " class="img-responsive" />
-						<div class="wthree_banner_btm_pos1">
-							<h3>Save <span>Upto</span> $10</h3>
-						</div>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="clearfix"> </div>
-	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
-         compiled from "smarty\templates\slider_in_banner.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adaaae26_22274783')) {function content_59db90adaaae26_22274783($_smarty_tpl) {?><div class="w3l_banner_nav_right">
-			<section class="slider">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<div class="w3l_banner_nav_right_banner">
-								<h3>Make your <span>food</span> with Spicy.</h3>
-								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="w3l_banner_nav_right_banner1">
-								<h3>Make your <span>food</span> with Spicy.</h3>
-								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="w3l_banner_nav_right_banner2">
-								<h3>upto <i>50%</i> off.</h3>
-								<div class="more">
-									<a href="products.html" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<!-- flexSlider -->
-				<link rel="stylesheet" href="../../css/flexslider.css" type="text/css" media="screen" property="" />
-				<script defer src="js/jquery.flexslider.js"></script>
+				<link rel="stylesheet" href="./css/flexslider.css" type="text/css" media="screen" property="" />
+				<script defer src="./js/jquery.flexslider.js"></script>
 				<script type="text/javascript">
 				$(window).load(function(){
 				  $('.flexslider').flexslider({
@@ -467,9 +415,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  </script>
 			<!-- //flexSlider -->
 		</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
+         compiled from "smarty\templates\banner\banner_down.tpl" */ ?>
+<?php if ($_valid && !is_callable('content_59dc9c9fb3a2e1_83094855')) {function content_59dc9c9fb3a2e1_83094855($_smarty_tpl) {?><div class="banner_bottom">
+			<div class="wthree_banner_bottom_left_grid_sub">
+			</div>
+			<div class="wthree_banner_bottom_left_grid_sub1">
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="../images/4.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_bottom_left_grid_pos">
+							<h4>Discount Offer <span>25%</span></h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="../images/5.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_btm_pos">
+							<h3>introducing <span>best store</span> for <i>groceries</i></h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 wthree_banner_bottom_left">
+					<div class="wthree_banner_bottom_left_grid">
+						<img src="../images/6.jpg" alt=" " class="img-responsive" />
+						<div class="wthree_banner_btm_pos1">
+							<h3>Save <span>Upto</span> $10</h3>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+	</div><?php }} ?>
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\top_brands.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adaae1e1_67786592')) {function content_59db90adaae1e1_67786592($_smarty_tpl) {?><div class="top-brands">
+<?php if ($_valid && !is_callable('content_59dc9c9fb3da91_49091059')) {function content_59dc9c9fb3da91_49091059($_smarty_tpl) {?><div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
@@ -618,9 +600,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\fresh_vegetables.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adab0f75_29916101')) {function content_59db90adab0f75_29916101($_smarty_tpl) {?><div class="fresh-vegetables">
+<?php if ($_valid && !is_callable('content_59dc9c9fb41200_85295948')) {function content_59dc9c9fb41200_85295948($_smarty_tpl) {?><div class="fresh-vegetables">
 		<div class="container">
 			<h3>Top Products</h3>
 			<div class="w3l_fresh_vegetables_grids">
@@ -687,9 +669,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\news_letter.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adab3b73_68326247')) {function content_59db90adab3b73_68326247($_smarty_tpl) {?><div class="newsletter">
+<?php if ($_valid && !is_callable('content_59dc9c9fb45574_65686367')) {function content_59dc9c9fb45574_65686367($_smarty_tpl) {?><div class="newsletter">
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -704,9 +686,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adab7cc9_54158755')) {function content_59db90adab7cc9_54158755($_smarty_tpl) {?><div class="footer">
+<?php if ($_valid && !is_callable('content_59dc9c9fb48418_15975553')) {function content_59dc9c9fb48418_15975553($_smarty_tpl) {?><div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -774,9 +756,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-09 17:07:25
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-10 12:10:39
          compiled from "smarty\templates\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59db90adabbc23_67074463')) {function content_59db90adabbc23_67074463($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
+<?php if ($_valid && !is_callable('content_59dc9c9fb4af42_70830706')) {function content_59dc9c9fb4af42_70830706($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            
