@@ -5,12 +5,18 @@ class M_category extends database
 		//Hàm hiển thị 8 danh mục sản phẩm chính
 	public function Hien_thi_main_Category()
 	{
-		$sql="SELECT CategoryName FROM category WHERE CategoryParentID is NULL ORDER BY Priority ASC ";
+		$sql="SELECT * FROM category WHERE CategoryParentID is NULL ORDER BY Priority ASC ";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
-	
-	//Hàm hiển thị danh mục sản phẩm theo Ca 
+	//Ham hien thi CategoryName
+	public function Hien_thi_Category()
+	{
+		$sql="SELECT CategoryID,CategoryParentID,CategoryName FROM category WHERE CategoryParentID is not NULL ";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
+	//Hàm hiển thị danh mục sản phẩm theo CategoryParentID
 	public function Hien_thi_Category_theo_CategoryParentID($CaterogyID)
 	{
 		$sql="SELECT CategoryName FROM category WHERE CategoryParentID=? ";
