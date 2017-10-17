@@ -17,15 +17,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- banner -->
 {block name="banner"} {include file="banner.tpl"} {/block}
 <!--// banner -->
+<!-- products - Hiển thị sản phẩm --> 
+{block name="product"} {include file="product.tpl"} {/block}
+<!-- //products - Hiển thị sản phẩm --> 	
 <!-- top-brands -->
 {block name="top_brands"} {include file="top_brands.tpl"} {/block}	
 <!-- //top-brands -->
 <!-- fresh-vegetables -->
 {block name="fresh_vegetables"} {include file="fresh_vegetables.tpl"} {/block}		
 <!-- //fresh-vegetables -->
+
 <!-- newsletter -->
 {block name="news_letter"} {include file="news_letter.tpl"} {/block}	
 <!-- //newsletter -->
+
 <!-- footer -->
 {block name="footer"} {include file="footer.tpl"} {/block}
 <!-- //footer -->
