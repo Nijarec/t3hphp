@@ -1,10 +1,10 @@
- <h2>Hệ thống CMS Quản trị Nhà Hàng</h2>
-			<p id="page-intro">Chào {$smarty.session.fullname}</p>
+ <h2>Hệ thống quản lí siêu thị mini</h2>
+			<p id="page-intro">Chào </p>
 			<ul class="shortcut-buttons-set">
 				
-				<li><a class="shortcut-button" href="themtintuc.php"><span>
+				<li><a class="shortcut-button" href="#"><span>
 					<img src="public/layout/resources/images/icons/pencil_48.png" alt="icon" /><br />
-					Thêm Tin tức
+					Thêm Sản phẩm
 				</span></a></li>
 				
 				<li><a class="shortcut-button" href="#"><span>

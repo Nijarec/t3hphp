@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-09 02:37:47
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-17 02:41:45
          compiled from "Smarty\templates\messages.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:37559dae0fb929109-46687771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1273659e56de90b0791-98756437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '37559dae0fb929109-46687771',
+  'nocache_hash' => '1273659e56de90b0791-98756437',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_59dae0fb92cf83_10119570',
+  'unifunc' => 'content_59e56de90b4a12_28054780',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59dae0fb92cf83_10119570')) {function content_59dae0fb92cf83_10119570($_smarty_tpl) {?><div id="messages" style="display: none"> <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
+<?php if ($_valid && !is_callable('content_59e56de90b4a12_28054780')) {function content_59e56de90b4a12_28054780($_smarty_tpl) {?><div id="messages" style="display: none"> <!-- Messages are shown when a link with these attributes are clicked: href="#messages" rel="modal"  -->
   
   <h3>3 Messages</h3>
   <p> <strong>17th May 2009</strong> by Admin<br />

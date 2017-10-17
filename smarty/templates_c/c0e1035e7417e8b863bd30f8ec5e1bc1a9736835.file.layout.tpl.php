@@ -1,9 +1,15 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
-         compiled from "smarty\templates\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:52433578059db8ca8bcb369-70246582%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
+         compiled from "smarty\templates\san_pham\layout.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1337459df5b9b9880e2-22385716%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
+    'c0e1035e7417e8b863bd30f8ec5e1bc1a9736835' => 
+    array (
+      0 => 'smarty\\templates\\san_pham\\layout.tpl',
+      1 => 1507807165,
+      2 => 'file',
+    ),
     'e0734278ae9da0e34a12899ed984b77d116c8cf5' => 
     array (
       0 => 'smarty\\templates\\layout.tpl',
@@ -59,15 +65,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '52433578059db8ca8bcb369-70246582',
+  'nocache_hash' => '1337459df5b9b9880e2-22385716',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_59db8ca8c0e274_26347198',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_59df5b9bbc3546_09583972',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59db8ca8c0e274_26347198')) {function content_59db8ca8c0e274_26347198($_smarty_tpl) {?><!--
+<?php if ($_valid && !is_callable('content_59df5b9bbc3546_09583972')) {function content_59df5b9bbc3546_09583972($_smarty_tpl) {?><!--
 author: W3layouts
 author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -77,8 +83,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
  <?php /*  Call merged included template "head.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4a75829_33635108($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '1337459df5b9b9880e2-22385716');
+content_59df5b9b9e3d17_15441876($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "head.tpl" */?> 
 <body>
@@ -87,8 +93,8 @@ $_smarty_tpl = array_pop($_tpl_stack);
 <!-- //script-for sticky-nav -->
  <?php /*  Call merged included template "header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4a9dce6_82610577($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '1337459df5b9b9880e2-22385716');
+content_59df5b9b9fc778_53364443($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "header.tpl" */?> 
 
@@ -99,31 +105,31 @@ $_smarty_tpl = array_pop($_tpl_stack);
 <!--// banner -->
  <?php /*  Call merged included template "content.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4abc871_89549189($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '1337459df5b9b9880e2-22385716');
+content_59df5b9ba2f377_06761959($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "content.tpl" */?> 
 <!-- footer -->
  <?php /*  Call merged included template "footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4b0a5e2_41599106($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '1337459df5b9b9880e2-22385716');
+content_59df5b9bb9ce08_61420232($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "footer.tpl" */?> 
 <!-- //footer -->
 <!-- Bootstrap Core JavaScript -->
  <?php /*  Call merged included template "javascript.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4b21239_43977168($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '1337459df5b9b9880e2-22385716');
+content_59df5b9bbae522_77357999($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "javascript.tpl" */?> 
 </body>
 </html>
 <?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\head.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4a75829_33635108')) {function content_59df5cb4a75829_33635108($_smarty_tpl) {?><head>
+<?php if ($_valid && !is_callable('content_59df5b9b9e3d17_15441876')) {function content_59df5b9b9e3d17_15441876($_smarty_tpl) {?><head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -161,9 +167,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- start-smoth-scrolling -->
 </head><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4a9dce6_82610577')) {function content_59df5cb4a9dce6_82610577($_smarty_tpl) {?><!-- header -->
+<?php if ($_valid && !is_callable('content_59df5b9b9fc778_53364443')) {function content_59df5b9b9fc778_53364443($_smarty_tpl) {?><!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
 			<a href="index.php">Today's special Offers !</a>
@@ -243,35 +249,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 <!-- //header --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\content.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4abc871_89549189')) {function content_59df5cb4abc871_89549189($_smarty_tpl) {?><!-- top-brands -->
- <?php /*  Call merged included template "top_brands.tpl" */
-$_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4ac9334_93957136($_smarty_tpl);
-$_smarty_tpl = array_pop($_tpl_stack); 
-/*  End of included template "top_brands.tpl" */?> 	
+<?php if ($_valid && !is_callable('content_59df5b9ba2f377_06761959')) {function content_59df5b9ba2f377_06761959($_smarty_tpl) {?><!-- top-brands -->
+	
 <!-- //top-brands -->
 <!-- fresh-vegetables -->
- <?php /*  Call merged included template "fresh_vegetables.tpl" */
-$_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("fresh_vegetables.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4ae07a9_34764835($_smarty_tpl);
-$_smarty_tpl = array_pop($_tpl_stack); 
-/*  End of included template "fresh_vegetables.tpl" */?> 		
+		
 <!-- //fresh-vegetables -->
 <!-- newsletter -->
- <?php /*  Call merged included template "news_letter.tpl" */
-$_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '52433578059db8ca8bcb369-70246582');
-content_59df5cb4af3536_73935412($_smarty_tpl);
-$_smarty_tpl = array_pop($_tpl_stack); 
-/*  End of included template "news_letter.tpl" */?> 	
+	
 <!-- //newsletter --><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\top_brands.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4ac9334_93957136')) {function content_59df5cb4ac9334_93957136($_smarty_tpl) {?><div class="top-brands">
+<?php if ($_valid && !is_callable('content_59df5b9ba43302_86652638')) {function content_59df5b9ba43302_86652638($_smarty_tpl) {?><div class="top-brands">
 		<div class="container">
 			<h3>Hot Offers</h3>
 			<div class="agile_top_brands_grids">
@@ -420,9 +411,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\fresh_vegetables.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4ae07a9_34764835')) {function content_59df5cb4ae07a9_34764835($_smarty_tpl) {?><div class="fresh-vegetables">
+<?php if ($_valid && !is_callable('content_59df5b9bb52e08_75416601')) {function content_59df5b9bb52e08_75416601($_smarty_tpl) {?><div class="fresh-vegetables">
 		<div class="container">
 			<h3>Top Products</h3>
 			<div class="w3l_fresh_vegetables_grids">
@@ -489,9 +480,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\news_letter.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4af3536_73935412')) {function content_59df5cb4af3536_73935412($_smarty_tpl) {?><div class="newsletter">
+<?php if ($_valid && !is_callable('content_59df5b9bb73291_48335175')) {function content_59df5b9bb73291_48335175($_smarty_tpl) {?><div class="newsletter">
 		<div class="container">
 			<div class="w3agile_newsletter_left">
 				<h3>sign up for our newsletter</h3>
@@ -506,9 +497,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			<div class="clearfix"> </div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4b0a5e2_41599106')) {function content_59df5cb4b0a5e2_41599106($_smarty_tpl) {?><div class="footer">
+<?php if ($_valid && !is_callable('content_59df5b9bb9ce08_61420232')) {function content_59df5b9bb9ce08_61420232($_smarty_tpl) {?><div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -576,9 +567,9 @@ $_smarty_tpl = array_pop($_tpl_stack);
 			</div>
 		</div>
 	</div><?php }} ?>
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:14:44
+<?php /* Smarty version Smarty-3.1.18, created on 2017-10-12 12:10:03
          compiled from "smarty\templates\javascript.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_59df5cb4b21239_43977168')) {function content_59df5cb4b21239_43977168($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
+<?php if ($_valid && !is_callable('content_59df5b9bbae522_77357999')) {function content_59df5b9bbae522_77357999($_smarty_tpl) {?><script src="js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".dropdown").hover(            

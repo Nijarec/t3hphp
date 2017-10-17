@@ -3,8 +3,6 @@
 {include file="$view"}
 {else}
 <div id="container" style="width:100%; height:400px;"></div>
-{/if}  
-</div><!-- End .content-box -->
 <script>
 $(function () { 
     var myChart = Highcharts.chart('container', {
@@ -29,3 +27,5 @@ $(function () {
     });
 });
 </script>
+{/if}  
+</div><!-- End .content-box -->

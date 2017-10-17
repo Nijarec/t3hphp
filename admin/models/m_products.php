@@ -36,7 +36,7 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 	{
 		$sql="SELECT * FROM products WHERE ProductID=$ProductID";
 		$this->setQuery($sql);
-		return $this->loadRow();
+		return $this->loadAllRows();
 	}
 	
 	public function Hien_thi_san_pham_theo_SupplierID($SupplierID)
@@ -44,6 +44,14 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 		$sql="SELECT * FROM products WHERE SupplierID=$SupplierID";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
+	}
+	
+	public function Hien_thi_san_pham()
+	{
+		$sql="Select * FROM products";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	
 	}
 	
 	public function Them_san_pham( $CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority)

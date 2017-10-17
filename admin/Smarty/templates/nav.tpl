@@ -27,17 +27,19 @@ $(function() {
   Danh mục 
   </a> 
   </li>
-  {if $smarty.session.role=="editor"}
   <li>
-  <a href="#" class="nav-top-item" id="tintuc"> Tin tức </a>
+  <a href="#" class="nav-top-item" id="sanpham"> Sản phẩm </a>
     <ul>
-      <li><a href="tintuc.php" title="tintuc">Danh sách tin tức</a></li>
-      <li><a href="themtintuc.php" title="tintuc">Thêm tin tức</a></li>
+      <li><a href="san_pham.php" title="sanpham">Danh sách sản phẩm</a></li>
+      <li><a href="them_san_pham.php" title="sanpham">Thêm sản phẩm</a></li>
+      <li><a href="sua_san_pham.php" title="sanpham">Cập nhật sản phẩm</a></li>
+      <li><a href="xoa_san_pham.php" title="sanpham">Xóa sản phẩm</a></li>
     </ul>
   </li>
-  {else}
-  <li> 
-  <a href="#" class="nav-top-item" id="loaimon"> Loại món ăn </a>
+  </ul>
+<!-- End #main-nav -->
+  <!--<li>--> 
+  <!--<a href="#" class="nav-top-item" id="loaimon"> Loại món ăn </a>
     <ul>
       <li><a href="loaimonan.php" title="loaimon">Danh sách loại món ăn</a></li>
       <li><a href="themloaimonan.php" title="loaimon" >Thêm loại món ăn</a></li>
@@ -61,7 +63,4 @@ $(function() {
       <li><a href="#" title="thucdon">Danh sách Thực đơn</a></li>
       <li><a href="#" title="thucdon">Thêm Thực đơn</a></li>
     </ul>
-  </li>
-  {/if}
-</ul>
-<!-- End #main-nav -->
+  </li>-->

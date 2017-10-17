@@ -3,7 +3,7 @@
 			 <!-- Brand and toggle get grouped for better mobile display -->
 			  <div class="navbar-header nav_2">
 				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-					<span class="sr-only">Toggle navigation</span>
+					<span class="sr-only">Danh muc</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -21,7 +21,7 @@
                                     <ul>
                                     
                                     {if $catM->CategoryID == $cat->CategoryParentID}	
-										<li><a href="#">{$cat->CategoryName}</a></li>
+										<li><a href="san_pham.php?cat={$cat->CategoryID}">{$cat->CategoryName}</a></li>
 										
                                     {/if}
 									</ul>

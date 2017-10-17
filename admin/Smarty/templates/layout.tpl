@@ -3,7 +3,7 @@
 <!-- Wrapper for the radial gradient background -->
 <div id="sidebar">
   <div id="sidebar-wrapper"> <!-- Sidebar with logo and menu --> 
-    {include file="logo_profile.tpl"}			
+    	
     {include file="nav.tpl"}
     {include file="messages.tpl"}
   </div>
