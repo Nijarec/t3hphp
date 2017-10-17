@@ -17,8 +17,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- banner -->
 {block name="banner"} {include file="banner.tpl"} {/block}
 <!--// banner -->
-<!-- products - Hiển thị sản phẩm --> 
-{block name="product"} {include file="product.tpl"} {/block}
+<!-- products - Hiển thị sản phẩm -->
+{block name="content"} {include file="content.tpl"} {/block}
+{*block name="product"} {include file="product.tpl"} {/block*}
 <!-- //products - Hiển thị sản phẩm --> 	
 <!-- top-brands -->
 {block name="top_brands"} {include file="top_brands.tpl"} {/block}	

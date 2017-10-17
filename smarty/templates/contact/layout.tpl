@@ -1,2 +1,2 @@
-{extends file="layout.tpl"}
-{block name="banner"}{include file ="contact.tpl"}{/block}
+{extends file = "layout.tpl"}
+{block name="banner"}{include file ="content.tpl"}{/block}

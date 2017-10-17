@@ -2,6 +2,12 @@
 include_once("database.php");
 class M_products extends database
 {
+	public function Hien_thi_tat_ca_san_pham()
+	{
+		$sql="SELECT * FROM products";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
 		// Hàm hiển thị 4 sản phẩm thông dụng đưa vào slider trong banner
 	public function Hien_thi_san_pham_slider()
 	{
@@ -54,6 +60,8 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 		$kq=$this->execute($param);
 		return $kq;
 	}
+
+	
 	
 	public function Xoa_san_pham($ProductID,$ProductName)
 	{

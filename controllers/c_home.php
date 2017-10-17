@@ -11,6 +11,7 @@ class C_home
 		$san_pham_slider=$m_sanpham->Hien_thi_san_pham_slider();
 		$dsCategoryMain=$m_category->Hien_thi_main_Category();
 		$dsCategory=$m_category->Hien_thi_Category();
+		
 		/*echo "<pre>";
 		print_r($dsCategory);
 		echo"</pre>";*/

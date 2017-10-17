@@ -1,25 +1,28 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2017-10-05 07:53:14
-         compiled from "smarty\templates\footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:141422130159d5c8ca1dbf56-40477329%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
+<?php
+/* Smarty version 3.1.30, created on 2017-10-17 10:20:23
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\footer.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59e5bd4740dc95_12704561',
+  'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '70eba14aea234c9b7881b48964462938ebb4971e' => 
+    'd6efa303ecde61ec68b8be664d02bfec97ccab39' => 
     array (
-      0 => 'smarty\\templates\\footer.tpl',
-      1 => 1507181698,
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\footer.tpl',
+      1 => 1507708652,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '141422130159d5c8ca1dbf56-40477329',
-  'function' => 
+  'includes' => 
   array (
   ),
-  'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_59d5c8ca1dd787_63998603',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59d5c8ca1dd787_63998603')) {function content_59d5c8ca1dd787_63998603($_smarty_tpl) {?><div class="footer">
+),false)) {
+function content_59e5bd4740dc95_12704561 (Smarty_Internal_Template $_smarty_tpl) {
+?>
+<div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>information</h3>
@@ -86,4 +89,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<p>© 2016 Grocery Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
-	</div><?php }} ?>
+	</div><?php }
+}
