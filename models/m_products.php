@@ -4,7 +4,7 @@ class M_products extends database
 {
 	public function Hien_thi_tat_ca_san_pham()
 	{
-		$sql="SELECT * FROM products";
+		$sql="SELECT * FROM products limit 10";
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	}
