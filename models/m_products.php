@@ -38,11 +38,13 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 	}
 	
 	//Hàm hiển thị sản phẩm theo product ID, Chi tiết sản phẩm
-	public function Hien_thi_san_pham_theo_ProductID($ProductID)
+
+		public function Hien_thi_san_pham_theo_ProductID($ProductID)
 	{
-		$sql="SELECT * FROM products WHERE ProductID=$ProductID";
+		$sql="SELECT * FROM products where ProductID=?";
 		$this->setQuery($sql);
-		return $this->loadRow();
+		$param=array($ProductID);
+		return $this->loadRow($param);
 	}
 	
 	public function Hien_thi_san_pham_theo_SupplierID($SupplierID)

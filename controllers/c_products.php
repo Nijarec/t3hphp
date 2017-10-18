@@ -18,16 +18,19 @@ class C_products
 		public function Hien_thi_chi_tiet_san_pham()
 	{
 		// Model
-		$ProductID=$_GET["$ProductID"];
+		$product='';
+		$ProductID=$_GET["ProductID"];
+		echo($ProductID);
 		include("models/m_products.php");
 		$m_products=new M_products();
 		$product=$m_products->Hien_thi_san_pham_theo_ProductID($ProductID);
+		var_dump($product);
 		// View
 		include("controllers/Smarty_sieu_thi.php");
 		$smarty=new Smarty_sieu_thi();
-		$smarty->assign("$product",$product);
-		$view="views/products/v_product.tpl";
+		$view="views/products/v_chi_tiet_products.tpl";
 		$smarty->assign("view",$view);
+		$smarty->assign("product",$product);
 		$smarty->display("products/layout.tpl");
 	}
 }
