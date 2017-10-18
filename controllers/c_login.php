@@ -13,6 +13,7 @@ class C_login
 			$Password=$_POST["Password"];
 			$m_login=new M_login();
 			$kq=$m_login->Kiem_tra_dang_nhap($Username,$Password);
+			var_dump($kq);
 			if($kq)
 			{
 				//Gửi mail

@@ -1,7 +1,5 @@
 <div class="w3ls_w3l_banner_nav_right_grid">
 				<h3>DANH SÁCH SẢN PHẨM</h3>
-				
-
 				<div class="w3ls_w3l_banner_nav_right_grid1">
 					<h6>food</h6>
 					{foreach $dsproducts as $pd}
@@ -19,8 +17,13 @@
 											<a href="#"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
 											<p>{$pd->ProductName}</p>
 											<h4>{$pd->Price} <span>$5.00</span></h4>
+											<input type="hidden" id="dongia{$pd->Price}" value="{$pd->Price}" />
+											<input type="text" size="2" value="1" id="soluong{$pd->ProductID}" />
+											<a class="button" href="javascript:void(0)" id="{$mon->ma_mon}">Mua</a>
+										<!--	<a class="button" href="javascript:void(0)" id="{$mon->ma_mon}">Mua</a>-->
+											
 										</div>
-										<div class="snipcart-details">
+										<!--<div class="snipcart-details">
 											<form action="#" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
@@ -35,7 +38,7 @@
 													<input type="submit" name="submit" value="Add to cart" class="button" />
 												</fieldset>
 											</form>
-										</div>
+										</div>-->
 									</div>
 								</figure>
 							</div>

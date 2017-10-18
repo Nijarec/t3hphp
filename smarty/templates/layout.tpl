@@ -24,8 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- top-brands -->
 {block name="top_brands"} {include file="top_brands.tpl"} {/block}	
 <!-- //top-brands -->
-<!-- fresh-vegetables -->
-{block name="fresh_vegetables"} {include file="fresh_vegetables.tpl"} {/block}		
+<!-- fresh-vegetables -->	
 <!-- //fresh-vegetables -->
 
 <!-- newsletter -->
