@@ -32,8 +32,7 @@
                     //lay_thong_tin_thuc_don
                     $smarty->assign('ds_thuc_don',$this->lay_thong_tin_thuc_don($gio_hang_thuc_don));
                 }
-            }
-            
+            }          
 			$smarty->assign("view","views/gio_hang/v_gio_hang.tpl");
 			$smarty->display("check_out/layout.tpl");
         }

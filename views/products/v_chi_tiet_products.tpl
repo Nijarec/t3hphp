@@ -1,5 +1,5 @@
-{foreach $product as $key => $value}
-		<div class="agileinfo_single">
+
+	<div class="agileinfo_single">
 			
 				<h5>{$product->ProductName}</h5>
 				<div class="col-md-4 agileinfo_single_left">
@@ -49,4 +49,3 @@
 				<div class="clearfix"> </div>
 				
 			</div>
-{/foreach}

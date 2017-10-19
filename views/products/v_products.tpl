@@ -16,10 +16,10 @@
 										<div class="snipcart-thumb">
 											<a href="chi_tiet_products.php?ProductID={$pd->ProductID}"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
 											<p>{$pd->ProductName}</p>
-											<h4>{$pd->Price} <span>$5.00</span></h4>
-											<input type="hidden" id="dongia{$pd->Price}" value="{$pd->Price}" />
+											<h4>number_format({$pd->Price}) <span>$5.00</span></h4>
+											<input type="hidden" id="dongia{$pd->Price}" value="number_format({$pd->Price})" />
 											<input type="text" size="2" value="1" id="soluong{$pd->ProductID}" />
-											<a class="button" href="javascript:void(0)" id="{$mon->ma_mon}">Mua</a>
+											<a class="button-1" href="javascript:void(0)" id="{$pd->ProductID}">Mua</a>
 										<!--	<a class="button" href="javascript:void(0)" id="{$mon->ma_mon}">Mua</a>-->
 											
 										</div>
