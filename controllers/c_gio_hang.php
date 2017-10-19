@@ -1,5 +1,5 @@
 <?php
-   @session_start();
+    @session_start();
     class C_gio_hang{
         protected $smarty;
         function xem_gio_hang()
@@ -14,9 +14,6 @@
                 $gio_hang_mon_an=array();
                 foreach($gio_hang as $key=>$value)
                 {
-                    if(substr($key,0,1)=='t')
-                        $gio_hang_thuc_don[substr($key,1,strlen($key)-1)]=$value;
-                    else
                         $gio_hang_mon_an[$key]=$value;
                 }
 				
@@ -26,15 +23,10 @@
                     //lay_thong_tin_mon_an
                     $smarty->assign('ds_mon_an',$this->lay_thong_tin_mon_an($gio_hang_mon_an));
                 }
-                if($gio_hang_thuc_don) //Nếu có chọn thực đơn
-                {
-                    $_SESSION['gio_hang_thuc_don']=$gio_hang_thuc_don;
-                    //lay_thong_tin_thuc_don
-                    $smarty->assign('ds_thuc_don',$this->lay_thong_tin_thuc_don($gio_hang_thuc_don));
-                }
-            }          
+            }
+            
 			$smarty->assign("view","views/gio_hang/v_gio_hang.tpl");
-			$smarty->display("check_out/layout.tpl");
+			$smarty->display("products/layout.tpl");
         }
         function layGioHang() {
             if(isset($_SESSION['gioHang']))
@@ -43,44 +35,24 @@
                 return false;
         }
 		
-		function lay_thong_tin_mon_an($mon_an)
+		function lay_thong_tin_mon_an($product)
         {
-            $ma_mon=array();
-            foreach($mon_an as $key=>$value)
+            $ProductID=array();
+            foreach($product as $key=>$value)
             {
-                $ma_mon[]=$key;
+                $ProductID[]=$key;
             }
-            $ma_mon=implode(",",$ma_mon);
-            include_once('models/m_mon_an.php');
-            $m_mon_an=new M_mon_an();
-            $ds_mon_an=$m_mon_an->lay_mon_an_cho_gio_hang($ma_mon);
+            $ProductID=implode(",",$ProductID);
+            include_once('models/m_products.php');
+            $m_products=new M_products();
+            $ds_mon_an=$m_products->lay_products_cho_gio_hang($ProductID);
             $ds_mon_an_gio_hang=array(); //Ðua số lượng vào $ds_mon_an
             foreach($ds_mon_an as $item)
             {
-                $item->so_luong=$mon_an[$item->ma_mon];
+                $item->so_luong=$product[$item->ProductID];
                 $ds_mon_an_gio_hang[]=$item;
             }
             return $ds_mon_an_gio_hang;
-        }
-        function lay_thong_tin_thuc_don($thuc_don)
-        {
-            $ma_thuc_don=array();
-            foreach($thuc_don as $key=>$value)
-            {
-                $ma_thuc_don[]=$key;
-            }
-            $ma_thuc_don=implode(",",$ma_thuc_don);
-            include_once('models/m_thuc_don.php');
-            $m_thuc_don=new M_thuc_don();
-            
-            $ds_thuc_don=$m_thuc_don->lay_thuc_don_cho_gio_hang($ma_thuc_don);
-            $ds_thuc_don_gio_hang=array(); //Ðua s? lu?ng vào $ds_thuc_don
-            foreach($ds_thuc_don as $item)
-            {
-                $item->so_luong=$thuc_don[$item->ma_thuc_don];
-                $ds_thuc_don_gio_hang[]=$item;
-            }
-            return $ds_thuc_don_gio_hang;
         }
 
         function themGioHang($maSP, $so_luong, $donGia) {

@@ -1,149 +1,93 @@
-<div class="privacy about">
-			<h3>Chec<span>kout</span></h3>
-			
-	      <div class="checkout-right">
-					<h4>Your shopping cart contains: <span>3 Products</span></h4>
-				<table class="timetable_sub">
-					<thead>
-						<tr>
-							<th>SL No.</th>	
-							<th>Product</th>
-							<th>Quality</th>
-							<th>Product Name</th>					
-							<th>Price</th>
-							<th>Remove</th>
-						</tr>
-					</thead>
-					<tbody><tr class="rem1">
-						<td class="invert">1</td>
-						<td class="invert-image"><a href="../../smarty/templates/single.html"><img src="../../images/1.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Fortune Sunflower Oil</td>
-						
-						<td class="invert">$290.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close1"> </div>
-							</div>
-
-						</td>
-					</tr>
-					<tr class="rem2">
-						<td class="invert">2</td>
-						<td class="invert-image"><a href="../../smarty/templates/single.html"><img src="../../images/3.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Basmati Rise (5 Kg)</td>
-					
-						<td class="invert">$250.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close2"> </div>
-							</div>
-
-						</td>
-					</tr>
-					<tr class="rem3">
-						<td class="invert">3</td>
-						<td class="invert-image"><a href="../../smarty/templates/single.html"><img src="../../images/2.png" alt=" " class="img-responsive"></a></td>
-						<td class="invert">
-							 <div class="quantity"> 
-								<div class="quantity-select">                           
-									<div class="entry value-minus">&nbsp;</div>
-									<div class="entry value"><span>1</span></div>
-									<div class="entry value-plus active">&nbsp;</div>
-								</div>
-							</div>
-						</td>
-						<td class="invert">Pepsi Soft Drink (2 Ltr)</td>
-						
-						<td class="invert">$15.00</td>
-						<td class="invert">
-							<div class="rem">
-								<div class="close3"> </div>
-							</div>
-	
-						</td>
-					</tr>
-
-				</tbody></table>
-			</div>
-			<div class="checkout-left">	
-				<div class="col-md-4 checkout-left-basket">
-					<h4>Continue to basket</h4>
-					<ul>
-						<li>Product1 <i>-</i> <span>$15.00 </span></li>
-						<li>Product2 <i>-</i> <span>$25.00 </span></li>
-						<li>Product3 <i>-</i> <span>$29.00 </span></li>
-						<li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-						<li>Total <i>-</i> <span>$84.00</span></li>
-					</ul>
-				</div>
-				<div class="col-md-8 address_form_agile">
-					  <h4>Add a new Details</h4>
-				<form action="../../smarty/templates/payment.html" method="post" class="creditly-card-form agileinfo_form">
-									<section class="creditly-wrapper wthree, w3_agileits_wrapper">
-										<div class="information-wrapper">
-											<div class="first-row form-group">
-												<div class="controls">
-													<label class="control-label">Full name: </label>
-													<input class="billing-address-name form-control" type="text" name="name" placeholder="Full name">
-												</div>
-												<div class="w3_agileits_card_number_grids">
-													<div class="w3_agileits_card_number_grid_left">
-														<div class="controls">
-															<label class="control-label">Mobile number:</label>
-														    <input class="form-control" type="text" placeholder="Mobile number">
-														</div>
-													</div>
-													<div class="w3_agileits_card_number_grid_right">
-														<div class="controls">
-															<label class="control-label">Landmark: </label>
-														 <input class="form-control" type="text" placeholder="Landmark">
-														</div>
-													</div>
-													<div class="clear"> </div>
-												</div>
-												<div class="controls">
-													<label class="control-label">Town/City: </label>
-												 <input class="form-control" type="text" placeholder="Town/City">
-												</div>
-													<div class="controls">
-															<label class="control-label">Address type: </label>
-												     <select class="form-control option-w3ls">
-																							<option>Office</option>
-																							<option>Home</option>
-																							<option>Commercial</option>
-							
-																					</select>
-													</div>
-											</div>
-											<button class="submit check_out">Delivery to this Address</button>
-										</div>
-									</section>
-								</form>
-									<div class="checkout-right-basket">
-				        	<a href="../../smarty/templates/payment.html">Make a Payment <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-			      	</div>
-					</div>
-			
-				<div class="clearfix"> </div>
-				
-			</div>
-
-		</div>
+<section id="content">
+  <div class="main" style="min-height:768px" id="th_giohang">
+    <div class="container">
+    {if isset($ds_mon_an) || isset($ds_thuc_don)}
+        <div>{assign var=tien_mon_an value=0}
+        <form action="gio_hang.php" method="post">
+    {if isset($ds_mon_an)}       
+        <h3 align="center">Danh sách món ăn bạn đã chọn</h3>
+        <table align="center" width="90%" cellpadding="2px" cellspacing="0">
+            <tr><td width="100px">Mã món</td><td>Tên món</td><td  width="100px">Số lượng</td><td align="right" width="150px">Đơn giá</td><td align="right"  width="150px">Thành tiền</td><td align="center"  width="70px">Xóa</td></tr>
+        {foreach $ds_mon_an as $item}
+            <tr>
+                <td>
+                    {$item->ma_mon}
+                </td>
+                <td>
+                    {$item->ten_mon}
+                </td>
+                <td>
+                    <input type="text" value="{$item->so_luong}" name="soluong{$item->ma_mon}" style="width:70px; text-align:center"/>
+                    <input type="hidden" value="{$item->don_gia}" name="dongia{$item->ma_mon}"/>
+                </td>
+                <td align="right">
+                    {number_format($item->don_gia)}
+                </td>
+                <td align="right">
+                    {number_format($item->so_luong*$item->don_gia)}đ 
+                    {$tien_mon_an=$tien_mon_an+$item->so_luong*$item->don_gia}
+                </td>
+                <td align="center">
+                    <input type="checkbox" name="{{$item->ma_mon}}" value="{$item->don_gia}"/>
+                </td>
+            </tr>
+        {/foreach}
+            <tr bgcolor="#FFE9D2"><td colspan="4" align="right">Tiền món ăn:</td><td align="right">{number_format($tien_mon_an)}đ</td></tr>
+        </table> 
+    {/if} 
+    
+    {if isset($ds_thuc_don)}{assign var=tien_thuc_don value=0}
+        <h3 align="center">Danh sách thực đơn bạn đã chọn</h3>
+        <table align="center" width="90%" cellpadding="2px" cellspacing="0">
+            <tr><td width="100px">Mã thực đơn</td><td>Tên thực đơn</td><td  width="100px">Số lượng</td><td align="right" width="150px">Đơn giá</td><td align="right"  width="150px">Thành tiền</td><td align="center"  width="70px">Xóa</td></tr>
+        {foreach $ds_thuc_don as $item}
+            <tr>
+                <td>
+                    {$item->ma_thuc_don}
+                </td>
+                <td>
+                    {$item->ten_thuc_don}
+                </td>
+                <td>
+                    <input type="text" value="{$item->so_luong}" name="soluongt{$item->ma_thuc_don}" style="width:70px; text-align:center"/>
+                    <input type="hidden" value="{$item->don_gia}" name="dongiat{$item->ma_thuc_don}"/>
+                </td>
+                <td align="right">
+                    {number_format($item->don_gia)}
+                </td>
+                <td align="right">
+                    {number_format($item->so_luong*$item->don_gia)}đ
+                    {$tien_thuc_don=$tien_thuc_don+$item->so_luong*$item->don_gia}
+                </td>
+                <td align="center">
+                    <input type="checkbox" name="t{{$item->ma_thuc_don}}" value="{$item->don_gia}"/>
+                </td>
+            </tr>
+        {/foreach}
+            <tr bgcolor="#FFE9D2"><td colspan="4" align="right">Tiền thực đơn:</td><td align="right">{number_format($tien_thuc_don)}đ</td></tr>
+            {if isset($ds_mon_an)}
+                <tr bgcolor="#FEC8A7"><td colspan="4" align="right">Tiền hóa đơn:</td><td align="right" style="color:red">
+                {$tong=$tien_thuc_don + $tien_mon_an}
+                {number_format($tong)}đ</td></tr>
+            {/if}
+        </table> 
+    {/if} 
+    <p align="center">
+    
+    <input type="submit" name="btnCapnhat" value="Cập nhật" class="button-2" />
+    
+    <input type="button"  class="button-2"
+						onclick="window.location.href = 'khach_hang.php?key=dat-hang'"
+						value="Đặt hàng" class="art-button" />
+                        
+    <input type="button"  class="button-1" id="btnxoa"						
+						value="Xóa giỏ hàng" class="art-button" />
+    </p>
+    </form>
+    </div>
+    {else}
+        <h3 align="center">Bạn chưa chọn món ăn nào chọn giỏ</h3> 
+    {/if}
+    </div>
+  </div>
+</section>

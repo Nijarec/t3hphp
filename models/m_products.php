@@ -2,6 +2,14 @@
 include_once("database.php");
 class M_products extends database
 {
+	
+		public function lay_products_cho_gio_hang($chuoi)
+	{
+		$query="Select * from products where ProductID in($chuoi)";
+		$this->setQuery($query);
+		return $this->loadAllRows();
+	}
+	
 	public function Hien_thi_tat_ca_san_pham()
 	{
 		$sql="SELECT * FROM products limit 10";

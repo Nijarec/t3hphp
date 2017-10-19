@@ -4,14 +4,14 @@ $(document).ready(function() {
 			
 			var $key=$(this).attr("id");
             var $soluonginput="#soluong"+$key;
-            var $soLuong=$($soluonginput).val();
+            var $soluong=$($soluonginput).val();
             
             var $dongiainput="#dongia"+$key;
             var $dongia=$($dongiainput).val();
 
             var form_data = {
                 id    : $key,
-                soluong : $soLuong,
+                soluong : $soluong,
                 dongia  : $dongia,
                 };
             
