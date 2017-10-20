@@ -36,7 +36,7 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 	{
 		$sql="SELECT * FROM products WHERE ProductID=$ProductID";
 		$this->setQuery($sql);
-		return $this->loadAllRows();
+		return $this->loadRow();
 	}
 	
 	public function Hien_thi_san_pham_theo_SupplierID($SupplierID)
@@ -54,26 +54,43 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 	
 	}
 	
-	public function Them_san_pham( $CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority)
+	public function Them_san_pham( $ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority)
 	{
-		$sql="INSERT INTO  products (ProductID, CategoryID, SupplierID, ProductName, ProductType, Unit, SubUnit, UnitQuantity, Description, Image, Price, Discount, LastUpdate, Priority) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql="INSERT INTO  products (ProductID, CategoryID, SupplierID, ProductName, ProductType, Unit, SubUnit, UnitQuantity, Description, Image, Price, Discount, LastUpdate, Priority) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		$this->setQuery($sql);
-		$param=array($CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority);
-		$kq=$this->execute($param);
-		return $kq;
+		$param=array($ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority);
+		//echo"<pre>";
+		
+		return $this->execute($param);
+		
 	}
 	
-	public function Xoa_san_pham($ProductID,$ProductName)
+	public function Xoa_san_pham($ProductID)
 	{
-		$sql="DELETE FROM products WHERE ProductID=?or ProductName=?";
+		$sql="DELETE FROM products WHERE ProductID=?";
 		$this->setQuery($sql);
-		$param=array($ProductID,$ProductName);
-		$kq=$this->execute($param);
-		return $kq;
+		$param=array($ProductID);
+		return $this->execute($param);
 	}
 	
-	public function Sua_san_pham()
+	public function Sua_san_pham($ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority,$id_product)
 	{
+		$sql="UPDATE products SET ProductID=?,CategoryID=?,SupplierID=?,ProductName=?,ProductType=?,Unit=?,SubUnit=?,UnitQuantity=?,Description=?,Image=?,Price=?,Discount=?,LastUpdate=?,Priority=? WHERE ProductID=?";
+		$this->setQuery($sql);
+		return $this->execute(array($ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority,$id_product));
+	}
+	
+	public function Lay_Unit()
+	{
+		$sql="select distinct Unit from products";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
+	public function Lay_SubUnit()
+	{
+		$sql="select distinct SubUnit from products";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
 	}
 }
 ?>

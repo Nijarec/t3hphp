@@ -2,7 +2,7 @@
 			<p id="page-intro">Chào </p>
 			<ul class="shortcut-buttons-set">
 				
-				<li><a class="shortcut-button" href="#"><span>
+				<li><a class="shortcut-button" href="them_san_pham.php"><span>
 					<img src="public/layout/resources/images/icons/pencil_48.png" alt="icon" /><br />
 					Thêm Sản phẩm
 				</span></a></li>
