@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-10-21 05:34:20
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\contact.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59eac03cccb3b7_30684701',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '61ea909b5991960348d77bb361533b72d69ea08f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\contact.tpl',
+      1 => 1508556351,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59eac03cccb3b7_30684701 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!--$ho_ten,$email,$sdt,$noi_dung -->
 	<div class="banner">
 		<div class="w3l_banner_nav_left">
@@ -103,4 +127,5 @@
 <!-- //mail -->
 		</div>
 		<div class="clearfix"></div>
-	</div>
+	</div><?php }
+}

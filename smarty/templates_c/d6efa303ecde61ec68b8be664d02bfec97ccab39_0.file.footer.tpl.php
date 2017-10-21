@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-10-21 05:35:50
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\footer.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59eac096cee290_33316540',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd6efa303ecde61ec68b8be664d02bfec97ccab39' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\footer.tpl',
+      1 => 1508556896,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59eac096cee290_33316540 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="footer">
 		<div class="container">
 			<div class="col-md-3 w3_footer_grid">
@@ -65,4 +89,5 @@
 				<p>© 2016 Grocery Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
-	</div>
+	</div><?php }
+}
