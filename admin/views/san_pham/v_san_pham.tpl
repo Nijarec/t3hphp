@@ -19,7 +19,7 @@
       <tfoot>
           <tr>
             <td colspan="6">
-            <div class="pagination"> [1][2][3] </div>
+            <div class="pagination"> {$lst} </div>
             <div class="clear"></div></td>
           </tr>
         </tfoot>
@@ -41,6 +41,7 @@
             </td>
         </tr>
         {/foreach}
+        <div  class="pagination" style="clear:both; text-align:center">{$lst}</div>
       </tbody>
     </table>
    

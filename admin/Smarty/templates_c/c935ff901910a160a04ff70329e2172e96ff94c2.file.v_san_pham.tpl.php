@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:49:50
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-21 05:12:49
          compiled from "views\san_pham\v_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1073259e56dee0a7066-31179877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c935ff901910a160a04ff70329e2172e96ff94c2' => 
     array (
       0 => 'views\\san_pham\\v_san_pham.tpl',
-      1 => 1508489343,
+      1 => 1508562760,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'tieude' => 0,
+    'lst' => 0,
     'san_pham' => 0,
     'sp' => 0,
   ),
@@ -47,7 +48,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <tfoot>
           <tr>
             <td colspan="6">
-            <div class="pagination"> [1][2][3] </div>
+            <div class="pagination"> <?php echo $_smarty_tpl->tpl_vars['lst']->value;?>
+ </div>
             <div class="clear"></div></td>
           </tr>
         </tfoot>
@@ -80,6 +82,8 @@ $_smarty_tpl->tpl_vars['sp']->_loop = true;
             </td>
         </tr>
         <?php } ?>
+        <div  class="pagination" style="clear:both; text-align:center"><?php echo $_smarty_tpl->tpl_vars['lst']->value;?>
+</div>
       </tbody>
     </table>
    
