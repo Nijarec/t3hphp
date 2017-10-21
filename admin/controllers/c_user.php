@@ -10,9 +10,9 @@ function Hien_thi_dang_nhap()
 		
 		if(isset($_POST["login"]))
 		{
-			$ten=$_POST["ten_dang_nhap"];
+			$email=$_POST["ten_dang_nhap"];
 			$mk=$_POST["mat_khau"];
-			$this->luu_dang_nhap($ten,$mk);
+			$this->luu_dang_nhap($email,$mk);
 
 		}
 		if(isset($_SESSION["fullname"]) )
@@ -32,12 +32,12 @@ function Hien_thi_dang_nhap()
 		session_destroy();
 		header("location:login.php");	
 	}
-	function luu_dang_nhap($ten,$mk)
+	function luu_dang_nhap($email,$mk)
 	{
 		$m_user=new M_user();
-		$user=$m_user->Doc_user_theo_tenDn_pass($ten,$mk);
-		$_SESSION['fullname']=$user->fullname;
-		$_SESSION['role']=$user->role;
+		$user=$m_user->Doc_user_theo_Email_pass($email,$mk);
+		$_SESSION['fullname']=$user->Name;
+		$_SESSION['role']=$user->ActiveCode;
 	}
 		
 }

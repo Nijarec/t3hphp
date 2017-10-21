@@ -14,11 +14,11 @@ Class M_user extends database
 		$this->setQuery($sql);
 		return $this->loadAllRows();	
 	}
-	function Doc_user_theo_tenDn_pass($ten,$mk)
+	function Doc_user_theo_Email_pass($email,$mk)
 	{
-		$sql="select * from user where username=? and password=?";
+		$sql="select * from auth_access where Email=? and Password=?";
 		$this->setQuery($sql);
-		return $this->loadRow(array($ten,$mk));	
+		return $this->loadRow(array($email,md5($mk)));	
 	}	
 }
 ?>

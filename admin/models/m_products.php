@@ -75,9 +75,9 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 	
 	public function Sua_san_pham($ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority,$id_product)
 	{
-		$sql="UPDATE products SET ProductID=?,CategoryID=?,SupplierID=?,ProductName=?,ProductType=?,Unit=?,SubUnit=?,UnitQuantity=?,Description=?,Image=?,Price=?,Discount=?,LastUpdate=?,Priority=? WHERE ProductID=?";
+		$sql="UPDATE products SET CategoryID=?,SupplierID=?,ProductName=?,ProductType=?,Unit=?,SubUnit=?,UnitQuantity=?,Description=?,Image=?,Price=?,Discount=?,LastUpdate=?,Priority=? WHERE ProductID=?";
 		$this->setQuery($sql);
-		return $this->execute(array($ProductID,$CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority,$id_product));
+		return $this->execute(array($CategoryID, $SupplierID, $ProductName, $ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority,$id_product));
 	}
 	
 	public function Lay_Unit()

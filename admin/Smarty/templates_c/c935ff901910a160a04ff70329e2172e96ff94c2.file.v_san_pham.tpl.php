@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:04:47
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:49:50
          compiled from "views\san_pham\v_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1073259e56dee0a7066-31179877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c935ff901910a160a04ff70329e2172e96ff94c2' => 
     array (
       0 => 'views\\san_pham\\v_san_pham.tpl',
-      1 => 1508486681,
+      1 => 1508489343,
       2 => 'file',
     ),
   ),
@@ -73,7 +73,8 @@ $_smarty_tpl->tpl_vars['sp']->_loop = true;
 " title="Edit" >
             <img src="public/layout/resources/images/icons/pencil.png" alt="Edit" />
             </a> 
-            <a href="javascript:Xoa_san_pham($sp->ProductID)" title="Delete" > 
+            <a href="xoa_san_pham.php?ProductID=<?php echo $_smarty_tpl->tpl_vars['sp']->value->ProductID;?>
+" title="Delete" > 
             <img src="public/layout/resources/images/icons/cross.png" alt="Delete" />
             </a>
             </td>
