@@ -56,7 +56,7 @@ class C_login
 				$noi_dung_mail = "<b>Từ: </b>$ho_ten<p/><b>Email:</b> $email<p/>$noi_dung";
 				$kq = thu_vien::Gui_mail_lien_he($tieu_de, $noi_dung_mail);*/
 				if($kq) {
-					echo "Dang ky thanh cong";
+					echo '<script type="text/javascript">alert("Đăng ký thành công!");</script>';
 				}
 				else {
 					echo "Dang ky that bai";
