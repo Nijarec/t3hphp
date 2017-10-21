@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-21 05:35:50
+/* Smarty version 3.1.30, created on 2017-10-21 06:46:57
   from "C:\xampp\htdocs\t3hphp\smarty\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59eac096ccacd4_01322381',
+  'unifunc' => 'content_59ead1417762c1_09099139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd008cfb376ad9e57d85aca83b9c5dccde6c48350' => 
     array (
       0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\header.tpl',
-      1 => 1508556938,
+      1 => 1508561210,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59eac096ccacd4_01322381 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ead1417762c1_09099139 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- header -->
 	<div class="agileits_header">
@@ -50,8 +50,15 @@ function content_59eac096ccacd4_01322381 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-								<li><a href="login.php">Login</a></li> 
-								<li><a href="login.php">Sign Up</a></li>
+							<?php echo '<?php 
+      						 ';?>if (isset($_SESSION['Username']){
+           						'Chào '.$_SESSION['Username'];
+           						}
+       						<?php echo '?>';?>
+								<li><a href="login.php">Đăng nhập</a></li> 
+								<li><a href="login.php">Đăng ký</a></li>
+								<li><a href="logout.php">Đăng xuất</a></li>
+							
 							</ul>
 						</div>                  
 					</div>	
