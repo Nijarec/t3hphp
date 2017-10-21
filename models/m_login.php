@@ -10,6 +10,16 @@ class M_login extends database
 		$param=array($Username,$Password);
 		return $this->execute($param);	
 	}
+	
+	public function Them_user($username,$password,$email,$phone_number)
+	{
+		$sql="INSERT INTO users VALUES(?,?,?,?,?)";
+		$this->setQuery($sql);
+		$param=array(NULL,$username,$password,$email,$phone_number);
+		return $this->execute($param);	
+	}
+	
+
 }
 
 ?>

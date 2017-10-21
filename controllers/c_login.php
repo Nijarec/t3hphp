@@ -35,6 +35,41 @@ class C_login
 		//$view="views/contact/v_contact.tpl";
 		//$smarty->assign("view",$view);
 		$smarty->display("login/layout.tpl");
+	}
+	
+		public function Dang_ky_moi()
+	{	
+		// Model
+		if(isset($_POST["btnRegister"]))
+		{
+			$username=$_POST["Username"];
+			$password=$_POST["Password"];
+			$email=$_POST["Email"];
+			$phone_number=$_POST["Phone_number"];
+			$m_login=new M_login();
+			$kq=$m_login->Them_user($username,$password,$email,$phone_number);
+			var_dump($kq);
+			if($kq)
+			{
+				//Gửi mail
+			/*	$tieu_de="Liên hệ";
+				$noi_dung_mail = "<b>Từ: </b>$ho_ten<p/><b>Email:</b> $email<p/>$noi_dung";
+				$kq = thu_vien::Gui_mail_lien_he($tieu_de, $noi_dung_mail);*/
+				if($kq) {
+					echo "Dang ky thanh cong";
+				}
+				else {
+					echo "Dang ky that bai";
+				}
+			}
+		}
+		// view
+		include("controllers/Smarty_sieu_thi.php");
+		$smarty=new Smarty_sieu_thi();
+		//$smarty->assign("title","Liên hệ | Thu Trân");
+		//$view="views/contact/v_contact.tpl";
+		//$smarty->assign("view",$view);
+		$smarty->display("login/layout.tpl");
 	}	
 }
 ?>

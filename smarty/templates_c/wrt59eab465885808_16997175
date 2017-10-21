@@ -1,0 +1,188 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-10-21 04:43:49
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\layout.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59eab465868c28_94461856',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '13ea45e7aee75f655c70a75921aa77e26a2f6613' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\layout.tpl',
+      1 => 1508343437,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:head.tpl' => 1,
+    'file:header.tpl' => 1,
+    'file:banner.tpl' => 1,
+    'file:content.tpl' => 1,
+    'file:top_brands.tpl' => 1,
+    'file:news_letter.tpl' => 1,
+    'file:footer.tpl' => 1,
+    'file:javascript.tpl' => 1,
+  ),
+),false)) {
+function content_59eab465868c28_94461856 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, false);
+?>
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_68590450259eab46585c3e1_10940074', "head");
+?>
+
+<body>
+<!-- header -->
+<!-- script-for sticky-nav -->
+<!-- //script-for sticky-nav -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_194840042159eab46585e5f5_73426107', "header");
+?>
+
+
+<!-- //header -->
+<!-- banner -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_181005234559eab46585f9d3_67070131', "banner");
+?>
+
+<!--// banner -->
+<!-- products - Hiển thị sản phẩm -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_147502259459eab465860d55_86591205', "content");
+?>
+
+
+<!-- //products - Hiển thị sản phẩm --> 	
+<!-- top-brands -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_176370905459eab465862375_03261614', "top_brands");
+?>
+	
+<!-- //top-brands -->
+<!-- fresh-vegetables -->	
+<!-- //fresh-vegetables -->
+
+<!-- newsletter -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_128218745059eab465863705_84890675', "news_letter");
+?>
+	
+<!-- //newsletter -->
+
+<!-- footer -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6162064959eab465864ef5_28273611', "footer");
+?>
+
+<!-- //footer -->
+<!-- Bootstrap Core JavaScript -->
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_158929271259eab465866662_60772154', "javascript");
+?>
+
+</body>
+</html>
+<?php }
+/* {block "head"} */
+class Block_68590450259eab46585c3e1_10940074 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "head"} */
+/* {block "header"} */
+class Block_194840042159eab46585e5f5_73426107 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "header"} */
+/* {block "banner"} */
+class Block_181005234559eab46585f9d3_67070131 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:banner.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "banner"} */
+/* {block "content"} */
+class Block_147502259459eab465860d55_86591205 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:content.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "content"} */
+/* {block "top_brands"} */
+class Block_176370905459eab465862375_03261614 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:top_brands.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "top_brands"} */
+/* {block "news_letter"} */
+class Block_128218745059eab465863705_84890675 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:news_letter.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "news_letter"} */
+/* {block "footer"} */
+class Block_6162064959eab465864ef5_28273611 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "footer"} */
+/* {block "javascript"} */
+class Block_158929271259eab465866662_60772154 extends Smarty_Internal_Block
+{
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+ <?php $_smarty_tpl->_subTemplateRender("file:javascript.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+ <?php
+}
+}
+/* {/block "javascript"} */
+}

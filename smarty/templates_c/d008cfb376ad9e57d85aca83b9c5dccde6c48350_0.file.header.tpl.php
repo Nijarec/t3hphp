@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-10-21 05:35:50
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\header.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59eac096ccacd4_01322381',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd008cfb376ad9e57d85aca83b9c5dccde6c48350' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\header.tpl',
+      1 => 1508556938,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59eac096ccacd4_01322381 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
@@ -40,7 +64,8 @@
 		<div class="clearfix"> </div>
 	</div>
 <!-- script-for sticky-nav -->
-	<script>
+	<?php echo '<script'; ?>
+>
 	$(document).ready(function() {
 		 var navoffeset=$(".agileits_header").offset().top;
 		 $(window).scroll(function(){
@@ -53,7 +78,8 @@
 		 });
 		 
 	});
-	</script>
+	<?php echo '</script'; ?>
+>
 <!-- //script-for sticky-nav -->
 	<div class="logo_products">
 		<div class="container">
@@ -77,4 +103,5 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-<!-- //header -->
+<!-- //header --><?php }
+}

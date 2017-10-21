@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-10-21 05:31:45
+  from "C:\xampp\htdocs\t3hphp\smarty\templates\login.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_59eabfa1017464_21369335',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f40952e7c25fe3f4f7843f56ecff6008b5b8b189' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\login.tpl',
+      1 => 1508556701,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_59eabfa1017464_21369335 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <div class="w3_login">
 			<h3>Sign In & Sign Up</h3>
 			<div class="w3_login_module">
@@ -28,7 +52,8 @@
 				  </a></div>
 				</div>
 			</div>
-			<script>
+			<?php echo '<script'; ?>
+>
 				$('.toggle').click(function(){
 				  // Switches the Icon
 				  $(this).children('i').toggleClass('fa-pencil');
@@ -40,5 +65,7 @@
 					opacity: "toggle"
 				  }, "slow");
 				});
-			</script>
-		</div>
+			<?php echo '</script'; ?>
+>
+		</div><?php }
+}
