@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-17 02:41:44
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 09:05:07
          compiled from "Smarty\templates\nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:185959e56de8ec0a35-86441267%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e1e8504ca6dc69671c973eed969f8559d02a9a1' => 
     array (
       0 => 'Smarty\\templates\\nav.tpl',
-      1 => 1508206052,
+      1 => 1508490301,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_59e56de8ecc3c1_42092414',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59e56de8ecc3c1_42092414')) {function content_59e56de8ecc3c1_42092414($_smarty_tpl) {?><script>
 $(function() {
@@ -43,7 +43,7 @@ $(function() {
 <ul id="main-nav">
   <!-- Accordion Menu -->
   <li> 
-  <a href="quantri.php" class="nav-top-item no-submenu"> 
+  <a href="quan_tri.php" class="nav-top-item no-submenu"> 
   <!-- Add the class "no-submenu" to menu items with no sub menu  -->
   Danh mục 
   </a> 
@@ -52,9 +52,7 @@ $(function() {
   <a href="#" class="nav-top-item" id="sanpham"> Sản phẩm </a>
     <ul>
       <li><a href="san_pham.php" title="sanpham">Danh sách sản phẩm</a></li>
-      <li><a href="themtintuc.php" title="tintuc">Thêm sản phẩm</a></li>
-      <li><a href="themtintuc.php" title="tintuc">Cập nhật sản phẩm</a></li>
-      <li><a href="themtintuc.php" title="tintuc">Xóa sản phẩm</a></li>
+      <li><a href="them_san_pham.php" title="sanpham">Thêm sản phẩm</a></li>
     </ul>
   </li>
   </ul>

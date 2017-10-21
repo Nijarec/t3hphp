@@ -35,7 +35,7 @@
             <a href="sua_san_pham.php?ProductID={$sp->ProductID}" title="Edit" >
             <img src="public/layout/resources/images/icons/pencil.png" alt="Edit" />
             </a> 
-            <a href="javascript:xoa_san_pham({$sp->ProductID})" title="Delete"> 
+            <a href="xoa_san_pham.php?ProductID={$sp->ProductID}" title="Delete" > 
             <img src="public/layout/resources/images/icons/cross.png" alt="Delete" />
             </a>
             </td>

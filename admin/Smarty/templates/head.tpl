@@ -16,5 +16,6 @@
 <script type="text/javascript" src="public/layout/resources/scripts/jquery.date.js"></script>
 <script type="text/javascript" src="../public/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="thu_vien/thu_vien.js"></script>
+<script type="text/javascript" src="../../public/js/thu_vien.js"></script>
 </head>
 <body>

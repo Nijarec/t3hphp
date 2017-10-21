@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-17 02:41:44
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:16:05
          compiled from "Smarty\templates\head.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:126659e56de8ce58a8-70520675%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '16ddbc0f0aa3365b9ae624a9453b31582b142b41' => 
     array (
       0 => 'Smarty\\templates\\head.tpl',
-      1 => 1507606710,
+      1 => 1508487361,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_59e56de8cf03e1_95421291',
   'variables' => 
   array (
     'title' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_59e56de8cf03e1_95421291',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59e56de8cf03e1_95421291')) {function content_59e56de8cf03e1_95421291($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -42,5 +42,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script type="text/javascript" src="public/layout/resources/scripts/jquery.date.js"></script>
 <script type="text/javascript" src="../public/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="thu_vien/thu_vien.js"></script>
+<script type="text/javascript" src="../../public/js/thu_vien.js"></script>
 </head>
 <body><?php }} ?>

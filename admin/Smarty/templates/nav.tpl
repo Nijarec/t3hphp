@@ -22,7 +22,7 @@ $(function() {
 <ul id="main-nav">
   <!-- Accordion Menu -->
   <li> 
-  <a href="quantri.php" class="nav-top-item no-submenu"> 
+  <a href="quan_tri.php" class="nav-top-item no-submenu"> 
   <!-- Add the class "no-submenu" to menu items with no sub menu  -->
   Danh mục 
   </a> 
@@ -32,8 +32,6 @@ $(function() {
     <ul>
       <li><a href="san_pham.php" title="sanpham">Danh sách sản phẩm</a></li>
       <li><a href="them_san_pham.php" title="sanpham">Thêm sản phẩm</a></li>
-      <li><a href="sua_san_pham.php" title="sanpham">Cập nhật sản phẩm</a></li>
-      <li><a href="xoa_san_pham.php" title="sanpham">Xóa sản phẩm</a></li>
     </ul>
   </li>
   </ul>
