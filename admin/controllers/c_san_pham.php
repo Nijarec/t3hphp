@@ -11,16 +11,23 @@ class C_san_pham
 		//Model
 		$m_san_pham=new M_products();
 		$san_pham=$m_san_pham->Hien_thi_san_pham();
-		/*echo "<h3 style='text-align:center'>";
-		echo "<pre>";
-		print_r($san_pham);
-		echo "</pre>";
-		echo "</h3>";*/
+		
+		//Pager
+		include"Pager.php";
+		$p= new pager();
+		$limit=20;
+		$count=count($san_pham);
+		$pages=$p->findPages($count,$limit);
+		$vt=$p->findStart($limit);
+		$curpage=$_GET["page"];
+		$lst=$p->pageList($curpage,$pages);
+		$san_pham=$m_san_pham->Hien_thi_san_pham($vt,$limit);
 		
 		//View
 		$smarty=new Smarty_quan_tri();
 		$smarty->assign("title","Quản lý Siêu thị mini");
 		$smarty->assign("tieude","Danh sách sản phẩm");
+		$smarty->assign("lst",$lst);
 		$smarty->assign("san_pham",$san_pham);
 		$smarty->assign("view","views/san_pham/v_san_pham.tpl");
 		$smarty->display("layout.tpl");	
