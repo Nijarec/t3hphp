@@ -46,44 +46,76 @@ class C_san_pham
 		$m_san_pham=new M_products();
 		$san_pham=$m_san_pham->Lay_Unit();
 		$san_pham1=$m_san_pham->Lay_SubUnit();
-		
+		$hople=true;
+		$err="";
 			// Models
 			//ProductID, CategoryID, SupplierID, ProductName, ProductType, Unit, SubUnit, UnitQuantity, Description, Image, Price, Discount, LastUpdate, Priority
-			if(isset($_POST["btnCapnhat"]))
+		if(isset($_POST["btnCapnhat"]))
+		{
+			if($_POST["ProductName"]=="")
 			{
-				$ProductID=NULL; 
-				$CategoryID=$_POST["CategoryID"];
-				$SupplierID=$_POST["SupplierID"];
-				$ProductName=$_POST["ProductName"];
-				$ProductType=$_POST["ProductType"];
-				 
-				$Unit=$_POST["Unit"];
-				$SubUnit=$_POST["SubUnit"];
-				$UnitQuantity=$_POST["UnitQuantity"];
-				$Description=$_POST["Description"];
-				$Image=$_FILES["f_hinh"]["error"]==0?$_FILES["f_hinh"]["name"]:"";
-				$Price=$_POST["Price"];
-				$Discount=$_POST["Discount"];
-				
-				$LastUpdate=date("Y-m-d H:i:s");
-				$Priority=NULL;
-				
-				
-				
-				$m_san_pham=new M_products();
-				$kq=$m_san_pham->Them_san_pham($ProductID, $CategoryID, $SupplierID, $ProductName,$ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority);
-				if($kq)
-				{
-					if($Image!="")
-					{
-						move_uploaded_file($_FILES["f_hinh"]["tmp_name"],"../public/images/$Image");
-						echo "<script> alert ('Thêm thành công')</script>";
-					}
-					header("Location:san_pham.php");	
-				}
-				
+				$err="Không được trống!!";
+				$hople=false;
+			}elseif($_POST["ProductType"]=="")
+			{
+				$err="Không được trống";
+				$hople=false;
 			}
-			
+			elseif($_POST["UnitQuantity"]=="")
+			{
+				$err="Không được trống!!";
+				$hople=false;
+			}elseif($_POST["Description"]=="")
+			{
+				$err="Không được trống!!";
+				$hople=false;
+			}elseif($_POST["Price"]=="")
+			{
+				$err="Không được trống!!";
+				$hople=false;
+			}elseif($_POST["Discount"]=="")
+			{
+				$err="Không được trống!!";
+				$hople=false;
+			}
+			if($hople)
+			{
+				if(isset($_POST["btnCapnhat"]))
+				{
+					$ProductID=NULL; 
+					$CategoryID=$_POST["CategoryID"];
+					$SupplierID=$_POST["SupplierID"];
+					$ProductName=$_POST["ProductName"];
+					$ProductType=$_POST["ProductType"];
+					 
+					$Unit=$_POST["Unit"];
+					$SubUnit=$_POST["SubUnit"];
+					$UnitQuantity=$_POST["UnitQuantity"];
+					$Description=$_POST["Description"];
+					$Image=$_FILES["f_hinh"]["error"]==0?$_FILES["f_hinh"]["name"]:"";
+					$Price=$_POST["Price"];
+					$Discount=$_POST["Discount"];
+					
+					$LastUpdate=date("Y-m-d H:i:s");
+					$Priority=NULL;
+					
+					
+					
+					$m_san_pham=new M_products();
+					$kq=$m_san_pham->Them_san_pham($ProductID, $CategoryID, $SupplierID, $ProductName,$ProductType, $Unit, $SubUnit, $UnitQuantity, $Description, $Image, $Price, $Discount, $LastUpdate, $Priority);
+					if($kq)
+					{
+						if($Image!="")
+						{
+							move_uploaded_file($_FILES["f_hinh"]["tmp_name"],"../public/images/$Image");
+							echo "<script> alert ('Thêm thành công')</script>";
+						}
+						header("Location:san_pham.php");	
+					}
+					
+				}
+			}
+		}
 			// View
 			$smarty=new Smarty_quan_tri();
 			$smarty->assign("title","Quản lý Siêu thị mimi");
@@ -92,9 +124,10 @@ class C_san_pham
 			$smarty->assign("san_pham",$san_pham);
 			$smarty->assign("san_pham1",$san_pham1);
 			$smarty->assign("sup",$sup);
+			$smarty->assign("err",$err);
 			$smarty->assign("view","views/san_pham/v_them_san_pham.tpl");
 			$smarty->display("layout.tpl");	
-	
+			
 	}
 	function Sua_tin_tuc()
 	{

@@ -1,7 +1,6 @@
 <?php
-@session_start();
 include("thu_vien/thu_vien.php");
-include_once("models/m_login.php");
+include("models/m_login.php");
 class C_login
 {
 	public function Hien_thi_login()
@@ -14,16 +13,21 @@ class C_login
 			$Password=$_POST["Password"];
 			$m_login=new M_login();
 			$kq=$m_login->Kiem_tra_dang_nhap($Username,$Password);
-			 if(($kq) == 0) {
-					echo '<script type="text/javascript">alert("Đăng nhập thất bại!");</script>';
-				 	$_SESSION['Username'] = $username;
-			 }
-			else {
-					echo '<script type="text/javascript">alert("Đăng nhập thành công!");</script>';
-					header('Location: index.php');
-				
+			var_dump($kq);
+			if($kq)
+			{
+				//Gửi mail
+			/*	$tieu_de="Liên hệ";
+				$noi_dung_mail = "<b>Từ: </b>$ho_ten<p/><b>Email:</b> $email<p/>$noi_dung";
+				$kq = thu_vien::Gui_mail_lien_he($tieu_de, $noi_dung_mail);*/
+				if($kq) {
+					echo "Dang nhap thanh cong";
+				}
+				else {
+					echo "Dang nhap that bai";
 				}
 			}
+		}
 		// view
 		include("controllers/Smarty_sieu_thi.php");
 		$smarty=new Smarty_sieu_thi();

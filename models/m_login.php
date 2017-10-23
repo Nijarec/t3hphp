@@ -3,12 +3,13 @@ include_once("database.php");
 // `ma_lien_he`, `ho_ten`, `email`, `noi_dung`,`ngay_lien_he`, `trang_thai`
 class M_login extends database
 {
-	function Kiem_tra_dang_nhap($username,$password)
+	public function Kiem_tra_dang_nhap($Username,$Password)
 	{
-		$sql="select * from users where username=? and password=?";
+		$sql="SELECT * FROM user WHERE username =? and password=?";
 		$this->setQuery($sql);
-		return $this->loadRow(array($username,$password));	
-	}	
+		$param=array($Username,$Password);
+		return $this->execute($param);	
+	}
 	
 	public function Them_user($username,$password,$email,$phone_number)
 	{

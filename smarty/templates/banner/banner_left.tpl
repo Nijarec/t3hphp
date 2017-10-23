@@ -21,7 +21,7 @@
                                     <ul>
                                     
                                     {if $catM->CategoryID == $cat->CategoryParentID}	
-										<li><a href="san_pham.php?cat={$cat->CategoryID}">{$cat->CategoryName}</a></li>
+										<li><a href="products.php?cat={$cat->CategoryID}">{$cat->CategoryName}</a></li>
 										
                                     {/if}
 									</ul>

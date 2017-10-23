@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:14:50
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 02:53:12
          compiled from "views\san_pham\v_them_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:789359e6b1d39f6386-73835710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7aad584b300c423344b38ff20b60da6123b2d4ea' => 
     array (
       0 => 'views\\san_pham\\v_them_san_pham.tpl',
-      1 => 1508487285,
+      1 => 1508727189,
       2 => 'file',
     ),
   ),
@@ -24,6 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ca' => 0,
     'sup' => 0,
     's' => 0,
+    'err' => 0,
     'san_pham' => 0,
     'sp' => 0,
     'san_pham1' => 0,
@@ -83,12 +84,14 @@ $_smarty_tpl->tpl_vars['s']->_loop = true;
           </p>*/-->
           
           <p>
-            <label>Tên sản phẩm</label>
-            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" />
+            <label>Tên sản phẩm</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" value=""/>
           </p>
           <p>
-            <label>Product Type</label>
-            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType" />
+            <label>Product Type</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType" value=""/>
           </p>
           <p>
         <label>Đơn vị</label>
@@ -125,11 +128,13 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
   		<?php } ?>
 		</select>
             <p>
-          <label>Số lượng</label>
-            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" />
+          <label>Số lượng</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
+            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
             </p>
           <p>
-            <label>Mô tả</label>
+            <label>Mô tả</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
             <textarea name="Description" id="Description"  class="ckeditor" ></textarea>
           </p>
@@ -138,12 +143,14 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
             <input type="file" name="f_hinh" />
           </p>
           <p>
-            <label>Giá</label>
-            <input class="text-input small-input" type="text" id="Price" name="Price" />
+            <label>Giá</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
+            <input class="text-input small-input" type="text" id="Price" name="Price" value="" />
 		  </p>
           <p>
-            <label>Giảm giá</label>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" />
+            <label>Giảm giá</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?></p>
+            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="" />
 		  </p>
           <!--<p>
             <label>Ngày cập nhật</label>

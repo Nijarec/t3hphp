@@ -7,12 +7,13 @@ class C_products
 	{
 		
 		//Model
+		$catID=$_GET["cat"];
 		
 		include("models/m_category.php");
 		include("models/m_products.php");
 		$m_products= new M_products();
 		$m_category= new M_category();
-		$dsproducts=$m_products->Hien_thi_tat_ca_san_pham();
+		$dsproducts=$m_products->Hien_thi_san_pham_theo_CategoryID($catID);
 		$dsCategoryMain=$m_category->Hien_thi_main_Category();
 		$dsCategory=$m_category->Hien_thi_Category();
 
@@ -33,14 +34,14 @@ class C_products
 		include("models/m_products.php");
 		$product='';
 		$ProductID=$_GET["ProductID"];
-		echo($ProductID);
+		
 		//include("models/m_products.php");
 		$m_products=new M_products();
 		$m_category= new M_category();
 		$product=$m_products->Hien_thi_san_pham_theo_ProductID($ProductID);
 		$dsCategoryMain=$m_category->Hien_thi_main_Category();
 		$dsCategory=$m_category->Hien_thi_Category();
-		var_dump($product);
+		
 		// View
 		include("controllers/Smarty_sieu_thi.php");
 		$smarty=new Smarty_sieu_thi();

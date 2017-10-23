@@ -27,9 +27,9 @@
 					<div class="snipcart-item block">
 						<div class="snipcart-thumb agileinfo_single_right_snipcart">
 							<h4>{$product->Price} <span>$25.00</span></h4>
-											<input type="hidden" id="dongia{$pd->Price}" value="{number_format($pd->Price)}" />
-											<input type="text" size="2" value="1" id="soluong{$pd->ProductID}" />
-											<a class="button-1" href="javascript:void(0)" id="{$pd->ProductID}">Mua</a>
+											<!--<input type="hidden" id="dongia{$product->Price}" value="{number_format($pd->Price)}" />
+											<input type="text" size="2" value="1" id="soluong{$product->ProductID}" />-->
+											<a class="button-1" href="javascript:void(0)" id="{$product->ProductID}">Mua</a>
 						</div>
 						<!--<div class="snipcart-details agileinfo_single_right_details">
 							<form action="#" method="post">

@@ -1,7 +1,7 @@
 <div class="w3ls_w3l_banner_nav_right_grid">
 				<h3>DANH SÁCH SẢN PHẨM</h3>
 				<div class="w3ls_w3l_banner_nav_right_grid1">
-					<h6>food</h6>
+					
 					{foreach $dsproducts as $pd}
 					<div class="col-md-3 w3ls_w3l_banner_left">
 						<div class="hover14 column">
@@ -15,8 +15,11 @@
 									
 										<div class="snipcart-thumb">
 											<a href="chi_tiet_products.php?ProductID={$pd->ProductID}"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
+                                            <a href="chi_tiet_products.php?ProductID={$pd->ProductID}">
 											<p>{$pd->ProductName}</p>
-											<h4>{number_format($pd->Price)} <span>$5.00</span></h4>
+                                            </a>
+                                            
+											<h4>{number_format($pd->Price)} vnd</h4>
 											<p style="text-align:center">
 											<input type="hidden" id="dongia{$pd->Price}" value="{$pd->Price}" />
 											<input type="text"  value="1" id="soluong{$pd->ProductID}" />&nbsp;

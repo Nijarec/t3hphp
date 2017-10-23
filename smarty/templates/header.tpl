@@ -26,15 +26,8 @@
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-							<?php 
-      						 if (isset($_SESSION['Username']){
-           						'Chào '.$_SESSION['Username'];
-           						}
-       						?>
-								<li><a href="login.php">Đăng nhập</a></li> 
-								<li><a href="login.php">Đăng ký</a></li>
-								<li><a href="logout.php">Đăng xuất</a></li>
-							
+								<li><a href="login.php">Login</a></li> 
+								<li><a href="login.php">Sign Up</a></li>
 							</ul>
 						</div>                  
 					</div>	

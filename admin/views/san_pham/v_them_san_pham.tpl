@@ -37,12 +37,12 @@
           </p>*/-->
           
           <p>
-            <label>Tên sản phẩm</label>
-            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" />
+            <label>Tên sản phẩm</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" value=""/>
           </p>
           <p>
-            <label>Product Type</label>
-            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType" />
+            <label>Product Type</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType" value=""/>
           </p>
           <p>
         <label>Đơn vị</label>
@@ -67,11 +67,11 @@
   		{/foreach}
 		</select>
             <p>
-          <label>Số lượng</label>
-            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" />
+          <label>Số lượng</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
+            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
             </p>
           <p>
-            <label>Mô tả</label>
+            <label>Mô tả</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
             <textarea name="Description" id="Description"  class="ckeditor" ></textarea>
           </p>
@@ -80,12 +80,12 @@
             <input type="file" name="f_hinh" />
           </p>
           <p>
-            <label>Giá</label>
-            <input class="text-input small-input" type="text" id="Price" name="Price" />
+            <label>Giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
+            <input class="text-input small-input" type="text" id="Price" name="Price" value="" />
 		  </p>
           <p>
-            <label>Giảm giá</label>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" />
+            <label>Giảm giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
+            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="" />
 		  </p>
           <!--<p>
             <label>Ngày cập nhật</label>
