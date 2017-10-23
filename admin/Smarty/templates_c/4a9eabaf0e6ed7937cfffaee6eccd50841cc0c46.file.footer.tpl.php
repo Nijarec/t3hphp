@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-17 02:41:45
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 04:00:21
          compiled from "Smarty\templates\footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2166359e56de91daeb7-15456723%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a9eabaf0e6ed7937cfffaee6eccd50841cc0c46' => 
     array (
       0 => 'Smarty\\templates\\footer.tpl',
-      1 => 1507984477,
+      1 => 1508596871,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_59e56de91dd631_80809419',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59e56de91dd631_80809419')) {function content_59e56de91dd631_80809419($_smarty_tpl) {?><div id="footer">
 				<small> <!-- Remove this notice or replace it with whatever you want -->

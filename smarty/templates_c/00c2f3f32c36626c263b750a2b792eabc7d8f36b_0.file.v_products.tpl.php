@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-21 05:41:47
+/* Smarty version 3.1.30, created on 2017-10-23 04:05:04
   from "C:\xampp\htdocs\t3hphp\views\products\v_products.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59eac1fbd3b6d2_17481662',
+  'unifunc' => 'content_59ed4e50bc48d6_28422671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00c2f3f32c36626c263b750a2b792eabc7d8f36b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\t3hphp\\views\\products\\v_products.tpl',
-      1 => 1508418529,
+      1 => 1508724296,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59eac1fbd3b6d2_17481662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ed4e50bc48d6_28422671 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="w3ls_w3l_banner_nav_right_grid">
 				<h3>DANH SÁCH SẢN PHẨM</h3>
@@ -45,8 +45,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['pd']->value) {
 											<a href="chi_tiet_products.php?ProductID=<?php echo $_smarty_tpl->tpl_vars['pd']->value->ProductID;?>
 "><img src="./images/<?php echo $_smarty_tpl->tpl_vars['pd']->value->Image;?>
 " alt=" " class="img-responsive" /></a>
-											<p><?php echo $_smarty_tpl->tpl_vars['pd']->value->ProductName;?>
-</p>
+											<a href="chi_tiet_products.php?ProductID=<?php echo $_smarty_tpl->tpl_vars['pd']->value->ProductID;?>
+"> <p><?php echo $_smarty_tpl->tpl_vars['pd']->value->ProductName;?>
+</p></a>
+											
 											<h4><?php echo number_format($_smarty_tpl->tpl_vars['pd']->value->Price);?>
  <span>$5.00</span></h4>
 											<p style="text-align:center">

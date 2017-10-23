@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 08:49:50
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 04:00:25
          compiled from "views\san_pham\v_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1073259e56dee0a7066-31179877%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c935ff901910a160a04ff70329e2172e96ff94c2' => 
     array (
       0 => 'views\\san_pham\\v_san_pham.tpl',
-      1 => 1508489343,
+      1 => 1508597915,
       2 => 'file',
     ),
   ),
