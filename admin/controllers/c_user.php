@@ -27,13 +27,10 @@ function Hien_thi_dang_nhap()
 			header("location:login.php");	
 		}
 	}
-	
-function thoat_dang_nhap()
+	function thoat_dang_nhap()
 	{
-		
 		session_destroy();
-		header("location:login.php");
-		
+		header("location:login.php");	
 	}
 	function luu_dang_nhap($email,$mk)
 	{

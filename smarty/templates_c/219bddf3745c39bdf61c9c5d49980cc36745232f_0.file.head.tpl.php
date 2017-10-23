@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-21 04:43:49
+/* Smarty version 3.1.30, created on 2017-10-21 16:59:18
   from "C:\xampp\htdocs\t3hphp\smarty\templates\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59eab4658b2901_82850758',
+  'unifunc' => 'content_59eb60c6eeea74_67360940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '219bddf3745c39bdf61c9c5d49980cc36745232f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\head.tpl',
-      1 => 1508416950,
+      1 => 1508597915,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59eab4658b2901_82850758 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59eb60c6eeea74_67360940 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
 <title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
