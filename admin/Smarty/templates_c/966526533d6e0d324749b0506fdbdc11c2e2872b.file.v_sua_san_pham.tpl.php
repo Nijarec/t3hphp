@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-20 07:23:24
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 09:13:26
          compiled from "views\san_pham\v_sua_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2713959e96af805f2a1-69640982%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '966526533d6e0d324749b0506fdbdc11c2e2872b' => 
     array (
       0 => 'views\\san_pham\\v_sua_san_pham.tpl',
-      1 => 1508484201,
+      1 => 1508749998,
       2 => 'file',
     ),
   ),
@@ -84,12 +84,12 @@ $_smarty_tpl->tpl_vars['s']->_loop = true;
           
           <p>
             <label>Tên sản phẩm</label>
-            <input class="text-input small-input" type="text" id="ProductName" name="ProductName" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->ProductName;?>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->ProductName;?>
 " />
           </p>
           <p>
             <label>Product Type</label>
-            <input class="text-input small-input" type="text" id="ProductType" name="ProductType"  value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->ProductType;?>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType"  value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->ProductType;?>
 "/>
           </p>
           <p>
@@ -134,7 +134,7 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
           <p>
             <label>Mô tả</label>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
-            <textarea name="Description" id="Description"  class="ckeditor" ><?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Description;?>
+            <textarea name="Description" id="Description"  class="ckeditor kiem_tra_rong" ><?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Description;?>
 </textarea>
           </p>
           <p>
@@ -148,12 +148,12 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
           </p>
           <p>
             <label>Giá</label>
-            <input class="text-input small-input" type="text" id="Price" name="Price" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Price;?>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Price" name="Price" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Price;?>
 "/>
 		  </p>
           <p>
             <label>Giảm giá</label>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Discount;?>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Discount" name="Discount" value="<?php echo $_smarty_tpl->tpl_vars['san_pham_doc_theo_id']->value->Discount;?>
 " />
 		  </p>
           <!--<p>
@@ -161,7 +161,7 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
             <input class="text-input small-input" type="text" id="LastUpdate" name="LastUpdate" />
           </p>--> 
        	  <p>
-            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat"  />
+            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return Kiem_tra_Du_lieu_Rong()"  />
             <input class="button" type="button" value="Bỏ qua" onclick="window.location='san_pham.php'" />
           </p>
         </fieldset>
@@ -173,4 +173,5 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
   </div>
   
 </div>
+
 <?php }} ?>

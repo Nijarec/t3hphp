@@ -39,16 +39,9 @@ class M_products extends database
 	public function Hien_thi_san_pham_theo_CategoryID($CategoryID)
 	{
 		// câu lệnh sql lấy sản phẩm theo CategoryID có CategoryParentID = $CategoryID chính
-<<<<<<< HEAD
 		$sql="SELECT * FROM products  WHERE CategoryID = ? limit 20";
 		$this->setQuery($sql);
 		return $this->loadAllRows(array($CategoryID));
-=======
-		$sql="SELECT * FROM products p WHERE p.CategoryID IN (
-SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
-		$this->setQuery($sql);
-		return $this->loadAllRows();
->>>>>>> f9d95f3f588b0cd63fddfb3f10d60711d4728ca4
 	}
 	
 	//Hàm hiển thị sản phẩm theo product ID, Chi tiết sản phẩm

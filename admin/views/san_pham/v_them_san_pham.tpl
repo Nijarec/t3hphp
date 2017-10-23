@@ -67,32 +67,32 @@
   		{/foreach}
 		</select>
             <p>
-          <label>Số lượng</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
-            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
+          <label>Số lượng</label><p style="color:#F00">{if isset ($err)}{$err}{/if} {if isset ($err1)}{$err1}{/if}</p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
             </p>
           <p>
             <label>Mô tả</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
-            <textarea name="Description" id="Description"  class="ckeditor" ></textarea>
+            <textarea name="Description" id="Description"  class="ckeditor kiem_tra_rong" ></textarea>
           </p>
           <p>
             <label>Hình sản phẩm</label>
             <input type="file" name="f_hinh" />
           </p>
           <p>
-            <label>Giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
-            <input class="text-input small-input" type="text" id="Price" name="Price" value="" />
+            <label>Giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if} {if isset ($err1)}{$err1}{/if}</p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Price" name="Price" value="" />
 		  </p>
           <p>
-            <label>Giảm giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if}</p>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="" />
+            <label>Giảm giá</label><p style="color:#F00">{if isset ($err)}{$err}{/if}{if isset ($err1)}{$err1}{/if}</p>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Discount" name="Discount" value="" />
 		  </p>
           <!--<p>
             <label>Ngày cập nhật</label>
             <input class="text-input small-input" type="text" id="LastUpdate" name="LastUpdate" />
           </p>--> 
        	  <p>
-            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return kiem_tra_tin_tuc();" />
+            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return Kiem_tra_Du_lieu_Rong();" />
             <input class="button" type="button" value="Bỏ qua" onclick="window.location='san_pham.php'" />
           </p>
         </fieldset>
@@ -104,3 +104,31 @@
   </div>
   
 </div>
+<script>
+function Xoa_san_pham(ProducID)
+{
+	if(confirm('Bạn xóa sản phẩm?'))
+	{
+		window.location='xoa_san_pham.php?ProductID=' + ProductID;	
+	}	
+}
+
+function Kiem_tra_Du_lieu_Rong()
+{
+	
+	var Hop_le=true
+	var ctr=document.getElementsByClassName("kiem_tra_rong")
+	for(var i=0;i<ctr.length;i++)
+	{
+		if(ctr.item(i).value=="")
+		{
+			var thong_bao=ctr.item(i).getAttribute("data-err");
+			alert("Không được trống");
+			ctr.item(i).focus();
+			Hop_le=false;
+			break;	
+		}	
+	}
+	return Hop_le;	
+}
+</script>

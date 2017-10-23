@@ -17,7 +17,7 @@ function Kiem_tra_Du_lieu_Rong()
 		if(ctr.item(i).value=="")
 		{
 			var thong_bao=ctr.item(i).getAttribute("data-err");
-			alert(thong_bao);
+			alert("Không được trống!");
 			ctr.item(i).focus();
 			Hop_le=false;
 			break;	

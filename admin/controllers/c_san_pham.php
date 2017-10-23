@@ -11,16 +11,23 @@ class C_san_pham
 		//Model
 		$m_san_pham=new M_products();
 		$san_pham=$m_san_pham->Hien_thi_san_pham();
-		/*echo "<h3 style='text-align:center'>";
-		echo "<pre>";
-		print_r($san_pham);
-		echo "</pre>";
-		echo "</h3>";*/
+		
+		//Pager
+		include"Pager.php";
+		$p= new pager();
+		$limit=20;
+		$count=count($san_pham);
+		$pages=$p->findPages($count,$limit);
+		$vt=$p->findStart($limit);
+		$curpage=$_GET["page"];
+		$lst=$p->pageList($curpage,$pages);
+		$san_pham=$m_san_pham->Hien_thi_san_pham($vt,$limit);
 		
 		//View
 		$smarty=new Smarty_quan_tri();
 		$smarty->assign("title","Quản lý Siêu thị mini");
 		$smarty->assign("tieude","Danh sách sản phẩm");
+		$smarty->assign("lst",$lst);
 		$smarty->assign("san_pham",$san_pham);
 		$smarty->assign("view","views/san_pham/v_san_pham.tpl");
 		$smarty->display("layout.tpl");	
@@ -41,6 +48,7 @@ class C_san_pham
 		$san_pham1=$m_san_pham->Lay_SubUnit();
 		$hople=true;
 		$err="";
+		$err1="";
 			// Models
 			//ProductID, CategoryID, SupplierID, ProductName, ProductType, Unit, SubUnit, UnitQuantity, Description, Image, Price, Discount, LastUpdate, Priority
 		if(isset($_POST["btnCapnhat"]))
@@ -58,7 +66,14 @@ class C_san_pham
 			{
 				$err="Không được trống!!";
 				$hople=false;
-			}elseif($_POST["Description"]=="")
+				
+			}
+			elseif(!is_numeric($_POST["UnitQuantity"]))
+				{
+					$err1="Vui lòng nhập số";
+					$hople=false;
+				}
+				elseif($_POST["Description"]=="")
 			{
 				$err="Không được trống!!";
 				$hople=false;
@@ -66,11 +81,25 @@ class C_san_pham
 			{
 				$err="Không được trống!!";
 				$hople=false;
-			}elseif($_POST["Discount"]=="")
+				
+				
+			}
+			elseif(!is_numeric($_POST["Price"]))
+				{
+					$err1="Vui lòng nhập số";
+					$hople=false;
+				}
+				elseif($_POST["Discount"]=="")
 			{
 				$err="Không được trống!!";
 				$hople=false;
+				
 			}
+			elseif(!is_numeric($_POST["Discount"]))
+				{
+					$err1="Vui lòng nhập số";
+					$hople=false;
+				}
 			if($hople)
 			{
 				if(isset($_POST["btnCapnhat"]))
@@ -118,55 +147,12 @@ class C_san_pham
 			$smarty->assign("san_pham1",$san_pham1);
 			$smarty->assign("sup",$sup);
 			$smarty->assign("err",$err);
+			$smarty->assign("err1",$err1);
 			$smarty->assign("view","views/san_pham/v_them_san_pham.tpl");
 			$smarty->display("layout.tpl");	
 			
 	}
-	function Sua_tin_tuc()
-	{
-			// Models
-			if(isset($_GET["ProductID"]))
-			{
-				$ma_san_pham=$_GET["ProductID"];
-				$m_san_pham=new M_san_pham();
-				$tin_tuc=$m_tin_tuc->Doc_tin_tuc_theo_ma_tin($ma_tin_tuc);
-				// Cập nhật tin tức
-				if(isset($_POST["btnCapnhat"]))
-				{
-					$tieu_de=$_POST["tieu_de"];
-					$tom_tat=$_POST["tom_tat"];
-					$chi_tiet=$_POST["chi_tiet"];
-					$hinh=$_FILES["f_hinh"]["error"]==0?$_FILES["f_hinh"]["name"]:$tin_tuc->hinh; 
-					$tac_gia=$_POST["tac_gia"];
-					$ngay_dang=$_POST["ngay_dang"];
-					$ngay_gui=$_POST["ngay_gui"];
-					$so_luot_xem=$_POST["so_luot_xem"];
-					
-					$kq=$m_tin_tuc->Sua_tin_tuc($tieu_de, $tom_tat, $chi_tiet, $hinh, $tac_gia,$ngay_dang,$ngay_gui,$so_luot_xem,$ma_tin_tuc);
-					if($kq)
-					{
-						if($_FILES["f_hinh"]["error"]==0)
-						{
-							move_uploaded_file($_FILES["f_hinh"]["tmp_name"],"../public/images/tin_tuc/$hinh");
-						}
-						header("Location:tintuc.php");	
-					}
-					
-				}
-				// End Cập nhật tin tức
-				
-			
-			
-			// View
-			$smarty=new Smarty_quan_tri();
-			$smarty->assign("title","Quản lý Nhà Hàng");
-			$smarty->assign("tieude","Sửa tin tức");
-			$smarty->assign("tin_tuc",$tin_tuc);
-			$smarty->assign("view","views/tintuc/v_Suatintuc.tpl");
-			$smarty->display("layout.tpl");	
-			}
-		}
-		
+	
 function Sua_san_pham()
 	{
 		if(isset($_GET["ProductID"]))

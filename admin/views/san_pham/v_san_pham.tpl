@@ -19,7 +19,7 @@
       <tfoot>
           <tr>
             <td colspan="6">
-            <div class="pagination"> [1][2][3] </div>
+            <div class="pagination"> {$lst} </div>
             <div class="clear"></div></td>
           </tr>
         </tfoot>
@@ -35,15 +35,28 @@
             <a href="sua_san_pham.php?ProductID={$sp->ProductID}" title="Edit" >
             <img src="public/layout/resources/images/icons/pencil.png" alt="Edit" />
             </a> 
-            <a href="xoa_san_pham.php?ProductID={$sp->ProductID}" title="Delete" > 
+            <!--xoa_san_pham.php?ProductID={$sp->ProductID}-->
+            <a href="xoa_san_pham.php?ProductID={$sp->ProductID}" title="Delete" onclick="return Xoa_san_pham({$sp->ProductID})" "> 
             <img src="public/layout/resources/images/icons/cross.png" alt="Delete" />
             </a>
             </td>
         </tr>
         {/foreach}
+        <div  class="pagination" style="clear:both; text-align:center">{$lst}</div>
       </tbody>
     </table>
    
   </div>
   
 </div>
+<script>
+function Xoa_san_pham(ProducID)
+{
+	
+	if(confirm('Bạn xóa sản phẩm ?'))
+	{
+		window.location="xoa_san_pham.php?ProductID="+ProductID;
+	}
+    window.location="xoa_san_pham.php?ProductID="+ProductID;
+}
+</script>

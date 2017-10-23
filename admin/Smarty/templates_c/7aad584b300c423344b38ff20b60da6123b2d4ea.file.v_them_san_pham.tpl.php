@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 02:53:12
-=======
-<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 04:00:26
->>>>>>> f9d95f3f588b0cd63fddfb3f10d60711d4728ca4
+<?php /* Smarty version Smarty-3.1.14, created on 2017-10-23 09:22:31
          compiled from "views\san_pham\v_them_san_pham.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:789359e6b1d39f6386-73835710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -11,11 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7aad584b300c423344b38ff20b60da6123b2d4ea' => 
     array (
       0 => 'views\\san_pham\\v_them_san_pham.tpl',
-<<<<<<< HEAD
-      1 => 1508727189,
-=======
-      1 => 1508596871,
->>>>>>> f9d95f3f588b0cd63fddfb3f10d60711d4728ca4
+      1 => 1508750542,
       2 => 'file',
     ),
   ),
@@ -37,6 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'sp' => 0,
     'san_pham1' => 0,
     'sp1' => 0,
+    'err1' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -137,14 +130,15 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
 		</select>
             <p>
           <label>Số lượng</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?> <?php if (isset($_smarty_tpl->tpl_vars['err1']->value)){?><?php echo $_smarty_tpl->tpl_vars['err1']->value;?>
 <?php }?></p>
-            <input class="text-input small-input" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
+            <input class="text-input small-input kiem_tra_rong" type="text" id="UnitQuantity" name="UnitQuantity" value="" />
             </p>
           <p>
             <label>Mô tả</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
 <?php }?></p>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
-            <textarea name="Description" id="Description"  class="ckeditor" ></textarea>
+            <textarea name="Description" id="Description"  class="ckeditor kiem_tra_rong" ></textarea>
           </p>
           <p>
             <label>Hình sản phẩm</label>
@@ -152,20 +146,22 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
           </p>
           <p>
             <label>Giá</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?> <?php if (isset($_smarty_tpl->tpl_vars['err1']->value)){?><?php echo $_smarty_tpl->tpl_vars['err1']->value;?>
 <?php }?></p>
-            <input class="text-input small-input" type="text" id="Price" name="Price" value="" />
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Price" name="Price" value="" />
 		  </p>
           <p>
             <label>Giảm giá</label><p style="color:#F00"><?php if (isset($_smarty_tpl->tpl_vars['err']->value)){?><?php echo $_smarty_tpl->tpl_vars['err']->value;?>
+<?php }?><?php if (isset($_smarty_tpl->tpl_vars['err1']->value)){?><?php echo $_smarty_tpl->tpl_vars['err1']->value;?>
 <?php }?></p>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="" />
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Discount" name="Discount" value="" />
 		  </p>
           <!--<p>
             <label>Ngày cập nhật</label>
             <input class="text-input small-input" type="text" id="LastUpdate" name="LastUpdate" />
           </p>--> 
        	  <p>
-            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return kiem_tra_tin_tuc();" />
+            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return Kiem_tra_Du_lieu_Rong();" />
             <input class="button" type="button" value="Bỏ qua" onclick="window.location='san_pham.php'" />
           </p>
         </fieldset>
@@ -177,4 +173,31 @@ $_smarty_tpl->tpl_vars['sp1']->_loop = true;
   </div>
   
 </div>
-<?php }} ?>
+<script>
+function Xoa_san_pham(ProducID)
+{
+	if(confirm('Bạn xóa sản phẩm?'))
+	{
+		window.location='xoa_san_pham.php?ProductID=' + ProductID;	
+	}	
+}
+
+function Kiem_tra_Du_lieu_Rong()
+{
+	
+	var Hop_le=true
+	var ctr=document.getElementsByClassName("kiem_tra_rong")
+	for(var i=0;i<ctr.length;i++)
+	{
+		if(ctr.item(i).value=="")
+		{
+			var thong_bao=ctr.item(i).getAttribute("data-err");
+			alert("Không được trống");
+			ctr.item(i).focus();
+			Hop_le=false;
+			break;	
+		}	
+	}
+	return Hop_le;	
+}
+</script><?php }} ?>

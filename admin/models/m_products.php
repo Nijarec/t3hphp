@@ -46,9 +46,14 @@ SELECT c.CategoryID FROM category c WHERE c.CategoryParentID=$CategoryID)";
 		return $this->loadAllRows();
 	}
 	
-	public function Hien_thi_san_pham()
+	
+	public function Hien_thi_san_pham($vt=-1,$limit=-1)
 	{
 		$sql="Select * FROM products";
+		if($vt>=0 && $limit>0)
+		{
+			$sql.=" limit $vt,$limit";
+		}
 		$this->setQuery($sql);
 		return $this->loadAllRows();
 	

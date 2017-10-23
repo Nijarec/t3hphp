@@ -37,11 +37,11 @@
           
           <p>
             <label>Tên sản phẩm</label>
-            <input class="text-input small-input" type="text" id="ProductName" name="ProductName" value="{$san_pham_doc_theo_id->ProductName}" />
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductName" name="ProductName" value="{$san_pham_doc_theo_id->ProductName}" />
           </p>
           <p>
             <label>Product Type</label>
-            <input class="text-input small-input" type="text" id="ProductType" name="ProductType"  value="{$san_pham_doc_theo_id->ProductType}"/>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="ProductType" name="ProductType"  value="{$san_pham_doc_theo_id->ProductType}"/>
           </p>
           <p>
         <label>Đơn vị</label>
@@ -72,7 +72,7 @@
           <p>
             <label>Mô tả</label>
             <!--input class="text-input large-input" type="text" id="chi_tiet" name="chi_tiet" /-->
-            <textarea name="Description" id="Description"  class="ckeditor" >{$san_pham_doc_theo_id->Description}</textarea>
+            <textarea name="Description" id="Description"  class="ckeditor kiem_tra_rong" >{$san_pham_doc_theo_id->Description}</textarea>
           </p>
           <p>
             <label>Hình sản phẩm</label>
@@ -84,18 +84,18 @@
           </p>
           <p>
             <label>Giá</label>
-            <input class="text-input small-input" type="text" id="Price" name="Price" value="{$san_pham_doc_theo_id->Price}"/>
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Price" name="Price" value="{$san_pham_doc_theo_id->Price}"/>
 		  </p>
           <p>
             <label>Giảm giá</label>
-            <input class="text-input small-input" type="text" id="Discount" name="Discount" value="{$san_pham_doc_theo_id->Discount}" />
+            <input class="text-input small-input kiem_tra_rong" type="text" id="Discount" name="Discount" value="{$san_pham_doc_theo_id->Discount}" />
 		  </p>
           <!--<p>
             <label>Ngày cập nhật</label>
             <input class="text-input small-input" type="text" id="LastUpdate" name="LastUpdate" />
           </p>--> 
        	  <p>
-            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat"  />
+            <input class="button" type="submit" value="Cập nhật" name="btnCapnhat" onclick="return Kiem_tra_Du_lieu_Rong()"  />
             <input class="button" type="button" value="Bỏ qua" onclick="window.location='san_pham.php'" />
           </p>
         </fieldset>
@@ -107,3 +107,4 @@
   </div>
   
 </div>
+

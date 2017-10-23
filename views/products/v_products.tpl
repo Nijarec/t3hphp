@@ -15,17 +15,11 @@
 									
 										<div class="snipcart-thumb">
 											<a href="chi_tiet_products.php?ProductID={$pd->ProductID}"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
-<<<<<<< HEAD
                                             <a href="chi_tiet_products.php?ProductID={$pd->ProductID}">
 											<p>{$pd->ProductName}</p>
                                             </a>
                                             
 											<h4>{number_format($pd->Price)} vnd</h4>
-=======
-											<a href="chi_tiet_products.php?ProductID={$pd->ProductID}"> <p>{$pd->ProductName}</p></a>
-											
-											<h4>{number_format($pd->Price)} <span>$5.00</span></h4>
->>>>>>> f9d95f3f588b0cd63fddfb3f10d60711d4728ca4
 											<p style="text-align:center">
 											<input type="hidden" id="dongia{$pd->Price}" value="{$pd->Price}" />
 											<input type="text"  value="1" id="soluong{$pd->ProductID}" />&nbsp;

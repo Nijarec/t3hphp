@@ -1,5 +1,10 @@
  <h2>Hệ thống quản lí siêu thị mini</h2>
-			<p id="page-intro">Chào {$smarty.session.fullname}</p>
+			
+            <div align="right">
+            <p id="page-intro">Chào {$smarty.session.fullname}</p>
+            <a href="quan_tri.php?func=1" >Thoát</a>
+            </div>
+            
 			<ul class="shortcut-buttons-set">
 				
 				<li><a class="shortcut-button" href="them_san_pham.php"><span>
@@ -22,10 +27,10 @@
 					Add an Event
 				</span></a></li>-->
 				
-				<li><a class="shortcut-button" href="#messages" rel="modal"><span>
+				<!--<li><a class="shortcut-button" href="#messages" rel="modal"><span>
 					<img src="public/layout/resources/images/icons/comment_48.png" alt="icon" /><br />
 					Open Modal
-				</span></a></li>
+				</span></a></li>-->
 				
 			</ul>
 			
