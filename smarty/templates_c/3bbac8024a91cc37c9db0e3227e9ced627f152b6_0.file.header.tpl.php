@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-23 02:12:53
+/* Smarty version 3.1.30, created on 2017-10-23 15:35:43
   from "C:\wamp64\www\do_an_cuoi_ki\smarty\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ed5025a3a8c1_69272007',
+  'unifunc' => 'content_59ee0c4f1f3608_45574979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3bbac8024a91cc37c9db0e3227e9ced627f152b6' => 
     array (
       0 => 'C:\\wamp64\\www\\do_an_cuoi_ki\\smarty\\templates\\header.tpl',
-      1 => 1508557651,
+      1 => 1508772940,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ed5025a3a8c1_69272007 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ee0c4f1f3608_45574979 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="index.php">Today's special Offers !</a>
+			<a href="index.php">Trang chủ !</a>
 		</div>
-		<div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value ='';" onblur="if (this.value == '') {
-				this.value = 'Search a product...';}" required="">
-				<input type="submit" value=" ">
-			</form>
+		<div class="w3l_search" style="text-transform:uppercase">
+        <a href="search.php">Tìm kiếm</a>
+			<!--<form action="#" method="post">
+				<input type="text" name="Product" value="Tìm kiếm sản phẩm" onfocus="this.value ='';" onblur="if (this.value == '') {
+				this.value = 'Tìm kiếm sản phẩm';}" required="">
+				<input type="submit" value=" " name="Tim_san_pham" onclick="window.location='search.php'"  onkeyup="XL_Tim_san_pham(this.value)">
+           
+			</form>-->
 		</div>
+        <div class="product_list_header">
+        
+        </div>
+
 		<div class="product_list_header">  
 			<form action="#" method="post" class="last">
                 <fieldset>
@@ -84,20 +90,21 @@ function content_59ed5025a3a8c1_69272007 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.php"><span>Grocery</span> Store</a></h1>
+				<h1><a href="index.php"><span>Siêu thị</span> Mini</a></h1>
 			</div>
-			<div class="w3ls_logo_products_left1">
+			<!--<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
 					<li><a href="events.html">Events</a><i>/</i></li>
 					<li><a href="about.html">About Us</a><i>/</i></li>
 					<li><a href="products.html">Best Deals</a><i>/</i></li>
 					<li><a href="services.html">Services</a></li>
 				</ul>
-			</div>
+			</div>-->
 			<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@grocery.com</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>0903195698</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="contact.php">Mail us</a></li>
+                    <li><a href="search.php">Tìm kiếm</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>

@@ -1,4 +1,28 @@
-// JavaScript Document
+function XL_Tim_san_pham(gtTim)
+{
+	/*if(gtTim=="")
+	{
+		document.getElementById("hienthi").innerHTML=""
+		return false;	
+	}*/
+	
+	// Ajax
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("POST","XL_tim_san_pham.php",true);
+	
+	xmlhttp.onreadystatechange=function(){
+		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			//var gtTrave=xmlhttp.responseText
+			//console.log(gtTrave)
+			document.getElementById("hienthi").innerHTML=xmlhttp.responseText
+			
+		}		
+	}
+	var data=new FormData()
+	data.append("gtTim",gtTim)
+	xmlhttp.send(data)
+	return false;
+}// JavaScript Document
 function XL_Mon_an_theo_mua()
 {
 	var mua="";
@@ -37,31 +61,7 @@ function XL_Mon_an_theo_mua()
 
 
 
-function XL_Tim_mon_an(gtTim)
-{
-	/*if(gtTim=="")
-	{
-		document.getElementById("hienthi").innerHTML=""
-		return false;	
-	}*/
-	
-	// Ajax
-	var xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("POST","XL_Tim_mon.php",true);
-	
-	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readyState==4 && xmlhttp.status==200){
-			//var gtTrave=xmlhttp.responseText
-			//console.log(gtTrave)
-			document.getElementById("hienthi").innerHTML=xmlhttp.responseText
-			
-		}		
-	}
-	var data=new FormData()
-	data.append("gtTim",gtTim)
-	xmlhttp.send(data)
-	return false;
-}
+
 function XL_Tin_tuc(ma_tin_tuc)
 {
 	// Ajax

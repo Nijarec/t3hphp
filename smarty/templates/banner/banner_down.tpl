@@ -1,4 +1,4 @@
-	<div class="banner_bottom">
+<!--	<div class="banner_bottom">
 			<div class="wthree_banner_bottom_left_grid_sub">
 			</div>
 			<div class="wthree_banner_bottom_left_grid_sub1">
@@ -29,4 +29,4 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
-	</div>
+	</div>-->

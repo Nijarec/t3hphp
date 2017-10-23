@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-23 02:12:54
+/* Smarty version 3.1.30, created on 2017-10-23 14:47:31
   from "C:\wamp64\www\do_an_cuoi_ki\smarty\templates\banner\banner_down.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ed50263e1ae5_11200156',
+  'unifunc' => 'content_59ee0103791e46_31378157',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb8424f4854bccfa68e3b69538d82e9c6fca7047' => 
     array (
       0 => 'C:\\wamp64\\www\\do_an_cuoi_ki\\smarty\\templates\\banner\\banner_down.tpl',
-      1 => 1508487847,
+      1 => 1508770049,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ed50263e1ae5_11200156 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ee0103791e46_31378157 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-	<div class="banner_bottom">
+<!--	<div class="banner_bottom">
 			<div class="wthree_banner_bottom_left_grid_sub">
 			</div>
 			<div class="wthree_banner_bottom_left_grid_sub1">
@@ -53,5 +53,5 @@ function content_59ed50263e1ae5_11200156 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
-	</div><?php }
+	</div>--><?php }
 }

@@ -3,6 +3,12 @@ include_once("database.php");
 class M_products extends database
 {
 	
+	public function Tim_kiem_san_pham($name)
+	{
+		$sql="SELECT * from products where ProductName like '%$name%'";
+		$this->setQuery($sql);
+		return $this->loadAllRows();
+	}
 		public function lay_products_cho_gio_hang($chuoi)
 	{
 		$query="Select * from products where ProductID in($chuoi)";

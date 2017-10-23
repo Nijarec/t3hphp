@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //fresh-vegetables -->
 
 <!-- newsletter -->
-{block name="news_letter"} {include file="news_letter.tpl"} {/block}	
+<!--{block name="news_letter"} {include file="news_letter.tpl"} {/block}-->	
 <!-- //newsletter -->
 
 <!-- footer -->
