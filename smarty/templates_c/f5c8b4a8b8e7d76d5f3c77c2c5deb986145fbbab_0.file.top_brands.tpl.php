@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-23 02:12:55
+/* Smarty version 3.1.30, created on 2017-11-06 08:02:37
   from "C:\wamp64\www\do_an_cuoi_ki\smarty\templates\top_brands.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ed502757ebb1_47209158',
+  'unifunc' => 'content_5a00171d4562d1_43321832',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f5c8b4a8b8e7d76d5f3c77c2c5deb986145fbbab' => 
     array (
       0 => 'C:\\wamp64\\www\\do_an_cuoi_ki\\smarty\\templates\\top_brands.tpl',
-      1 => 1507185762,
+      1 => 1509954591,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ed502757ebb1_47209158 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a00171d4562d1_43321832 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="top-brands">
 		<div class="container">
@@ -38,7 +38,7 @@ function content_59ed502757ebb1_47209158 (Smarty_Internal_Template $_smarty_tpl)
 											<p>fortune sunflower oil</p>
 											<h4>$7.99 <span>$10.00</span></h4>
 										</div>
-										<div class="snipcart-details top_brand_home_details">
+										<div class="snipcart-details top_brand_home_details"><!---->
 											<form action="checkout.html" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
@@ -50,7 +50,7 @@ function content_59ed502757ebb1_47209158 (Smarty_Internal_Template $_smarty_tpl)
 													<input type="hidden" name="currency_code" value="USD" />
 													<input type="hidden" name="return" value=" " />
 													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" class="button" />
+													<input type="submit" name="submit" value="Mua" class="button" />
 												</fieldset>
 													
 											</form>

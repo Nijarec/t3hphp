@@ -14,17 +14,34 @@
 									<div class="snipcart-item block">
 									
 										<div class="snipcart-thumb">
-											<a href="chi_tiet_products.php?ProductID={$pd->ProductID}"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
-                                            <a href="chi_tiet_products.php?ProductID={$pd->ProductID}">
-											<p>{$pd->ProductName}</p>
-                                            </a>
-                                            
-											<h4>{number_format($pd->Price)} vnd</h4>
-											<p style="text-align:center">
-											<input type="hidden" id="dongia{$pd->Price}" value="{$pd->Price}" />
-											<input type="text"  value="1" id="soluong{$pd->ProductID}" />&nbsp;
-											<a class="button-1" href="javascript:void(0)" id="{$pd->ProductID}">Mua</a>
- 											</p>
+                                        	<div class="snipcart-details">
+											<form action="#" method="post">
+                                                <fieldset>
+                                                    <a href="chi_tiet_products.php?ProductID={$pd->ProductID}"><img src="./images/{$pd->Image}" alt=" " class="img-responsive" /></a>
+                                                    <a href="chi_tiet_products.php?ProductID={$pd->ProductID}">
+                                                    <p>{$pd->ProductName}</p>
+                                                    </a>
+                                                    
+                                                    <h4>{number_format($pd->Price)} VND</h4>
+                                                    <p  style="text-align:center">
+                                                    <!--<input type="hidden" name="cmd" value="_cart" />
+                                                    <input type="hidden" name="add" value="1" />
+                                                    <input type="hidden" name="item_name" value="{$pd->ProductName}" />
+													<input type="hidden" name="amount" value="{$pd->Price}" />
+													<input type="hidden" name="currency_code" value="VND" />
+													<input type="hidden" name="return" value=" " />
+													<input type="hidden" name="cancel_return" value=" " />
+                                                    -->
+                                                    <input type="hidden" id="dongia{$pd->ProductID}" value="{$pd->Price}" />
+                                                    
+                                                    <input style="text-align:center" type="text"  value="1" id="soluong{$pd->ProductID}" />&nbsp;
+                                                    
+                                                    <!--<input type="submit" name="submit" value="Mua" class="button" />-->
+                                                    <a class="button-1" href="javascript:void(0)" id="{$pd->ProductID}">Mua</a>
+                                                    </p>
+                                                </fieldset>
+											</form>
+											</div>
 											
 										<!--	<a class="button" href="javascript:void(0)" id="{$mon->ma_mon}">Mua</a>-->
 											

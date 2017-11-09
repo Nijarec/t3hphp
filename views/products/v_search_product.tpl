@@ -1,4 +1,4 @@
-{block name="banner_righr"}{/block}
+{block name="banner_right"}{/block}
 
 <!--<div class="w3l_search" align="center">
        

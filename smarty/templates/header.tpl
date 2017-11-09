@@ -1,7 +1,7 @@
 <!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="index.php">Trang chủ !</a>
+			<a href="index.php">Trang chủ</a>
 		</div>
 		<div class="w3l_search" style="text-transform:uppercase">
         <a href="search.php">Tìm kiếm</a>
@@ -12,18 +12,20 @@
            
 			</form>-->
 		</div>
-        <div class="product_list_header">
+       
         
-        </div>
 
 		<div class="product_list_header">  
-			<form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
+        <a href="gio_hang.php">
                     <input type="submit" name="submit" value="View your cart" class="button" />
+                    </a>
+			<!--<form action="#" method="post" class="last">
+                <fieldset>
+                    
+                    
+                    
                 </fieldset>
-            </form>
+            </form>-->
 		</div>
 		<div class="w3l_header_right">
 			<ul>

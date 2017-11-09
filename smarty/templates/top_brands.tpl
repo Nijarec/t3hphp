@@ -14,7 +14,7 @@
 											<p>fortune sunflower oil</p>
 											<h4>$7.99 <span>$10.00</span></h4>
 										</div>
-										<div class="snipcart-details top_brand_home_details">
+										<div class="snipcart-details top_brand_home_details"><!---->
 											<form action="checkout.html" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
@@ -26,7 +26,7 @@
 													<input type="hidden" name="currency_code" value="USD" />
 													<input type="hidden" name="return" value=" " />
 													<input type="hidden" name="cancel_return" value=" " />
-													<input type="submit" name="submit" value="Add to cart" class="button" />
+													<input type="submit" name="submit" value="Mua" class="button" />
 												</fieldset>
 													
 											</form>
