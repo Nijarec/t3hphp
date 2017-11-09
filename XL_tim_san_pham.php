@@ -8,12 +8,12 @@ include("models/m_products.php");
 $m_san_pham=new M_products();
 $san_phams=$m_san_pham->Tim_kiem_san_pham($gtTim);
 ?>
-<table width="940px" border="0">
+<table width="100%" border="0">
   <tr class="tieude">
-    <td>Tên sản phẩm</td>
-    <td width="500px">Loại sản phẩm</td>
-    <td>Mô tả</td>
-    <td>Đơn giá</td>
+    <td width="500px">Tên sản phẩm</td>
+    <td width="200px">Loại sản phẩm</td>
+    <td width="200px">Mô tả</td>
+    <td width="100px">Đơn giá</td>
   </tr>
   <?php
  

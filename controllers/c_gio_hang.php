@@ -10,23 +10,23 @@
             $gio_hang=$this->layGioHang();
             if($gio_hang) //Nếu có giỏ hàng
             {
-                $gio_hang_thuc_don=array();
-                $gio_hang_mon_an=array();
+                //$gio_hang_thuc_don=array();
+                $gio_hang_san_pham=array();
                 foreach($gio_hang as $key=>$value)
                 {
-                        $gio_hang_mon_an[$key]=$value;
+                        $gio_hang_san_pham[$key]=$value;
                 }
 				
-                if($gio_hang_mon_an) //Nếu có chọn món
+                if($gio_hang_san_pham) //Nếu có chọn sản phẩm
                 {
-                    $_SESSION['gio_hang_mon_an']=$gio_hang_mon_an;
-                    //lay_thong_tin_mon_an
-                    $smarty->assign('ds_mon_an',$this->lay_thong_tin_mon_an($gio_hang_mon_an));
+                    $_SESSION['gio_hang_san_pham']=$gio_hang_san_pham;
+                    //lay_thong_tin_sản_phẩm
+                    $smarty->assign('ds_san_pham',$this->lay_thong_tin_san_pham($gio_hang_san_pham));
                 }
             }
             
 			$smarty->assign("view","views/gio_hang/v_gio_hang.tpl");
-			$smarty->display("products/layout.tpl");
+			$smarty->display("check_out/layout.tpl");
         }
         function layGioHang() {
             if(isset($_SESSION['gioHang']))
@@ -35,7 +35,7 @@
                 return false;
         }
 		
-		function lay_thong_tin_mon_an($product)
+		function lay_thong_tin_san_pham($product)
         {
             $ProductID=array();
             foreach($product as $key=>$value)
@@ -45,14 +45,14 @@
             $ProductID=implode(",",$ProductID);
             include_once('models/m_products.php');
             $m_products=new M_products();
-            $ds_mon_an=$m_products->lay_products_cho_gio_hang($ProductID);
-            $ds_mon_an_gio_hang=array(); //Ðua số lượng vào $ds_mon_an
-            foreach($ds_mon_an as $item)
+            $ds_san_pham=$m_products->lay_products_cho_gio_hang($ProductID);
+            $ds_san_pham_gio_hang=array(); //Ðua số lượng vào $ds_san_pham
+            foreach($ds_san_pham as $item)
             {
                 $item->so_luong=$product[$item->ProductID];
-                $ds_mon_an_gio_hang[]=$item;
+                $ds_san_pham_gio_hang[]=$item;
             }
-            return $ds_mon_an_gio_hang;
+            return $ds_san_pham_gio_hang;
         }
 
         function themGioHang($maSP, $so_luong, $donGia) {

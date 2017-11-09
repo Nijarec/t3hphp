@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-23 15:35:43
+/* Smarty version 3.1.30, created on 2017-11-09 13:44:54
   from "C:\wamp64\www\do_an_cuoi_ki\smarty\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ee0c4f1f3608_45574979',
+  'unifunc' => 'content_5a045bd66cfa33_46817549',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3bbac8024a91cc37c9db0e3227e9ced627f152b6' => 
     array (
       0 => 'C:\\wamp64\\www\\do_an_cuoi_ki\\smarty\\templates\\header.tpl',
-      1 => 1508772940,
+      1 => 1510235090,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ee0c4f1f3608_45574979 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a045bd66cfa33_46817549 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="index.php">Trang chủ !</a>
+			<a href="index.php">Trang chủ</a>
 		</div>
 		<div class="w3l_search" style="text-transform:uppercase">
         <a href="search.php">Tìm kiếm</a>
@@ -36,18 +36,20 @@ function content_59ee0c4f1f3608_45574979 (Smarty_Internal_Template $_smarty_tpl)
            
 			</form>-->
 		</div>
-        <div class="product_list_header">
+       
         
-        </div>
 
 		<div class="product_list_header">  
-			<form action="#" method="post" class="last">
-                <fieldset>
-                    <input type="hidden" name="cmd" value="_cart" />
-                    <input type="hidden" name="display" value="1" />
+        <a href="gio_hang.php">
                     <input type="submit" name="submit" value="View your cart" class="button" />
+                    </a>
+			<!--<form action="#" method="post" class="last">
+                <fieldset>
+                    
+                    
+                    
                 </fieldset>
-            </form>
+            </form>-->
 		</div>
 		<div class="w3l_header_right">
 			<ul>

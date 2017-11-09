@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-23 02:12:53
+/* Smarty version 3.1.30, created on 2017-11-09 13:00:40
   from "C:\wamp64\www\do_an_cuoi_ki\smarty\templates\head.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ed50258b5450_72875034',
+  'unifunc' => 'content_5a0451787ac981_04112006',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e6eccf8fb9c256401885a2ddd8404b8a4b3dc6b2' => 
     array (
       0 => 'C:\\wamp64\\www\\do_an_cuoi_ki\\smarty\\templates\\head.tpl',
-      1 => 1508487847,
+      1 => 1510217473,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ed50258b5450_72875034 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a0451787ac981_04112006 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <head>
-<title>Grocery Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Siêu thị Mini</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
