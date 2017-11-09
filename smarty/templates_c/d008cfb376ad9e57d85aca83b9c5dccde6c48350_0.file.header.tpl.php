@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-21 06:46:57
+/* Smarty version 3.1.30, created on 2017-10-23 20:00:00
   from "C:\xampp\htdocs\t3hphp\smarty\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59ead1417762c1_09099139',
+  'unifunc' => 'content_59ee2e20102309_55001404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd008cfb376ad9e57d85aca83b9c5dccde6c48350' => 
     array (
       0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\header.tpl',
-      1 => 1508561210,
+      1 => 1508780405,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59ead1417762c1_09099139 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ee2e20102309_55001404 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- header -->
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="index.php">Today's special Offers !</a>
+			<a href="index.php">Trang chủ !</a>
 		</div>
-		<div class="w3l_search">
-			<form action="#" method="post">
-				<input type="text" name="Product" value="Search a product..." onfocus="this.value ='';" onblur="if (this.value == '') {
-				this.value = 'Search a product...';}" required="">
-				<input type="submit" value=" ">
-			</form>
+		<div class="w3l_search" style="text-transform:uppercase">
+        <a href="search.php">Tìm kiếm</a>
+			<!--<form action="#" method="post">
+				<input type="text" name="Product" value="Tìm kiếm sản phẩm" onfocus="this.value ='';" onblur="if (this.value == '') {
+				this.value = 'Tìm kiếm sản phẩm';}" required="">
+				<input type="submit" value=" " name="Tim_san_pham" onclick="window.location='search.php'"  onkeyup="XL_Tim_san_pham(this.value)">
+           
+			</form>-->
 		</div>
+        <div class="product_list_header">
+        
+        </div>
+
 		<div class="product_list_header">  
 			<form action="#" method="post" class="last">
                 <fieldset>
@@ -50,15 +56,8 @@ function content_59ead1417762c1_09099139 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="mega-dropdown-menu">
 						<div class="w3ls_vegetables">
 							<ul class="dropdown-menu drp-mnu">
-							<?php echo '<?php 
-      						 ';?>if (isset($_SESSION['Username']){
-           						'Chào '.$_SESSION['Username'];
-           						}
-       						<?php echo '?>';?>
-								<li><a href="login.php">Đăng nhập</a></li> 
-								<li><a href="login.php">Đăng ký</a></li>
-								<li><a href="logout.php">Đăng xuất</a></li>
-							
+								<li><a href="login.php">Login</a></li> 
+								<li><a href="login.php">Sign Up</a></li>
 							</ul>
 						</div>                  
 					</div>	
@@ -91,20 +90,21 @@ function content_59ead1417762c1_09099139 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.php"><span>Grocery</span> Store</a></h1>
+				<h1><a href="index.php"><span>Siêu thị</span> Mini</a></h1>
 			</div>
-			<div class="w3ls_logo_products_left1">
+			<!--<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
 					<li><a href="events.html">Events</a><i>/</i></li>
 					<li><a href="about.html">About Us</a><i>/</i></li>
 					<li><a href="products.html">Best Deals</a><i>/</i></li>
 					<li><a href="services.html">Services</a></li>
 				</ul>
-			</div>
+			</div>-->
 			<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
-					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:store@grocery.com">store@grocery.com</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>0903195698</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="contact.php">Mail us</a></li>
+                    <li><a href="search.php">Tìm kiếm</a></li>
 				</ul>
 			</div>
 			<div class="clearfix"> </div>

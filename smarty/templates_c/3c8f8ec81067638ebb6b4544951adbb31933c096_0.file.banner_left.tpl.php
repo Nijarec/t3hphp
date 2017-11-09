@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-21 04:43:49
+/* Smarty version 3.1.30, created on 2017-10-23 20:00:00
   from "C:\xampp\htdocs\t3hphp\smarty\templates\banner\banner_left.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59eab465943c91_84049522',
+  'unifunc' => 'content_59ee2e201685d6_71522198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3c8f8ec81067638ebb6b4544951adbb31933c096' => 
     array (
       0 => 'C:\\xampp\\htdocs\\t3hphp\\smarty\\templates\\banner\\banner_left.tpl',
-      1 => 1508209108,
+      1 => 1508753577,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59eab465943c91_84049522 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59ee2e201685d6_71522198 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="w3l_banner_nav_left">
 			<nav class="navbar nav_bottom">
@@ -54,7 +54,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['cat']->value) {
                                     <ul>
                                     
                                     <?php if ($_smarty_tpl->tpl_vars['catM']->value->CategoryID == $_smarty_tpl->tpl_vars['cat']->value->CategoryParentID) {?>	
-										<li><a href="san_pham.php?cat=<?php echo $_smarty_tpl->tpl_vars['cat']->value->CategoryID;?>
+										<li><a href="products.php?cat=<?php echo $_smarty_tpl->tpl_vars['cat']->value->CategoryID;?>
 "><?php echo $_smarty_tpl->tpl_vars['cat']->value->CategoryName;?>
 </a></li>
 										

@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 08, 2017 at 07:02 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 23, 2017 lúc 08:04 PM
+-- Phiên bản máy phục vụ: 10.1.25-MariaDB
+-- Phiên bản PHP: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_sieu_thi_mini`
+-- Cơ sở dữ liệu: `db_sieu_thi_mini`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `auth_access`
+-- Cấu trúc bảng cho bảng `auth_access`
 --
 
 CREATE TABLE `auth_access` (
@@ -40,7 +40,7 @@ CREATE TABLE `auth_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `auth_access`
+-- Đang đổ dữ liệu cho bảng `auth_access`
 --
 
 INSERT INTO `auth_access` (`UserID`, `Email`, `Password`, `Name`, `Phone`, `Mobile`, `Address`, `ActiveCode`) VALUES
@@ -56,12 +56,13 @@ INSERT INTO `auth_access` (`UserID`, `Email`, `Password`, `Name`, `Phone`, `Mobi
 (17, 'fashaju@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'fashaju', '123456789', '0987654321', 'không nhà', NULL),
 (18, 'trinhvcb@gmail.com', 'aa64d412fbe9a9e3d3a4fc0f70e3224c', 'le mai trinh', '0673872114', '0982254272', '66/16 d 30.4 p1 tpcao lanh', NULL),
 (19, 'holiman_dn@yahoo.com', '3ede4421bac9e954e64217205e723406', 'holi', '', '0982010013', '', NULL),
-(20, 'kieuphulam@gmail.com', 'da119d0f8555f4334fddc2df3d43652b', 'lam', '', '0903347848', 'thanh khe da nang', '42959dc0c4');
+(20, 'kieuphulam@gmail.com', 'da119d0f8555f4334fddc2df3d43652b', 'lam', '', '0903347848', 'thanh khe da nang', '42959dc0c4'),
+(21, 'ddphuvinh.1994@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 'Doan Dang Phu Vinh', '1635750145', '1635750145', '7J Nguyễn Thị Tần P2 Q8', '0');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- Cấu trúc bảng cho bảng `category`
 --
 
 CREATE TABLE `category` (
@@ -76,7 +77,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `category`
+-- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`CategoryID`, `CategoryParentID`, `CategoryName`, `Description`, `Priority`, `Quotation`, `Link`, `SEO`) VALUES
@@ -155,7 +156,7 @@ INSERT INTO `category` (`CategoryID`, `CategoryParentID`, `CategoryName`, `Descr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
+-- Cấu trúc bảng cho bảng `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -170,7 +171,7 @@ CREATE TABLE `contacts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `new_product`
+-- Cấu trúc bảng cho bảng `new_product`
 --
 
 CREATE TABLE `new_product` (
@@ -179,7 +180,7 @@ CREATE TABLE `new_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `new_product`
+-- Đang đổ dữ liệu cho bảng `new_product`
 --
 
 INSERT INTO `new_product` (`ProductID`, `Priority`) VALUES
@@ -219,7 +220,7 @@ INSERT INTO `new_product` (`ProductID`, `Priority`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orderdetail`
+-- Cấu trúc bảng cho bảng `orderdetail`
 --
 
 CREATE TABLE `orderdetail` (
@@ -229,7 +230,7 @@ CREATE TABLE `orderdetail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `orderdetail`
+-- Đang đổ dữ liệu cho bảng `orderdetail`
 --
 
 INSERT INTO `orderdetail` (`OrderID`, `ProductID`, `Quantity`) VALUES
@@ -405,7 +406,7 @@ INSERT INTO `orderdetail` (`OrderID`, `ProductID`, `Quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Cấu trúc bảng cho bảng `orders`
 --
 
 CREATE TABLE `orders` (
@@ -417,7 +418,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `orders`
+-- Đang đổ dữ liệu cho bảng `orders`
 --
 
 INSERT INTO `orders` (`OrderID`, `UserID`, `Note`, `DateCreated`, `Status`) VALUES
@@ -426,7 +427,7 @@ INSERT INTO `orders` (`OrderID`, `UserID`, `Note`, `DateCreated`, `Status`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -447,7 +448,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, `ProductType`, `Unit`, `SubUnit`, `UnitQuantity`, `Description`, `Image`, `Price`, `Discount`, `LastUpdate`, `Priority`) VALUES
@@ -4004,7 +4005,7 @@ INSERT INTO `products` (`ProductID`, `CategoryID`, `SupplierID`, `ProductName`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `promotion_gift`
+-- Cấu trúc bảng cho bảng `promotion_gift`
 --
 
 CREATE TABLE `promotion_gift` (
@@ -4016,7 +4017,7 @@ CREATE TABLE `promotion_gift` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `promotion_price`
+-- Cấu trúc bảng cho bảng `promotion_price`
 --
 
 CREATE TABLE `promotion_price` (
@@ -4027,7 +4028,7 @@ CREATE TABLE `promotion_price` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `promotion_price`
+-- Đang đổ dữ liệu cho bảng `promotion_price`
 --
 
 INSERT INTO `promotion_price` (`ProductID`, `Description`, `Discount`, `Priority`) VALUES
@@ -4045,7 +4046,7 @@ INSERT INTO `promotion_price` (`ProductID`, `Description`, `Discount`, `Priority
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shopcart`
+-- Cấu trúc bảng cho bảng `shopcart`
 --
 
 CREATE TABLE `shopcart` (
@@ -4057,7 +4058,7 @@ CREATE TABLE `shopcart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `shopcart`
+-- Đang đổ dữ liệu cho bảng `shopcart`
 --
 
 INSERT INTO `shopcart` (`CartID`, `ProductID`, `UserID`, `Quantity`, `Date`) VALUES
@@ -4099,7 +4100,7 @@ INSERT INTO `shopcart` (`CartID`, `ProductID`, `UserID`, `Quantity`, `Date`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status`
+-- Cấu trúc bảng cho bảng `status`
 --
 
 CREATE TABLE `status` (
@@ -4108,7 +4109,7 @@ CREATE TABLE `status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `status`
+-- Đang đổ dữ liệu cho bảng `status`
 --
 
 INSERT INTO `status` (`statusid`, `status`) VALUES
@@ -4118,7 +4119,7 @@ INSERT INTO `status` (`statusid`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supplier`
+-- Cấu trúc bảng cho bảng `supplier`
 --
 
 CREATE TABLE `supplier` (
@@ -4129,7 +4130,7 @@ CREATE TABLE `supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `supplier`
+-- Đang đổ dữ liệu cho bảng `supplier`
 --
 
 INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Description`, `Priority`) VALUES
@@ -4203,49 +4204,78 @@ INSERT INTO `supplier` (`SupplierID`, `SupplierName`, `Description`, `Priority`)
 (68, 'Tân Tân', '0', NULL),
 (69, 'Tân Úc Việt', '', NULL);
 
+-- --------------------------------------------------------
+
 --
--- Indexes for dumped tables
+-- Cấu trúc bảng cho bảng `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(16) NOT NULL,
+  `password` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone_number` int(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Đang đổ dữ liệu cho bảng `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `phone_number`) VALUES
+(1, '1', '1', 'ddphuvinh.1994@gmail.com', 1),
+(2, 'vinh', '123', 'ddphuvinh.1994@gmail.com', 1635750145),
+(3, 'vinh', '123', 'ddphuvinh.1994@gmail.com', 1635750145),
+(4, 'ddphuvinh.1994', 'chipnow94', 'ddphuvinh.1994@gmail.com', 1635750145),
+(5, 'ddphuvinh.1994', 'chipnow94', 'ddphuvinh.1994@gmail.com', 1635750145),
+(6, 'hien', '123', 'nonodd@gmail.com', 1251321),
+(7, 'vinhdeptrai', '123', 'ddphuvinh.1994@gmail.com', 1635750145),
+(8, 'vinhdeptrai', '123', 'ddphuvinh.1994@gmail.com', 1635750145),
+(9, 'qwerty', '1', 'advancefitnessgym@gmail.com', 123);
+
+--
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `auth_access`
+-- Chỉ mục cho bảng `auth_access`
 --
 ALTER TABLE `auth_access`
   ADD PRIMARY KEY (`UserID`);
 
 --
--- Indexes for table `category`
+-- Chỉ mục cho bảng `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`CategoryID`),
   ADD KEY `FK_category_CategoryID` (`CategoryParentID`);
 
 --
--- Indexes for table `contacts`
+-- Chỉ mục cho bảng `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`ma_lien_he`);
 
 --
--- Indexes for table `new_product`
+-- Chỉ mục cho bảng `new_product`
 --
 ALTER TABLE `new_product`
   ADD PRIMARY KEY (`ProductID`);
 
 --
--- Indexes for table `orderdetail`
+-- Chỉ mục cho bảng `orderdetail`
 --
 ALTER TABLE `orderdetail`
   ADD PRIMARY KEY (`OrderID`,`ProductID`);
 
 --
--- Indexes for table `orders`
+-- Chỉ mục cho bảng `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`OrderID`);
 
 --
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`ProductID`),
@@ -4253,96 +4283,107 @@ ALTER TABLE `products`
   ADD KEY `FK_products_SupplierID` (`SupplierID`);
 
 --
--- Indexes for table `promotion_gift`
+-- Chỉ mục cho bảng `promotion_gift`
 --
 ALTER TABLE `promotion_gift`
   ADD PRIMARY KEY (`ProductID`);
 
 --
--- Indexes for table `promotion_price`
+-- Chỉ mục cho bảng `promotion_price`
 --
 ALTER TABLE `promotion_price`
   ADD PRIMARY KEY (`ProductID`);
 
 --
--- Indexes for table `shopcart`
+-- Chỉ mục cho bảng `shopcart`
 --
 ALTER TABLE `shopcart`
   ADD PRIMARY KEY (`CartID`);
 
 --
--- Indexes for table `status`
+-- Chỉ mục cho bảng `status`
 --
 ALTER TABLE `status`
   ADD PRIMARY KEY (`statusid`);
 
 --
--- Indexes for table `supplier`
+-- Chỉ mục cho bảng `supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`SupplierID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Chỉ mục cho bảng `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `auth_access`
+-- AUTO_INCREMENT cho bảng `auth_access`
 --
 ALTER TABLE `auth_access`
-  MODIFY `UserID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `UserID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
--- AUTO_INCREMENT for table `category`
+-- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
   MODIFY `CategoryID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 --
--- AUTO_INCREMENT for table `contacts`
+-- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
   MODIFY `ma_lien_he` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `orderdetail`
+-- AUTO_INCREMENT cho bảng `orderdetail`
 --
 ALTER TABLE `orderdetail`
   MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
   MODIFY `OrderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
   MODIFY `ProductID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4209;
 --
--- AUTO_INCREMENT for table `shopcart`
+-- AUTO_INCREMENT cho bảng `shopcart`
 --
 ALTER TABLE `shopcart`
   MODIFY `CartID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 --
--- AUTO_INCREMENT for table `status`
+-- AUTO_INCREMENT cho bảng `status`
 --
 ALTER TABLE `status`
   MODIFY `statusid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `supplier`
+-- AUTO_INCREMENT cho bảng `supplier`
 --
 ALTER TABLE `supplier`
   MODIFY `SupplierID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT cho bảng `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `category`
+-- Các ràng buộc cho bảng `category`
 --
 ALTER TABLE `category`
   ADD CONSTRAINT `FK_category_CategoryID` FOREIGN KEY (`CategoryParentID`) REFERENCES `category` (`CategoryID`) ON DELETE SET NULL ON UPDATE SET NULL;
 
 --
--- Constraints for table `products`
+-- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `FK_products_CategoryID` FOREIGN KEY (`CategoryID`) REFERENCES `category` (`CategoryID`),
